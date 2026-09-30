@@ -1,0 +1,44 @@
+# PÁGINA: MEMORIAS VRD 2019
+# URL actual: https://vrdaylatam.org/vrd-2019/        URL nueva: /memorias/2019/
+
+slug: memorias-2019
+url: /memorias/2019/
+titulo: VRD 2019
+estado: publicada
+url_original: https://vrdaylatam.org/vrd-2019/
+edicion: 2019
+
+secciones:
+  - tipo: cabecera
+    titulo: Virtual Reality Day 2019
+
+  - tipo: galeria
+    id: fotos
+    imagenes:
+      - memorias/2019/00-afiche.jpg
+      - memorias/2019/01.jpg
+      - memorias/2019/02.jpg
+      - memorias/2019/03.jpg
+      - memorias/2019/04.jpg
+      - memorias/2019/05.jpg
+      - memorias/2019/06.jpg
+      - memorias/2019/07.jpg
+      - memorias/2019/08-ganadores.jpg
+
+  - tipo: tabla
+    id: actividades
+    titulo: Actividades
+    columnas: [Nombre, Descripción, Aplicaciones y elementos]
+    filas:
+      - [Recorrido del túnel RA, El contexto temático del recorrido es el inicio de la vida desde la cédula hasta el cuerpo humano, "Túnel con infografías, aplicaciones de RA UTPL (célula, regiones anatómicas y objetos 3D de virtopsia), stand para tablets"]
+      - [Trivia, Concurso de preguntas en base al contenido del recorrido, "Pantalla táctil, cuestionario de preguntas (souvenirs para las personas que obtengan un mínimo del 70%)"]
+      - [Stand de RA, Presentación de aplicaciones gratuitas. Toma de fotos con RA. Compartir en Redes Sociales, "Arloopa, Quiver, Zappar Studio, Ink Hunter, Proyectos del Club RV UTPL"]
+      - [Stand de Oculus Go, Experiencias en Realidad eXtendidas (RX), "Videos 360: concientización vial (ANT), campus UTPL (MediaLab) y YouTube, Art Plunge, Anna Frank House, Museo UTPL"]
+      - [Stand Mundos Virtuales, Experiencia en mundos virtuales, Recorrido por el campus virtual de la UTPL]
+      - [Streaming del evento, Entrevistas de opinión del público sobre el uso de RX, Streaming por redes sociales]
+
+  - tipo: videos
+    id: video
+    titulo: Vídeo
+    items:
+      - {titulo: Día de la Realidad Virtual 2019, youtube: J9zWYuUNLNQ}

@@ -1,0 +1,29 @@
+# PÁGINA: CONTACTO
+# URL actual: https://vrdaylatam.org/contacto/        URL nueva: /contacto/
+#
+# El sitio actual tiene un formulario propio (Nombre, E-mail, Asunto, Mensaje -> "Enviar").
+# El sitio nuevo NO procesa formularios: se reemplaza por un Google Form con los mismos campos.
+# Ver docs/05-enlaces-y-formularios.md
+
+slug: contacto
+url: /contacto/
+titulo: Contactos
+estado: publicada
+url_original: https://vrdaylatam.org/contacto/
+
+secciones:
+  - tipo: cabecera
+    titulo: Contactos
+    fondo: fondos/cabecera-paginas.png
+
+  - tipo: formulario_externo
+    id: formulario
+    titulo: Si tienes algún comentario o sugerencia ¡Escríbenos!
+    url: ""                      # PENDIENTE: URL del Google Form (campos: Su nombre, E-mail, Asunto, Mensaje)
+    modo: incrustado             # incrustado (iframe de Google Forms) | boton (abre en otra pestaña)
+    texto_boton: Enviar mensaje
+    campos_referencia:           # solo documentación: campos del formulario original
+      - Su nombre
+      - E-mail
+      - Asunto
+      - Mensaje

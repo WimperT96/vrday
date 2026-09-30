@@ -1,0 +1,43 @@
+# ============================================================================
+# PÁGINA NUEVA: LUGAR — VR Day LATAM 2026
+# URL: /lugar/   (en el menú de la maqueta 2026)
+# Datos conocidos (agenda tentativa 2026): sede UTPL, Centro de Convenciones UTPL,
+# stands en el Hall del Aula Magna y en el sector de ingreso al Rectorado.
+# Faltan dirección, mapa, fotos e indicaciones de llegada.
+# ============================================================================
+
+slug: lugar
+url: /lugar/
+titulo: Lugar
+estado: publicada
+url_original: ""          # no existía como página
+
+secciones:
+  - tipo: cabecera
+    titulo: Lugar
+    subtitulo: "Sede Ecuador: Universidad Técnica Particular de Loja – UTPL"
+
+  - tipo: texto
+    id: sede
+    titulo: Universidad Técnica Particular de Loja (UTPL)
+    imagen: lugar/sede-utpl.svg          # PLACEHOLDER
+    imagen_posicion: derecha
+    cuerpo: |
+      El VR Day LATAM 2026 se realizará el **12 y 13 de noviembre de 2026** en la Universidad Técnica Particular de Loja.
+
+      **Espacios del evento**
+
+      - **Centro de Convenciones UTPL** — recorrido por instalaciones y espacios tecnológicos (jueves 12).
+      - **Hall del Aula Magna** — stands y experiencias inmersivas.
+      - **Sector de ingreso al Rectorado** — stands y experiencias inmersivas.
+
+      **Dirección:** PENDIENTE
+    placeholder: true                    # PENDIENTE: dirección exacta, indicaciones de llegada
+
+  - tipo: embed
+    id: mapa
+    titulo: Cómo llegar
+    proveedor: google-maps
+    url: ""                              # PENDIENTE: URL de "Insertar mapa" de Google Maps
+    imagen_respaldo: lugar/mapa.svg      # se muestra mientras no haya URL
+    proporcion: "16:9"

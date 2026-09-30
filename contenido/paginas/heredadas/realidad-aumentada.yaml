@@ -1,0 +1,138 @@
+# PÁGINA HEREDADA: REALIDAD AUMENTADA (grupo DTE / UTPL)
+# URL actual: https://vrdaylatam.org/realidad-aumentada/        URL nueva: /realidad-aumentada/
+# No enlazada desde ningún menú. Construida sobre una plantilla demo del tema: TODAS sus imágenes
+# ya no existen (se usan placeholders) y varios textos son de relleno o están duplicados.
+# Se conserva por decisión de "mantener todas las páginas"; ver docs/01 y docs/06.
+
+slug: realidad-aumentada
+url: /realidad-aumentada/
+titulo: Realidad aumentada
+estado: oculta
+url_original: https://vrdaylatam.org/realidad-aumentada/
+
+secciones:
+  - tipo: cabecera
+    titulo: Realidad aumentada
+
+  - tipo: texto
+    id: que-es-ra
+    titulo: ¿Qué es realidad aumentada?
+    imagen: heredadas/realidad-aumentada/que-es-ra.svg
+    imagen_posicion: derecha
+    cuerpo: |
+      La herramienta de Realidad Aumentada (RA) busca potenciar el aprendizaje, ya que permite estudiar de forma interactiva al combinar elementos físicos con elementos virtuales mediante imágenes en 3D.
+
+      Este aplicativo tiene la ventaja de ser offline, es decir no necesita internet permitiendo su acceso desde cualquier lugar, en cualquier momento. Mediante la utilización de una imagen que se la denomina "marcador" el usuario puede acceder a la aplicación y manipular sus diferentes elementos y acceder a información adicional de cada uno.
+
+  - tipo: tarjetas
+    id: investigacion
+    titulo: Investigación en RA
+    subtitulo: Artículos
+    items:
+      - titulo: Repositorios 3D
+        texto: Selection of an educational repository of 3D objects at the Universidad técnica particular de loja (utpl)
+        imagen: heredadas/realidad-aumentada/app-generica.svg
+      - titulo: VRUTPL-Virtual Reality 3D
+        texto: Realidad Inmersiva "Centro Forense"
+        imagen: heredadas/realidad-aumentada/app-generica.svg
+      - titulo: Virtopsia
+        texto: Realidad aumentada como recurso de apoyo en el proceso enseñanza-aprendizaje en medicina legal.
+        imagen: heredadas/realidad-aumentada/app-generica.svg
+      - titulo: Biología
+        texto: "Case study: methodology for the development of learning objects (Oa) in 3d for applications of augmented reality (ar)"
+        imagen: heredadas/realidad-aumentada/app-generica.svg
+      - titulo: Ebooks
+        texto: Uso de la tableta digital en entornos universitarios de aprendizaje a distancias
+        imagen: heredadas/realidad-aumentada/app-generica.svg
+
+  - tipo: texto
+    id: premios
+    titulo: Premios
+    cuerpo: |
+      **Virtopsia**
+
+      - Ganadores en GOLC - Laboratorio en línea en la categoría visualizado
+      - Finalistas en premio Espiral – Adultos Universidad
+
+  - tipo: tarjetas
+    id: aplicaciones
+    titulo: Aplicaciones con RA
+    subtitulo: Aplicaciones desarrolladas
+    items:
+      - titulo: Virtopsia
+        texto: El aplicativo enseña cómo se realiza una autopsia sin necesidad de hacerlo en un cuerpo real.
+        imagen: heredadas/realidad-aumentada/app-generica.svg
+        url: "#virtopsia"
+      - titulo: Biología
+        texto: El propósito de este aplicativo es visualizar de forma dinámica e interactiva la célula animal, célula vegetal y procariota con sus diferentes organelas, transporte en la membrana celular.
+        imagen: heredadas/realidad-aumentada/app-generica.svg
+      - titulo: Regiones anatómicas
+        texto: El aplicativo enseña cómo se realiza una autopsia sin necesidad de hacerlo en un cuerpo real.   # duplicado de Virtopsia en el sitio actual
+        imagen: heredadas/realidad-aumentada/app-generica.svg
+      - titulo: Estadística
+        texto: El propósito de este aplicativo es visualizar de forma dinámica e interactiva la célula animal, célula vegetal y procariota con sus diferentes organelas, transporte en la membrana celular.   # duplicado de Biología
+        imagen: heredadas/realidad-aumentada/app-estadistica.svg
+
+  # Detalle de la app Virtopsia (en el sitio actual es un bloque desplegable)
+  - tipo: texto
+    id: virtopsia
+    titulo: Virtopsia
+    fondo: heredadas/realidad-aumentada/fondo-virtopsia.svg
+    cuerpo: |
+      **Descripción**
+
+      El aplicativo enseña cómo se realiza una autopsia sin necesidad de hacerlo en un cuerpo real.
+
+      El aplicativo presenta las características principales de cuatro tipos de muertes (más frecuentes): por accidente de tránsito, por arma blanca, por arma de fuego y muerte por asfixia; y desde diversos planos permite realizar acercamientos y estudios pormenorizados de cada cavidad y órganos que el estudiante requiera.
+
+      Plataforma: Android
+
+      **Características:**
+
+      - Permite tener recursos de tanatología que son de difícil acceso, tomando en cuenta la situación geográfica de nuestros estudiantes y la dificultad que existe para poder acceder a un centro forense en el país.
+      - Constituye una herramienta como un laboratorio visualizado ya que permite conocer cuatro tipos de muerte.
+      - Permite al estudiante explorar cada una de las muertes tanto en examen interno como externo y tipo de incisiones.
+
+  - tipo: acordeon
+    id: virtopsia-detalle
+    items:
+      - titulo: ¿Cómo usar la app?
+        cuerpo: |
+          - Videotutorial   <!-- PENDIENTE: enlace "#" en el sitio actual -->
+          - Instructivo     <!-- PENDIENTE: enlace "#" en el sitio actual -->
+      - titulo: Demo de la aplicación
+        youtube: M157uJOSa7U
+      - titulo: Arquitectura de la aplicación
+        cuerpo: |
+          La arquitectura se encuentra conformada por los siguientes apartados:
+
+          1. Backend: orientado al almacenamiento de datos y registro de acceso.
+          2. Aplicación móvil: diseñado para plataformas iOS y Android.
+          3. Contenido gráfico: necesarios a desarrollar para el aplicativo.
+      - titulo: Aplicación en el proceso de enseñanza/aprendizaje
+        cuerpo: |
+          Cabe recalcar que la tecnología por sí sola no generará aprendizajes significativos, es por ello la necesidad de que esté acompañada de una metodología de enseñanza-aprendizaje (Cabero, 2015).
+
+          La metodología que se utilizó para implementar el aplicativo Virtopsia en el proceso de enseñanza/aprendizaje es la metodología basada en casos, la misma que Benito & Cruz, 2005 menciona 3 fases para este método. Fases que han sido adaptadas como se observa a continuación.
+
+  - tipo: equipo
+    id: participantes
+    titulo: Participantes en el proyecto
+    miembros:
+      - {nombre: Martha Agila,        cargo: Títulos profesionales, foto: heredadas/realidad-aumentada/equipo/martha-agila.svg}
+      - {nombre: Jénnifer Samaniego,  cargo: Títulos profesionales, foto: heredadas/realidad-aumentada/equipo/jennifer-samaniego.svg}
+      - {nombre: Luis Ríos,           cargo: Títulos profesionales, foto: heredadas/realidad-aumentada/equipo/luis-rios.svg}
+      - {nombre: Paola Sarango,       cargo: Títulos profesionales, foto: heredadas/realidad-aumentada/equipo/paola-sarango.svg}
+      - {nombre: Inés Jara,           cargo: Títulos profesionales, foto: heredadas/realidad-aumentada/equipo/martha-agila.svg}
+      - {nombre: Marcelo Borja,       cargo: Títulos profesionales, foto: heredadas/realidad-aumentada/equipo/marcelo-borja.svg}
+    # "Títulos profesionales" es texto de relleno en el sitio actual.
+    # Existe además un modal de ejemplo "Johanna Pérez Díaz — investigador@utpl.edu.ec" con la
+    # reseña de Martha Agila: es contenido demo y NO se migra.
+
+  - tipo: testimonios
+    id: testimonios
+    titulo: Testimonios y experiencias con la aplicación
+    placeholder: true     # nombres de ejemplo del tema (José Pérez, Juan Díaz), sin texto de testimonio
+    items:
+      - {nombre: José Pérez, cargo: Docente de medicina}
+      - {nombre: Juan Díaz,  cargo: Estudiante UTPL, foto: heredadas/realidad-aumentada/equipo/luis-rios.svg}

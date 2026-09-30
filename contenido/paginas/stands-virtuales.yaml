@@ -1,0 +1,38 @@
+# PÁGINA: STANDS VIRTUALES (edición 2020)
+# URL actual: https://vrdaylatam.org/stands-virtuales/        URL nueva: /stands-virtuales/
+# En el sitio actual no está enlazada desde ningún menú (la tarjeta del inicio lleva a itch.io).
+
+slug: stands-virtuales
+url: /stands-virtuales/
+titulo: Stands virtuales
+estado: oculta          # accesible por URL, fuera del menú (igual que hoy)
+url_original: https://vrdaylatam.org/stands-virtuales/
+
+secciones:
+  - tipo: cabecera
+    titulo: Stands virtuales
+    fondo: fondos/cabecera-paginas-2020.jpg
+
+  - tipo: texto
+    id: descripcion
+    cuerpo: |
+      Actualmente los eventos han tomado un giro de 360 grados acoplándose a una nueva realidad, es por ello que el VRD dará acceso a diversos proyectos de Realidad Virtual, Realidad Aumentada y Realidad Mixta de diversas organizaciones, empresas e instituciones de educación superior mediante comunicación en tiempo real con sus respectivos delegados, en donde podrás interactuar con:
+
+      - Casos de éxito Lenovo
+      - Proyectos de la Universidad de las Américas UDLA
+      - Proyecto ACTIVAR Senecyt
+      - Proyectos del Club de Realidad Virtual UTPL, Medialab y Sala Liid
+      - Proyectos del Parque Tecnológico UTPL.
+      - Proyectos IEEE.
+
+      A través de la plataforma inmersiva oficial del evento VirBELA.
+
+  - tipo: galeria
+    id: capturas
+    titulo: Capturas del entorno de los stands
+    imagenes:
+      - stands-virtuales/capturas/01.jpg
+      - stands-virtuales/capturas/02.jpg
+      - stands-virtuales/capturas/03.jpg
+      - stands-virtuales/capturas/04.jpg
+      - stands-virtuales/capturas/05.jpg

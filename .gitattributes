@@ -1,0 +1,15 @@
+# Texto con fin de línea normalizado (LF en el repositorio)
+* text=auto eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Binarios
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.avif binary
+*.mp4 binary
+*.glb binary
+*.ico binary

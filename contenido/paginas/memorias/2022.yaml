@@ -1,0 +1,34 @@
+# PÁGINA: MEMORIAS VRD 2022
+# URL actual: https://vrdaylatam.org/vrd-2023/  (el slug dice 2023 pero el contenido es 2022)
+# URL nueva: /memorias/2022/   (redirección 301 desde /vrd-2023/)
+
+slug: memorias-2022
+url: /memorias/2022/
+titulo: VRD 2022
+estado: publicada
+url_original: https://vrdaylatam.org/vrd-2023/
+edicion: 2022
+
+secciones:
+  - tipo: cabecera
+    titulo: Virtual Reality Day 2022
+
+  - tipo: galeria
+    id: fotos
+    imagenes:
+      - memorias/2022/01.jpg
+      - memorias/2022/02.jpg
+      - memorias/2022/03.jpg
+      - memorias/2022/04.jpg
+      - memorias/2022/05.jpg
+      - memorias/2022/06.jpg
+      - memorias/2022/07.jpg
+      # En el sitio actual la galería también incluye la foto de ganadores de 2019
+      # (y repite una foto). Se deja comentada; decidir si se mantiene:
+      # - memorias/2019/08-ganadores.jpg
+
+  - tipo: videos
+    id: videos
+    items:
+      - {titulo: VRDAY 2022,    youtube: 2t_razofWkY}
+      - {titulo: GAME JAM 2022, youtube: yJuiXWva9mo}

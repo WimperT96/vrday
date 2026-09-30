@@ -1,0 +1,796 @@
+# Ponentes de todas las ediciones.
+# Fuente: modales de Inicio, Agenda y Agenda 2019 del sitio actual (unificados por foto).
+# Para agregar un ponente copia un bloque, cambia 'slug' (único por edición) y la foto en medios/ponentes/<edicion>/.
+# visible_en_sitio_actual=false -> existía en el sitio pero sin tarjeta visible (modal huérfano).
+
+ponentes:
+- slug: aura-forero
+  nombre: Aura Forero
+  edicion: 2023
+  pais: Colombia
+  institucion: ''
+  foto: ponentes/2023/aura-forero.png
+  resena: |-
+    Ingeniera mecatrónica, magíster en ingeniería biomédica. Representante de cofundadora de CETREAL.
+
+    Ha trabajado en proyectos de integración de tecnologías IA, blockchain, visión por computador, analitica para el diseño y desarrollo de experiencias en realidades extendidas en sectores como educación, salud e industrial.
+  visible_en_sitio_actual: true
+  orden: 1
+- slug: camilo-montanez
+  nombre: Camilo Montañez
+  edicion: 2023
+  pais: ''
+  institucion: Universidad de la Sabana
+  foto: ponentes/2023/camilo-montanez.jpg
+  resena: |-
+    Ingeniero Industrial – Universidad de la Sabana, condecorado como Master of Metaverse por META.
+
+    Fouder de Beyond afterlife
+
+    Fundador y CEO de 3GOVideo. Ex – Lead de Meta (Facebook) Developer Circles Bogotá.Ex- Manager del ecosistema local Huawei Colombia. Co – Founder XRCol – Asociación de tecnologías Inmersivas de Colombia. Co – founder VRCO comunidad de tecnologías Inmersivas de Colombia. Speaker con más de 284 charlas sobre tecnologías inmersivas, Metaverso e inteligencia artificial.
+
+    Profesor y consultor, mentor en: Masschallenge, Cube Ventures, CEIS U Sabana, Educamas, Proimagenes – Crea Digital, Universidad EAN, EAN Impacta entre otros.
+  visible_en_sitio_actual: true
+  orden: 2
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: carlos-reyes
+  nombre: Carlos Reyes
+  edicion: 2023
+  pais: Colombia
+  institucion: ''
+  foto: ponentes/2023/carlos-reyes.png
+  resena: |-
+    Diseñador y Productor de Videojuegos.
+
+    Ha trabajado con empresas como Nickelodeon y ATARI, Fundador y Director de Game Art & Design Studios Colombia, actual Coordinador Regional para Centro y Suramérica y Presidente del Capítulo Colombia de la International Game Developers Association.
+
+    Consultor en el desarrollo de proyectos tecnológicos nacionales e internacionales. Empresario del sector de Industrias Creativas y Culturales desde 2010, Administrador de Empresas de la Universidad Nacional de Colombia, MSc Information & Technology de la Universidad Leeds Beckett (UK), Consultor IT con 10 años de experiencia en gerencia de proyectos de desarrollo tecnológico, sistemas de información, software empresarial y aplicaciones móviles.
+  visible_en_sitio_actual: true
+  orden: 3
+- slug: fabian-bonilla
+  nombre: Fabian Bonilla
+  edicion: 2023
+  pais: Colombia
+  institucion: ''
+  foto: ponentes/2023/fabian-bonilla.jpg
+  resena: |-
+    Artista plástico y realizador audiovisual con énfasis en nuevos medios.
+
+    Durante su trayectoria, ha explorado diversas técnicas artísticas, abarcando desde el dibujo y la pintura hasta la animación, el video y el cine experimental y numerosos proyectos audiovisuales para televisión. Esta amplia gama de habilidades le ha permitido sumergirse en proyectos creativos multifacéticos. Su enfoque principal radica en la creación de narrativas transmedia, donde fusiona sus intereses visuales con la innovación en la narración audiovisual. Esta convergencia se ha convertido en la base de su trabajo artístico, permitiéndole explorar las posibilidades de la tecnología y el arte en conjunto. email: fabianbonillart@gmail.com
+  visible_en_sitio_actual: true
+  orden: 4
+- slug: felipe-villamil
+  nombre: Felipe Villamil
+  edicion: 2023
+  pais: Colombia
+  institucion: ''
+  foto: ponentes/2023/felipe-villamil.jpg
+  resena: |-
+    Productor audiovisual y multimedia.
+
+    Estudió Medios Audiovisuales en el Politécnico Grancolombiano, hizo una especialización en Comunicación Multimedia en la Sergio Arboleda y realizó cursos en cine en la FUC, el SICA de Buenos Aires. trabajó en Señal Colombia y CMO Producciones y en varios proyectos de videoclips y cortometrajes. Actualmente trabaja como consultor de comunicación y multimedia y es productor ejecutivo en Cinegrafic desarrollando proyectos transmedia y multiplataforma.
+  visible_en_sitio_actual: true
+  orden: 5
+- slug: andres-castro
+  nombre: Andrés Castro
+  edicion: 2023
+  pais: Colombia
+  institucion: ''
+  foto: ponentes/2023/andres-castro.jpg
+  resena: |-
+    Ingeniero de Soporte para plataformas XR de Unity para Amerícas y Europa.
+
+    Ha trabajado en proyectos de la Universidad de los Andes y startups en Colombia, ha sido instructor universitario y del SENA en las áreas de contenidos digitales. CEO de Joycom Games y desarrollador de juegos con más de 12 años de experiencia. Tecnólogo en Sistemas de la Universidad Distrital F.J.C.
+  visible_en_sitio_actual: true
+  orden: 6
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: jorge-bacca-acosta
+  nombre: Jorge Bacca Acosta
+  edicion: 2023
+  pais: Colombia
+  institucion: ''
+  foto: ponentes/2023/jorge-bacca-acosta.jpg
+  resena: |-
+    Doctor en tecnología , Magister en Informática Industrial e Ingeniero en Telemática.
+
+    Es actualmente profesor asociado de la Fundación Universitaria Konrad Lorenz de Colombia. Es doctor en tecnología por la Universitat de Girona (España) con mención Cum Laude, Magister en Informática Industrial por la misma universidad e Ingeniero en Telemática de la Universidad Distrital Francisco José de Caldas. Sus intereses de investigación son: Realidad Virtual y Aumentada en educación, técnicas de movimiento ocular en investigación, Tecnologías Educativas, Personalización, Adaptación, agentes inteligentes y web semántica. Dirige el capítulo para Colombia de la Immersive Learning Research Network – una red de investigación internacional dedicada a promover la investigación con tecnologías inmersivas en la educación. Es uno de los editores en jefe de la revista Contemporary Educational Technology y editor asociado de la revista Computer Applications in Engineering Education.
+  visible_en_sitio_actual: true
+  orden: 7
+- slug: juan-felipe-santos
+  nombre: Juan Felipe Santos
+  edicion: 2023
+  pais: Colombia
+  institucion: ''
+  foto: ponentes/2023/juan-felipe-santos.jpg
+  resena: |-
+    Magister en Marketing estratégico.
+
+    Es un apasionado por el desarrollo de alta tecnología en el País, a sus 29 años cuenta con más de 10 años de experiencia en emprendimientos tecnológicos. Magister en Marketing estratégico, fue nominado 2 veces al Under30 entrepreneurs del MIT Review en los años 2020 y 2021. Ha participado en la creación de 150 campañas inmersivas en el país y ha acompañado a 90 empresas en sus procesos de innovación inmersiva. Su misión es volver a Colombia, un referente de tecnologías inmersivas y del metaverso a nivel mundial.
+  visible_en_sitio_actual: true
+  orden: 8
+- slug: karina-acuna
+  nombre: Karina Acuña
+  edicion: 2023
+  pais: Colombia
+  institucion: ''
+  foto: ponentes/2023/karina-acuna.jpg
+  resena: |-
+    Directora de Shift Active, compañía de inteligencia interactiva.
+
+    Líder de la iniciativa Mujer Aumentada que busca fomentar la creación de experiencias de realidad aumentada, a través del uso de frameworks, para promover el aprendizaje, la creatividad y la innovación e impulsar la inclusión de más mujeres en los roles de liderazgo en el campo de la tecnología.
+
+    Nominada en los premios HABA 2023 del Ministerio de las tecnologías de la información y las comunicaciones que reconoce a mujeres que han desarrollado proyectos o soluciones innovadoras en el ámbito digital.
+  visible_en_sitio_actual: true
+  orden: 9
+- slug: martin-trujillo
+  nombre: Martin Trujillo
+  edicion: 2023
+  pais: Colombia
+  institucion: ''
+  foto: ponentes/2023/martin-trujillo.png
+  resena: |-
+    Doctorante en Ciencias de la Educación, Maestría en Entornos Virtuales de Aprendizaje, Maestría en Edición Literaria, Ingeniero electricista.
+
+    Actualmente Líder de Proyectos Especiales para Virtualidad con el Laboratorio de Experiencias de Aprendizaje Inmersivo y MI-Books en la producción de libros interactivos multimedia para los diferentes programas. Investigador junior en MinCienias. Experto en e-learning en modelos pedagógicos institucionales, construcción de ambientes virtuales de aprendizaje y materiales educativos. Docente de Innovación Educativa, Ambientes de aprendizaje inmersivo, Didácticas digitales en postgrado. Representante por el Politécnico a la RedUnete y RedCrea.
+  visible_en_sitio_actual: true
+  orden: 10
+- slug: miguel-angel-zuniga
+  nombre: Miguel Angel Zuñiga
+  edicion: 2023
+  pais: Colombia
+  institucion: ''
+  foto: ponentes/2023/miguel-angel-zuniga.jpg
+  resena: |-
+    Músico, Ingeniero de Sonido, profesional en Estudios y Gestión Cultural de la Universidad EAN.
+
+    Músico, Ingeniero de Sonido, profesional en Estudios y Gestión Cultural de la Universidad EAN, con maestría en Gerencia estratégica del Diseño; docente de la Universidad Ean. Consultor para las industrias creativas y culturales, con experiencia en facilitación y en el uso de la metodología Design Thinking e innovación en temas de emprendimiento, creación de empresas, gestión cultural, entre otros. Docente por más de 12 años en temas de creatividad, innovación, creación de empresas creativas.
+  visible_en_sitio_actual: true
+  orden: 11
+  notas: 'Otras grafías en el sitio actual: Miguel Ángel Zuñiga'
+- slug: samuel-acosta
+  nombre: Samuel Acosta
+  edicion: 2023
+  pais: Colombia
+  institucion: ''
+  foto: ponentes/2023/samuel-acosta.jpg
+  resena: |-
+    Ingeniero en diseño de entretenimiento digital con énfasis en experiencias interactivas y magister en comunicación transmedia de la universidad EAFIT.
+
+    Tiene amplia experiencia en gerencia de proyectos , desarrollo de aplicaciones en el motor de videojuegos Unity , conceptualización, prototipado y desarrollo de experiencias para XR y creación de mundos virtuales.Actualmente es Director de Innovación y nuevas tecnologias de Jeduca donde desarrolla y lidera la estrategia de tecnología de la información (TI) y de innovación para impulsar la competitividad de la empresa y supervisa la ejecución de proyectos tecnológicos innovadores desde la concepción hasta la implementación.
+  visible_en_sitio_actual: true
+  orden: 12
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: sergio-gomez
+  nombre: Sergio Gómez
+  edicion: 2023
+  pais: Colombia
+  institucion: ''
+  foto: ponentes/2023/sergio-gomez.png
+  resena: |-
+    Doctor en Tecnología con énfasis en educación.
+
+    Ha trabajado los últimos 14 años haciendo investigación activa en el aprendizaje mejorado por tecnologías (TeL) y áreas relacionadas, incluyendo: desarrollo de competencias digitales docentes, educación virtual, sistemas educativos adaptativos, diseño instruccional, aprendizaje móvil (m-learning) y computación consciente del contexto. Actualmente es director de e-learning en la universidad de la Salle y es docente colaborador de la misma universidad y de la Universitat Oberta de Catalunya. Ha sido autor y co-autor de más de 40 artículos relacionados con el área de investigación del Aprendizaje Mejorado por Tecnologías –TeL, especialmente en temáticas del aprendizaje móvil y contextual.
+  visible_en_sitio_actual: true
+  orden: 13
+  notas: 'Otras grafías en el sitio actual: Sergio Goméz'
+- slug: sergio-ramirez
+  nombre: Sergio Ramírez
+  edicion: 2023
+  pais: Colombia
+  institucion: ''
+  foto: ponentes/2023/sergio-ramirez.jpg
+  resena: |-
+    Transeúnte de lo analógico a lo digital, es polivalente, emprendedor, innovador, formador, ubicuo y en múltiples realidades.
+
+    Ha desarrollado una intensa actividad en el ámbito del derecho, en la aplicación de la inmersión, las tecnologías de la información, las telecomunicaciones, los medios digitales y creativos y, sobre todo, en la virtualidad extendida aplicada a la educación, la formación, la cultura y el entretenimiento, la salud, la industria, la seguridad, el marketing y el impacto social; tanto en España, Canadá, Estados Unidos, Reino Unido, México, Chile, Colombia y otros países latinoamericanos.
+
+    Con sus más de 25 años de experiencia, es considerado uno de los pioneros de realidad virtual y aumentada en América Latina, actualmente es CEO y fundador de Demiurgo (www.demiurgo.xyz), abogado por la Universidad Nacional Autónoma de México; Humanista Digital por la Universidad Autónoma de Barcelona; Pedagogo por la UTEL; Miembro de XR LATAM; Miembro del Clúster Multimedia de Tecnologías Inmersivas; Miembro del Instituto Mexicano de Realidades Mixtas; Miembro de la Fundación Exponencial Latinoamericana; Miembro del Sistema Nacional de Competencias en México y ha dirigido empresas internacionales relacionadas con la producción de televisión, la animación, experiencias inmersivas, realidad virtual, realidad aumentada, realidad mixta y metaversos.
+  visible_en_sitio_actual: true
+  orden: 14
+- slug: arturo-nunez
+  nombre: Arturo Nuñez
+  edicion: 2023
+  pais: Perú
+  institucion: ''
+  foto: ponentes/2023/arturo-nunez.jpg
+  resena: ''
+  visible_en_sitio_actual: true
+  orden: 15
+  notas: Reseña vacía o incompleta en el sitio actual — completar.
+- slug: henry-lara-ponce-de-leon
+  nombre: Henry Lara Ponce de León
+  edicion: 2023
+  pais: Perú
+  institucion: ''
+  foto: ponentes/2023/henry-lara-ponce-de-leon.jpg
+  resena: |-
+    Más de 22 años de experiencia en la construcción de ecosistemas digitales. Experto en Dirección y Estrategia de proyectos multiplataformas para marcas multisectoriales. Fundador de "Internovam", Agencia de marketing digital con +21 de años en el medio e "Inmerzum", división que brinda soluciones integrales con tecnologías inmersivas, como Realidad Virtual y Aumentada para sectores como Educación, Industrial, Turismo, Inmobiliaria, Medicina, Entretenimiento, entre otros.
+
+    Estudios en Análisis y Sistemas, Diseño y Marketing. Ganador de 1 premio en Sistemas a nivel nacional, 2do lugar a nivel internacional Colombia, 3 premios en Diseño, 1 Premio Internacional en Australia. Expositor invitado en ponencias de Tecnología digital e inmersivas, en entidades como Universidad Ricardo Palma, San Ignacio de Loyola, Universidad UPN, Universidad de Lima, Peru Tech MeetUp, Perú con Ciencia Concytec, The App Date Perú, Colegio Médico, Congreso de la República del Perú, VR Day Perú, entre otros.
+  visible_en_sitio_actual: true
+  orden: 16
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: katherine-villacorta
+  nombre: Katherine Villacorta
+  edicion: 2023
+  pais: Perú
+  institucion: ''
+  foto: ponentes/2023/katherine-villacorta.jpg
+  resena: |-
+    Administrador de Empresas con más de 10 años de experiencia en el sector privado, ayudando a las empresas en el diseño e implementación de mejoras en la experiencia digital. Máster en CX e Innovación en el IE University y Licenciado en Administración de Empresas de la Universidad del Pacífico.
+
+    Actualmente se desempeña como Digital Experience Project Lead en NTT Data, dirigiendo distintos proyectos relacionados al UX, Creative Design y Metaverse; actualmente profesor de pregrado en la Universidad del Pacífico y de postgrado en UPC en temas relacionados a Innovación, UX, Design thinking y Realidades Extendidas.
+  visible_en_sitio_actual: true
+  orden: 17
+  notas: |-
+    Otras grafías en el sitio actual: Katherine Villacota La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: nickolas-syris
+  nombre: Nickolas Syris
+  edicion: 2023
+  pais: Perú
+  institucion: ''
+  foto: ponentes/2023/nickolas-syris.jpg
+  resena: ''
+  visible_en_sitio_actual: true
+  orden: 18
+  notas: Reseña vacía o incompleta en el sitio actual — completar.
+- slug: andres-leon
+  nombre: Andrés León
+  edicion: 2023
+  pais: Perú
+  institucion: ''
+  foto: ponentes/2023/andres-leon.jpg
+  resena: |-
+    Creador en medios interactivos, docente universitario e investigador especializado en la intersección entre teoría y praxis del arte. Con estudios en filosofía (PhD), teatrología, musicología y cine, así como formación en artes visuales y escénicas, investiga el uso escénico de medios, tendencias y herramientas en las nuevas tecnologías, así como las formas y manifestaciones de la cultura digital. Dentro de este último ámbito, se enfoca en los desarrollos y retos actuales de la Realidad Extendida. Dirige el Laboratorio de Innovación y Creación Digital de la Facultad de Artes Escénicas PUCP (LabXR AE), LabXR.pucp.edu.pe.
+  visible_en_sitio_actual: true
+  orden: 19
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: gonzalo-diaz
+  nombre: Gonzalo Díaz
+  edicion: 2023
+  pais: Perú
+  institucion: ''
+  foto: ponentes/2023/gonzalo-diaz.jpg
+  resena: |-
+    Ingeniero electrónico de la Universidad Nacional de Ingeniería, desarrollador de aplicaciones de realidad virtual desde el 2013, mentor de proyectos de emprendimiento en Bio Incuba, la incubadora de negocios de la Universidad Cayetano Heredia, Investigador en Tecnologías Inmersivas de la Universidad Nacional De Ingeniería, tutor del Club de Investigación en Realidad Virtual de la misma universidad, tutor del equipo de alumnos que están desarrollando en realidad virtual el laboratorio del curso de Introducción a la Bio Ingeniería, desarrollador de una aplicación de realidad virtual para la enseñanza de anatomía dental que conjuntamente con otros investigadores de la UNI fuera publicado en un paper de la revista Explore de la IEEE titulado "Dentoraculus - a gamified Virtual Realitu experience for dental morphology learning" ganando un premio en Shanghái
+  visible_en_sitio_actual: true
+  orden: 20
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: roy-guzman
+  nombre: Roy Guzmán
+  edicion: 2023
+  pais: Perú
+  institucion: ''
+  foto: ponentes/2023/roy-guzman.jpg
+  resena: |-
+    Ing. industrial - CEO de CERV Realidad virtual, con 13 años de experiencia en desarrollo de simulaciones para entrenamiento. Promotor y desarrollador del primer metaverso en Perú.
+  visible_en_sitio_actual: true
+  orden: 21
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: simon-leon
+  nombre: Simón León
+  edicion: 2023
+  pais: Perú
+  institucion: ''
+  foto: ponentes/2023/simon-leon.jpg
+  resena: |-
+    Ingeniero de innovación en NTT DATA, responsable de la investigación y desarrollo de soluciones basadas en nuevas tecnologías. Desarrollador experto en blockchain y realidad virtual además embajador de varios protocolos Open Source y fundador de las conferencias internacionales Blockchain Latam Day. Miembro fundador de la comunidad Web3D Builders Latam enfocada en la colaboración para el aprendizaje del uso de tecnologías 3D para arquitecturas informáticas descentralizadas.
+  visible_en_sitio_actual: true
+  orden: 22
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: osvaldo
+  nombre: Osvaldo
+  edicion: 2023
+  pais: Brasil
+  institucion: ''
+  foto: ponentes/2023/osvaldo.jpg
+  resena: |-
+    Administrador de empresas, pós graduado em marketing e diretor de negócios da indústria de Games e Realidades Imersivas. Executivo sênior com experiencia de 23 anos em gestão de grandes e medias empresas no Brasil e outros países (Portugal, Espanha, Argentina,
+
+    Chile, Peru, Uruguai e México). Participação em projetos imersivos para o Cineasta Tim Burton, Disney, Museu do Amanhã – RJ, Carrefour, Nestlé, Siemens, Suvinil, ArcelorMittal, Nivea, Lacoste, entre outros importantes players do mercado.
+
+    Atualmente, conselheiro da XRBR, membro diretor da XR Latam (Latino América), membro diretor do MAIX (Movimiento para el Arte e Investigacion Extendida).
+  visible_en_sitio_actual: true
+  orden: 23
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: jorge
+  nombre: Jorge
+  edicion: 2023
+  pais: Brasil
+  institucion: ''
+  foto: ponentes/2023/jorge.jpg
+  resena: |-
+    Artista 3D, diretor de animação, produtor de conteúdo imersivo audiovisual. Produtor musical e engenheiro de áudio de produções nacionais e internacionais. Criador de ambientes virtuais para games e Metaverso. Desenvolvimento e produção para cinema imersivo e de animação. Membro fundador do XRBR. Palestrante nas áreas de 3D, realidade virtual e áudio imersivo em eventos como Rio 2C, Unity Developer Day, Pixel Show, Hacktown, Exponential Conference e AAA Inovação. Pesquisador de novas tecnologias. Responsável pela restauração e remasterização de todo conteúdo histórico do Prêmio Profissionais do Ano da Rede Globo. Criador dos games “The Drop” e “Halls of Hell”.
+  visible_en_sitio_actual: true
+  orden: 24
+- slug: alicia-gabriela-paredes
+  nombre: Alicia Gabriela Paredes
+  edicion: 2023
+  pais: Ecuador
+  institucion: ''
+  foto: ponentes/2023/alicia-gabriela-paredes.jpg
+  resena: ''
+  visible_en_sitio_actual: true
+  orden: 25
+  notas: |-
+    Nombre corregido; en el Inicio del sitio actual aparece como 'Alicia Gabirela Paredes'. Otras grafías en el sitio actual: Alicia Gabirela Paredes Reseña vacía o incompleta en el sitio actual — completar.
+- slug: daniela-flores
+  nombre: Daniela Flores
+  edicion: 2023
+  pais: Ecuador
+  institucion: ''
+  foto: ponentes/2023/daniela-flores.jpg
+  resena: |-
+    Licenciada en Comunicación por la Universidad Hemisferios en Ecuador. Ha culminado varios estudios y cursos de formación en torno a temáticas en las líneas de Comunicación, Medios Digitales y Estrategia que han sido claves para su desempeño en varios sectores productivos desde que empezó su vida laboral. Actualmente, es becaria de un Diplomado en Periodismo por parte del CLAEP y la SIP. Hace 2 años se adentró en el sector tech y desde entonces se ha desarrollado en el área de Comunicación y Atención al Socio de la Cámara de Innovación y Tecnología Ecuatoriana - CITEC y ocupa el cargo de Directora en dicha área
+  visible_en_sitio_actual: true
+  orden: 26
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: dino-garzoni
+  nombre: Dino Garzoni
+  edicion: 2023
+  pais: Ecuador
+  institucion: ''
+  foto: ponentes/2023/dino-garzoni.jpg
+  resena: ''
+  visible_en_sitio_actual: true
+  orden: 27
+  notas: Reseña vacía o incompleta en el sitio actual — completar.
+- slug: jennifer-samaniego
+  nombre: Jennifer Samaniego
+  edicion: 2023
+  pais: ''
+  institucion: Universidad Técnica Particular de Loja - UTPL (Ecuador)
+  foto: ponentes/2023/jennifer-samaniego.jpg
+  resena: |-
+    Master en Ciencias de los Datos de la Universidad Oberta de Cataluña. Analista de Innovación en la Dirección de Tecnologías para la Educación del Vicerrectorado de Modalidad Abierta y a Distancia, responsable del Club de Realidad Virtual UTPL. Subdirectora de la Red de Aprendizaje Inmersivo Ecuador. Ha recibido algunos reconocimientos de excelencia profesional y premios por instituciones como: Fundación Fidal, Raw, bi/COA, Catedra Iberoamericana Alejandro Roemmers de Industrias Culturales y Creativas de la Universidad Miguel Hernández, Senecyt, The Global Online Laboratory Consortium, MetaRed. En el abril del 2023 fue representante de una de las 10 comunidades seleccionadas de 327 de América Latina y el Caribe en la convocatoria Metaverse Community Challenge en Sao Paulo Brasil organizado por el BID Lab (laboratorio de innovación del Grupo Banco Interamericano de Desarrollo) y Meta siendo la única representante del Ecuador. Ganadora regional y Global al premio Women That Build Awards 2023 entre 1.100 candidatas a nivel mundial. Sus líneas de investigación son: e-Learning, comunidades virtuales, aprendizaje activo, tecnologías educativas e inmersivas y ciencia de los datos.
+  visible_en_sitio_actual: true
+  orden: 28
+- slug: edisson-david-cuasapas
+  nombre: Edisson David Cuasapas
+  edicion: 2023
+  pais: Ecuador
+  institucion: ''
+  foto: ponentes/2023/edisson-david-cuasapas.png
+  resena: |-
+    Es un destacado CEO y Gerente General de Encuba y la Escuela para Programadores Encuba, además de ser Presidente de CIBERDEC y de la cámara junior de comercio de Ibarra. Ha tenido éxito como conferencista, ganador de convocatorias y concursos, autor de artículos científicos, instructor de programación y líder fundador de Microsoft UTN Student Cellule.
+  visible_en_sitio_actual: true
+  orden: 29
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: jose-oswaldo-guaman
+  nombre: José Oswaldo Guamán
+  edicion: 2023
+  pais: Ecuador
+  institucion: ''
+  foto: ponentes/2023/jose-oswaldo-guaman.png
+  resena: ''
+  visible_en_sitio_actual: true
+  orden: 30
+  notas: |-
+    Nombre corregido; en el Inicio del sitio actual aparece como 'José Owsaldo Guamán'. Otras grafías en el sitio actual: José Owsaldo Guamán Reseña vacía o incompleta en el sitio actual — completar.
+- slug: juan-carlos-maldonado
+  nombre: Juan Carlos Maldonado
+  edicion: 2023
+  pais: Ecuador
+  institucion: ''
+  foto: ponentes/2023/juan-carlos-maldonado.jpg
+  resena: |-
+    Es profesor de Producción Audiovisual en la Universidad Técnica Particular de Loja y se encuentra en proceso de doctorado en Comunicación en universidades españolas. Tiene una amplia experiencia en realización y producción audiovisual, además de estar involucrado en investigaciones sobre comunicación y cultura audiovisual, publicando sobre nuevas narrativas y la innovación en el ámbito audiovisual.
+  visible_en_sitio_actual: true
+  orden: 31
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: milton-sancan
+  nombre: Milton Sancán
+  edicion: 2023
+  pais: Ecuador
+  institucion: ''
+  foto: ponentes/2023/milton-sancan.jpg
+  resena: |-
+    Milton Elías Sancán Lapo es Licenciado en Diseño y Producción Audiovisual con un Máster en Postproducción Digital, con experiencia trabajando para marcas conocidas y un papel activo en la postproducción de películas. Además, es docente e investigador en la UCSG y cofundador de Ronin Flame Games, una empresa de desarrollo de videojuegos.
+  visible_en_sitio_actual: true
+  orden: 32
+  notas: |-
+    Nombre corregido; en el Inicio del sitio actual aparece como 'Milton Salcan'. Otras grafías en el sitio actual: Milton Salcan, Milton Sancan La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: mohamenth
+  nombre: Mohamenth
+  edicion: 2023
+  pais: ''
+  institucion: Meta - Metaverse Community Challenge
+  foto: ponentes/2023/mohamenth.jpg
+  resena: |-
+    Mohammad es gerente en Meta donde se centra en tecnologías emergentes con el equipo de public policy. El ayudó a administrar el Metaverse Communities Challenge de la cual Rain fue un grantee.
+
+    Mohammad está formado en económica e derecho e el graduó con un JD de Harvard Law School e MPP en University of Oxford.
+  visible_en_sitio_actual: true
+  orden: 33
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: neysa-rivadeneira
+  nombre: Neysa Rivadeneira
+  edicion: 2023
+  pais: Ecuador
+  institucion: ''
+  foto: ponentes/2023/neysa-rivadeneira.jpg
+  resena: ''
+  visible_en_sitio_actual: true
+  orden: 34
+  notas: |-
+    Otras grafías en el sitio actual: Neysa Rivadineira Reseña vacía o incompleta en el sitio actual — completar.
+- slug: omar-gustavo-bravo
+  nombre: Omar Gustavo Bravo
+  edicion: 2023
+  pais: ''
+  institucion: UPS
+  foto: ponentes/2023/omar-gustavo-bravo.jpg
+  resena: |-
+    Docente de las Carrera de Ingeniería de Sistemas- Computación - Diseño Multimedia, Universidad Politécnica Salesiana, Docente en las maestrías de Matemáticas (Redes de computación) y maestría en Agroecología (Escritura Académica en Overleaf), Investigador del grupo GIHP4C de Smart Cities de la Carrera de Sistemas/Computación UPS
+  visible_en_sitio_actual: true
+  orden: 35
+  notas: |-
+    Otras grafías en el sitio actual: Omar Gustavo Bravo Quezada La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: oscar-cartagena
+  nombre: Oscar Cartagena
+  edicion: 2023
+  pais: Ecuador
+  institucion: ''
+  foto: ponentes/2023/oscar-cartagena.png
+  resena: ''
+  visible_en_sitio_actual: true
+  orden: 36
+  notas: Reseña vacía o incompleta en el sitio actual — completar.
+- slug: no-determinado
+  nombre: No determinado
+  edicion: 2023
+  pais: Ecuador
+  institucion: ''
+  foto: ponentes/2023/no-determinado.png
+  resena: ''
+  visible_en_sitio_actual: true
+  orden: 37
+  notas: |-
+    Otras grafías en el sitio actual: Osvaldo Reseña vacía o incompleta en el sitio actual — completar.
+- slug: tatiana-cabrera
+  nombre: Tatiana Cabrera
+  edicion: 2023
+  pais: Ecuador
+  institucion: ''
+  foto: ponentes/2023/tatiana-cabrera.jpg
+  resena: ''
+  visible_en_sitio_actual: true
+  orden: 38
+  notas: Reseña vacía o incompleta en el sitio actual — completar.
+- slug: martha-agila
+  nombre: Martha Agila
+  edicion: 2023
+  pais: ''
+  institucion: Universidad Técnica Particular de Loja - UTPL (Ecuador)
+  foto: ponentes/2023/martha-agila.jpg
+  resena: |-
+    Ingeniera en Sistemas Informáticos y Computación; Magister en Educación a Distancia. Docente bimodal de la UTPL, en el departamento de Ciencias de la Computación y Electrónica dentro de la sección de Inteligencia Artificial. Directora en la Dirección de Tecnologías para la Educación del Vicerrectorado de la Modalidad Abierta y a Distancia. Postulante doctoral del programa Formación en la Sociedad del Conocimiento de la Universidad de Salamanca, España. Líneas de investigación: e-Learning, m-Learning, competencias digitales, aprendizaje activo, tecnologías aplicadas a la
+
+    educación.
+  visible_en_sitio_actual: true
+  orden: 39
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: miguel-ferrer
+  nombre: Miguel Ferrer
+  edicion: 2023
+  pais: ''
+  institucion: Globant
+  foto: ponentes/2023/miguel-ferrer.jpg
+  resena: |-
+    Ingeniero de sistemas especialista en comercio electrónico, con experiencia en procesos de innovación y emprendimiento en la Universidad de Stanford, Google Campus e Intel
+
+    Con una trayectoria de más de 10 años, ha desempeñado un papel fundamental en la transformación digital, liderando proyectos para reconocidas compañías de la industria del entretenimiento, como Square Enix Games, Warner Media y Scentifc Games. Además de otros sectores, incluyendo fintechs y organizaciones gubernamentales.
+
+    Entusiasta del gaming y el desarrollo de experiencias de realidad extendida (XR).
+
+    Actualmente Technical Manager de proyectos en Globant y Subject Matter Expert en el campo de desarrollo de WEB UI.
+  visible_en_sitio_actual: true
+  orden: 40
+- slug: claudio-grandinetti
+  nombre: Claudio Grandinetti
+  edicion: 2021
+  pais: ''
+  institucion: IdeaLab
+  foto: ponentes/2021/claudio-grandinetti.jpg
+  resena: |-
+    Director de la Red De Medios, el Canal de TV y la Radio Digital de la Universidad Nacional de Río Negro. Se desempeña implementando estrategias y proyectos basados en tecnologías emergentes.
+
+    Con más de 25 años de experiencia como Diseñador, Productor Audiovisual y creador de Mundos Inmersivos para entornos de realidad extendida, dirige la puesta en marcha del IDEALAB, —primer estudio multidisciplinar en la Patagonia orientado a la Producción Inmersiva en el ámbito Audiovisual y educativo—.
+  visible_en_sitio_actual: false
+- slug: cristobal-almagia
+  nombre: Cristóbal Almagia
+  edicion: 2021
+  pais: ''
+  institucion: Almagico VR
+  foto: ponentes/2021/cristobal-almagia.jpg
+  resena: |-
+    fundador de Almagico VR, centro de desarrollo de experiencias inmersivas. Colaboramos y producimos contenidos 360º para Museos, Galerías de Arte, Universidades, Investigadores, Centros de formación, Gremios y Empresas. Cristóbal es Ingeniero Comercial con experiencia en apoyo a planes sectoriales para economía creativa, producción audiovisual y dirección de contenidos 360º, con especialización en Chile y el extranjero. En Almagico VR nos orientamos en 3 ámbitos: promover el patrimonio cultural y submarino en 360º; reducir brechas de aprendizaje con experiencias inmersivas para educación; además de brindar soluciones para la industria en entrenamiento, eventos y ferias virtuales.
+  visible_en_sitio_actual: false
+- slug: damian-turkieh
+  nombre: Damián Turkieh
+  edicion: 2021
+  pais: Argentina
+  institucion: ''
+  foto: ponentes/2021/damian-turkieh.jpg
+  resena: |-
+    Pionero en la realización de video 360° y sonido espacial, ha dirigido y producido más de 50 experiencias XR desde 2014, es fundador y director de Realidad 360° Argentina, es docente e investigador. Ha creado el primer estudio de captura de video volumétrico de Argentina. Entre sus últimos trabajos se destacan la serie “4 Feet High / Metro Veinte” (VR), contenidos para la web interactiva de Parques Nacionales, experiencias AR y VR para la exposición “Dalí 2.1, Los Ojos del Surrealismo” y “Virtual Crossings” (performance con MoCap y video Volumétrico). Actualmente, trabaja en los proyectos “Magic in the Desert” (XR con video volumétrico), Montevenus (animación VR), Feel Your Clothes (animación VR), Mindco Relief (mindfulness VR) y nuevas experiencias para "Dalí 2.1" (videomapping inmersivo e interactivo).
+  visible_en_sitio_actual: false
+- slug: daniel-alvarez
+  nombre: Daniel Álvarez
+  edicion: 2021
+  pais: ''
+  institucion: Universidad Católica de Cuenca.
+  foto: ponentes/2021/daniel-alvarez.jpg
+  resena: |-
+    Psicólogo Clínico por la Universidad del Azuay. Master En Investigación en Psicología Clínica y de la salud por la Universitat Autonoma de Barcelona. Docente de la Universidad Católica de Cuenca, en la Facultad de Psicología Clínica. Miembro del equipo de trabajo del Instituto de Neurociencias de la Universidad Católica de Cuenca.
+  visible_en_sitio_actual: false
+- slug: eduardo-sanchez
+  nombre: Eduardo Sánchez
+  edicion: 2021
+  pais: ''
+  institucion: Universidad Autónoma de Nuevo León (México)
+  foto: ponentes/2021/eduardo-sanchez.jpg
+  resena: |-
+    Eduardo Alejandro Sánchez Rentería, ingeniero en mecatrónica especializado en el desarrollo de simulaciones para realidad virtual en entornos de ingeniería, he participado en el Centro de Innovación, Investigación y Desarrollo en Ingeniería y Tecnología (CIIDIT) además del Centro de Investigación e Innovación en Ingeniería Aeronáutica (CIIIA)
+  visible_en_sitio_actual: false
+- slug: gaston-carballal
+  nombre: Gastón Carballal
+  edicion: 2021
+  pais: ''
+  institucion: Artista VR (Argentina)
+  foto: ponentes/2021/gaston-carballal.jpg
+  resena: |-
+    VRartisan es mi nickname y Cuento historias a través del arte digital.
+
+    Soy escultor de realidad virtual, si querés podés ver alguno de los lugares que he creado, a mis mundos, quizás en alguno de ellos tu mente se sienta como en casa.
+
+    A lo largo de mi vida he trabajado para la televisión y la publicidad, he creado campañas y dirigido anuncios para algunas de las marcas más reconocidas del mundo como Nike, PlayStation, Oracle y Onitsuka Tiger, sin embargo, estoy creando un nuevo camino.
+
+    Quiero un estilo de vida con creaciones originales, colaborando con artistas para tener un verdadero intercambio de ideas y conceptos, unir culturas y hablar el lenguaje de los colores y la expresión.
+  visible_en_sitio_actual: false
+- slug: juan-jose-gahona
+  nombre: Juan Jose Gahona
+  edicion: 2021
+  pais: ''
+  institucion: Universidad Técnica Particular de Loja - Ecuador
+  foto: ponentes/2021/juan-jose-gahona.jpg
+  resena: |-
+    Estudiante de la UTPL e integrante del club de RV de la misma, soy un apasionado de la programación y las artes digitales actualmente soy el encargado del desarrollo de los filtros de AR de la universidad.
+  visible_en_sitio_actual: false
+- slug: karina-acuna
+  nombre: Karina Acuña
+  edicion: 2021
+  pais: ''
+  institucion: Shiftactive (Colombia).
+  foto: ponentes/2021/karina-acuna.jpg
+  resena: |-
+    Directora de Shift Active compañía de inteligencia interactiva con más de 15 años de experiencia en la creación de productos digitales como videojuegos, app interactivas y realidades extendidas para varios países en Latam y Europa, Panelista en el primer encuentro de Women in Games en Colombia, el cual fomenta la participación de mujeres en la industria de Videojuegos y hace parte de la junta directiva de IGDA Colombia (International Game Developers Association)
+  visible_en_sitio_actual: false
+- slug: loreto-saez
+  nombre: Loreto Sáez
+  edicion: 2021
+  pais: ''
+  institucion: Universidad Técnica Particular de Loja (Ecuador)
+  foto: ponentes/2021/loreto-saez.jpg
+  resena: |-
+    Funcionaria de la Dirección General de Relaciones Interinstitucionales UTPL: Relaciones públicas, Líder de Grupos de Arte UTPL, Coordinadora Unidad de Gestión Cultural UTPL desde 2012 y hasta la presente fecha. Curso de gestión cultural 2019 (UASB-Ecuador). Taller de gestión cultural 2017 (Taller Multinacional-México). Mentora de la Incubadora cultural CCE Azuay 2020-2021. Mentora de la línea de industria cultural Prendho UTPL 2021.
+  visible_en_sitio_actual: false
+- slug: maryheth-cabrera
+  nombre: Maryheth Cabrera
+  edicion: 2021
+  pais: ''
+  institucion: Agama en Canadá
+  foto: ponentes/2021/maryheth-cabrera.jpg
+  resena: |-
+    Creative Chief Officer en Agama Canadá, es una realizadora audiovisual Bogotana con más de 5 años de experiencia; se ha especializado en el desarrollo de soluciones creativas junto con nuevas tecnologías para campañas digitales, páginas web, contenidos audiovisuales, experiencias sonoras y aplicaciones móviles.
+  visible_en_sitio_actual: false
+- slug: mauricio-lopez
+  nombre: Mauricio López
+  edicion: 2021
+  pais: ''
+  institucion: Oso Borroso Digital
+  foto: ponentes/2021/mauricio-lopez.jpg
+  resena: |-
+    Socio fundador y Desarrollador XR en OsoBorroso Digital. Llevo un poco más de 9 años experimentando con la Realidad Aumentada y la Realidad Virtual. Pasé de estudiar diseño gráfico al mundo del diseño interactivo y rápidamente al diseño de experiencias inmersivas, especialmente para Web. Actualmente me dedico al desarrollo de proyectos AR y VR para marcas, cultura y eventos.
+  visible_en_sitio_actual: false
+- slug: milton-sancan
+  nombre: Milton Sancán
+  edicion: 2021
+  pais: ''
+  institucion: Ronin Flame - Ecuador
+  foto: ponentes/2021/milton-sancan.jpg
+  resena: |-
+    Milton Elías Sancán Lapo, MSc. Ha trabajado para empresas de 3D y videojuegos como: Matte, Awa, Paradise, PolygonFarm (Reino Unido), MIcrosoft Xbox, CII (España) y marcas como: Pepsi, Chevrolet, Doritos, Adidas, Coca Cola, Fanta, Powerade y Marlboro. Es cofundador de RONIN Flame Games, empresa especializada en el desarrollo de videojuegos advergames. Cursa un doctorado en la Universidad Politécnica de Valencia. Es docente, investigador y coordinador a tiempo completo en la facultad de Artes y Humanidades de la UCSG.
+  visible_en_sitio_actual: false
+- slug: paulina-donoso
+  nombre: Paulina Donoso
+  edicion: 2021
+  pais: ''
+  institucion: UDLA (Ecuador)
+  foto: ponentes/2021/paulina-donoso.jpg
+  resena: |-
+    Directora de la Carrera de Multimedia y Producción Audiovisual en la UDLA en Ecuador. Está por terminar su PHD en Comunicación en la Universidad Austral en Argentina en análisis de guion documental político. Es miembro de la Academia de Artes Audiovisuales y Cinematográficas del Ecuador. Era la presidenta del comité de selección de proyectos de Ecuador en espacios internacionales para el ICCA del Ecuador y exdirectora Técnica de Consejo Nacional de Cine de Ecuador. Se especializa en escritura de guiones. Ha dirigido varios videos musicales y cortos. Es directora del Festival Internacional VR/ AR “MULTIFEST” que se hace juntamente con el gobierno de Francia. Es directora del Proyecto When Silence Talks ganador del premio Artizen Latam XR. Fue commissioner en el Festival New Images 2021 y organizó el satélite del Festival de Cannes XR. Organiza el satélite de Steropsia Latam en Ecuador y es miembro del jurado y Board of Members.
+  visible_en_sitio_actual: false
+- slug: roberto-cerda
+  nombre: Roberto Cerda
+  edicion: 2021
+  pais: México
+  institucion: ''
+  foto: ponentes/2021/roberto-cerda.jpg
+  resena: |-
+    Innovador Social, Creador de Dreamo XR, Memoria Virtual, el Instituto Mexicano de Realidades Mixtas y Restore Coral. Su relación con las tecnologías emergentes nace en Barcelona en 2013 del programa 2050Life en donde se aborda la crisis de los Océanos desde un ángulo de Innovación Social y Tecnologías Emergentes, implementado estrategias innovadoras a favor del coral y el objetivo 14 (Vida bajo el Agua) del Programa de las Naciones Unidas para el Desarrollo Sostenible.
+
+    MTV Agentes de Cambio 2017 por su programa de reducción de brecha digital y educación ambiental, con +50,000 Niños y Adultos beneficiados en + 50 festivales, Escuelas, programas itinerantes a comunidades de escasos recursos.
+  visible_en_sitio_actual: false
+- slug: roy-guzman
+  nombre: Roy Guzmán
+  edicion: 2021
+  pais: ''
+  institucion: Cerv Perú
+  foto: ponentes/2021/roy-guzman.jpg
+  resena: |-
+    Ingeniero Industrial especialista en desarrollo simulaciones virtuales para experiencias inmersivas, con amplia experiencia en proyecto de modelado y animación 3D para procedimientos de mantenimiento, operación y seguridad industrial. Actualmente, Director ejecutivo en CERV Realidad Virtual y miembro del comité de tecnología e Innovación de la Cámara de Comercio e Industria de Arequipa.
+  visible_en_sitio_actual: false
+- slug: samuel-israel
+  nombre: Samuel & Israel
+  edicion: 2021
+  pais: ''
+  institucion: Klark
+  foto: ponentes/2021/samuel-israel.jpg
+  resena: |-
+    Samuel Lic. Diseño Gráfico e Israel Ing. en Sistemas, juntan sus conocimientos para desarrollar aplicaciones Inmersivas desde el 2015, dando ponencias y seminarios en algunas universidades en la provincia de Imbabura, así como el desarrollo de aplicaciones en más de 6 eventos provinciales. Klark
+  visible_en_sitio_actual: false
+- slug: samuel-acosta
+  nombre: Samuel Acosta
+  edicion: 2021
+  pais: ''
+  institucion: Universidad EAFIT (Colombia)
+  foto: ponentes/2021/samuel-acosta.jpg
+  resena: |-
+    Ingeniero en diseño de entretenimiento digital con énfasis en experiencias interactivas y aspirante a magíster en comunicación transmedia de la universidad EAFIT, tiene experiencia en desarrollo con tecnologías XR y aplicaciones en el motor de videojuegos Unity, conceptualización, prototipado y desarrollo de experiencias en realidad mixta y mundos inmersivos.
+  visible_en_sitio_actual: false
+- slug: sergio-fernandez
+  nombre: Sergio Fernández
+  edicion: 2021
+  pais: ''
+  institucion: Agama en Colombia y Canadá
+  foto: ponentes/2021/sergio-fernandez.jpg
+  resena: |-
+    CEO de Agama en Colombia y Canadá. Co-fundador y CTO de dos Startup Canadienses: MICC y GetBooking. Más de 12 años de experiencia como programador. Apasionado por tecnologías inmersivas y creyente de plataformas descentralizadas. Actualmente trabaja como desarrollador de aplicaciones móviles para XR, Web 3 y plataformas descentralizadas.
+  visible_en_sitio_actual: false
+- slug: oscar-cartagena
+  nombre: Óscar Cartagena
+  edicion: 2021
+  pais: Chile
+  institucion: ''
+  foto: ponentes/2021/oscar-cartagena.jpg
+  resena: |-
+    Es un emprendedor con 24 años de desempeño en diversas áreas del rubro artístico y digital. Nacido en Venezuela de padres chilenos, en estas dos décadas ha compartido espacios y escenarios con diversos profesionales, músicos y artistas; en tarimas nacionales e internacionales, universidades y municipalidades. Su expertise profesional es de gran amplitud, cubriendo aspectos técnicos, publicitarios, artísticos y comerciales de diversas verticales de negocios. Su actual foco es la industria XR en Chile, su impacto en Latinoamérica y su potencial de ser uno de los nodos principales de estas tecnologías en la región.
+
+    Su experiencia como emprendedor tecnológico es de larga trayectoria, ya sea participando en proyectos personales como Posterity, pasando por Start-Up Chile como CTO con Dj Profile TV, prestando servicios de tecnología de punta con su agencia boutique Augmented Experiences o produciendo eventos digitales con NVIVO; ha ayudado a múltiples Start-ups a concretar sus ideas a través de la estrategia, branding, marketing o implementación tecnológica de sus proyectos. Como profesional ha sido parte de equipos ganadores de premios internacionales (3 PROMAX BDA, 1 ACHAP) y colaborado con una larga lista de empresas de gran calibre.
+
+    Actualmente, es el Fundador y Presidente de la Asociación Chilena de Experiencias Inmersivas (ACHEI A.G.), una asociación gremial sin fines de lucro enfocada en la industria XR (Realidad Aumentada, Virtual y Mixta) en Chile y Latinoamérica; con la finalidad de impulsar la industria desde una perspectiva formativa, de creación de estándares y de búsqueda de espacios comunes entre la tecnología, el estado, la formación académica y el emprendimiento.
+  visible_en_sitio_actual: false
+- slug: elvira-rincon
+  nombre: Elvira Rincón
+  edicion: 2020
+  pais: ''
+  institucion: Tecnológico de Monterrey
+  foto: ponentes/2020/elvira-rincon.jpg
+  resena: ''
+  visible_en_sitio_actual: true
+  orden: 1
+  notas: Reseña vacía o incompleta en el sitio actual — completar.
+- slug: jorge-bacca
+  nombre: Jorge Bacca
+  edicion: 2020
+  pais: ''
+  institucion: Fundación Universitaria Konrad Lorenz
+  foto: ponentes/2020/jorge-bacca.jpg
+  resena: |-
+    Doctor en tecnología por la Universidad de Girona (España) con mención Cum Laude, Magister en Informática Industrial por la misma universidad e Ingeniero en Telemática de la Universidad Distrital Francisco José de Caldas de Colombia. Actualmente es profesor asociado e investigador de la Fundación Universitaria Konrad Lorenz. Sus intereses de investigación giran en torno al uso de la Realidad Aumentada y la Realidad Virtual como tecnologías educativas en diversas áreas del conocimiento. También es presidente del capítulo para Colombia de la Immersive Learning Research Network (iLRN).
+  visible_en_sitio_actual: true
+  orden: 2
+- slug: jorge-gutierrez
+  nombre: Jorge Gutiérrez
+  edicion: 2020
+  pais: ''
+  institucion: U
+  foto: ponentes/2020/jorge-gutierrez.jpg
+  resena: I
+  visible_en_sitio_actual: true
+  orden: 3
+  notas: Reseña vacía o incompleta en el sitio actual — completar.
+- slug: julio-cabrero
+  nombre: Julio Cabrero
+  edicion: 2020
+  pais: ''
+  institucion: F
+  foto: ponentes/2020/julio-cabrero.jpg
+  resena: D
+  visible_en_sitio_actual: true
+  orden: 4
+  notas: Reseña vacía o incompleta en el sitio actual — completar.
+- slug: laura-raya
+  nombre: Laura Raya
+  edicion: 2020
+  pais: ''
+  institucion: Universidad de Tecnología y Arte Digital (U-tad)
+  foto: ponentes/2020/laura-raya.jpg
+  resena: |-
+    Directora en U-tad de Postgrados de Tecnologías Inmersivas y Realidad Virtual. Directora de proyectos I+D+i de Computación Gráfica y Realidad Virtual
+  visible_en_sitio_actual: true
+  orden: 5
+- slug: lorena-gonzalez-lopez
+  nombre: Lorena González López
+  edicion: 2020
+  pais: ''
+  institucion: U
+  foto: ponentes/2020/lorena-gonzalez-lopez.jpg
+  resena: D
+  visible_en_sitio_actual: true
+  orden: 6
+  notas: Reseña vacía o incompleta en el sitio actual — completar.
+- slug: maria-elisa-flores
+  nombre: María Elisa Flores
+  edicion: 2020
+  pais: ''
+  institucion: Soyarteecuador
+  foto: ponentes/2020/maria-elisa-flores.jpg
+  resena: |-
+    Máster en crítica de arte por la Universidad Nacional de las Artes (Buenos Aires-Argentina). Especialista en producción de textos críticos y de difusión mediática de las artes. Licenciada en restauración de obras de arte y museología por la Universidad Tecnológica Equinoccial (Quito-Ecuador). Curadora, crítica de arte y perito valuador certificada en bellas artes. Ha trabajado por más de diez años en conservación y restauración de bienes muebles e inmuebles mediante proyectos de rescate y salvaguarda del patrimonio cultural del Ecuador. Actualmente se desempeña como redactora freelance en revistas culturales. Redacción de reseñas artísticas y críticas de arte en prensa escrita. Producción de textos para catálogos y dossiers de artistas. Es asesora y promotora cultural independiente. Técnica en conservación y gestión del patrimonio cultural. Brinda consultorías para el desarrollo de colecciones privadas y corporativas. Realiza inventario y catalogación de colecciones públicas y privadas; peritajes, investigación histórica y avalúos de obras de arte. Participa activamente en congresos, seminarios, cursos y otros encuentros nacionales e internacionales de arte-cultura y museos desde hace más de una década.
+  visible_en_sitio_actual: true
+  orden: 7
+- slug: martha-agila
+  nombre: Martha Agila
+  edicion: 2020
+  pais: ''
+  institucion: Universidad Técnica Particular de Loja - UTPL (Ecuador)
+  foto: ponentes/2020/martha-agila.jpg
+  resena: |-
+    Ingeniera en Sistemas Informáticos y Computación; Magister en Educación a Distancia. Docente bimodal de la UTPL, en el departamento de Ciencias de la Computación y Electrónica dentro de la sección de Inteligencia Artificial. Directora en la Dirección de Tecnologías para la Educación del Vicerrectorado de la Modalidad Abierta y a Distancia. Postulante doctoral del programa Formación en la Sociedad del Conocimiento de la Universidad de Salamanca, España. Líneas de investigación: e-Learning, m-Learning, competencias digitales, aprendizaje activo, tecnologías aplicadas a la
+
+    educación.
+  visible_en_sitio_actual: true
+  orden: 8
+  notas: La reseña difiere entre páginas; se conservó la versión más completa.
+- slug: paulo-guerra
+  nombre: Paulo Guerra
+  edicion: 2020
+  pais: ''
+  institucion: Universidad de las Américas
+  foto: ponentes/2020/paulo-guerra.jpg
+  resena: I
+  visible_en_sitio_actual: true
+  orden: 9
+  notas: Reseña vacía o incompleta en el sitio actual — completar.
+- slug: samir-vargas
+  nombre: Samir Vargas
+  edicion: 2020
+  pais: ''
+  institucion: U
+  foto: ponentes/2020/samir-vargas.jpg
+  resena: I
+  visible_en_sitio_actual: true
+  orden: 10
+  notas: Reseña vacía o incompleta en el sitio actual — completar.
+- slug: veronica-rodriguez
+  nombre: Verónica Rodríguez
+  edicion: 2020
+  pais: ''
+  institucion: U
+  foto: ponentes/2020/veronica-rodriguez.jpg
+  resena: I
+  visible_en_sitio_actual: true
+  orden: 11
+  notas: Reseña vacía o incompleta en el sitio actual — completar.
+- slug: vicky-vasan
+  nombre: Vicky Vasan
+  edicion: 2020
+  pais: ''
+  institucion: INMERSIVA xR
+  foto: ponentes/2020/vicky-vasan.jpg
+  resena: |-
+    Cofundadora de INMERSIVAxR / Realidad Extendida, Virtual, Aumentada / Creative & Transmedia Producer. Investigadora en Agencia_RV y LabRS.
+  visible_en_sitio_actual: true
+  orden: 12

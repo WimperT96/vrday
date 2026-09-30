@@ -1,0 +1,48 @@
+# PÁGINA HEREDADA: INICIO – ARIES (grupo DTE / UTPL)
+# URL actual: https://vrdaylatam.org/inicio-aries/        URL nueva: /inicio-aries/
+# Borrador de portada de otro proyecto (grupo DTE de la UTPL). No enlazada; imágenes inexistentes.
+
+slug: inicio-aries
+url: /inicio-aries/
+titulo: Inicio – ARIES
+estado: oculta
+url_original: https://vrdaylatam.org/inicio-aries/
+
+secciones:
+  - tipo: texto
+    id: bienvenida
+    titulo: ¡Bienvenidos!
+    cuerpo: |
+      El NAMING DTE de la UTPL es un grupo de trabajo e investigación que tiene su principal interés en el estudio de las nuevas tecnologías y su implementación en los procesos educativos.
+
+  - tipo: tarjetas
+    id: lineas-investigacion
+    titulo: Líneas de Investigación
+    subtitulo: "El DTE en la actualidad ha desarrollado proyectos en las siguientes líneas:"
+    items:
+      - titulo: RX
+        etiqueta: Realidad extendida
+        texto: La Realidad eXtendida hace referencia a la combinación de entornos reales y virtuales en conjunto con la interacción humano-máquina generada por un computador, sirviendo como paraguas para poder abarcar diversas áreas como realidad aumentada, virtual, mixta y realidades futuras
+        imagen: heredadas/inicio-aries/banner.svg
+      - titulo: LAB-R
+        etiqueta: Laboratorios remotos
+        texto: Son herramientas tecnológicas compuestas por software (sistema informático) y hardware (sistema electrónico o maquetas) que permiten a los estudiantes de forma remota realizar sus prácticas desde donde tengan conexión a internet dando la apariencia de encontrarse en un laboratorio tradicional.
+        imagen: heredadas/inicio-aries/banner.svg
+      - titulo: Virtual Reality Day 2020
+        imagen: heredadas/inicio-aries/banner.svg
+      - titulo: Repositorio 3D
+        texto: Espacio para almacenar, organizar, difundir, compartir y editar objetos o modelos 3D
+        imagen: heredadas/inicio-aries/banner.svg
+
+  # En el sitio actual siguen tres bloques vacíos: "Tendencias tecnológicas" (botón "Ver todas"),
+  # un bloque sin título y "Noticias recientes". Se dejan como placeholders.
+  - tipo: texto
+    id: tendencias
+    titulo: Tendencias tecnológicas
+    placeholder: true
+    cuerpo: ""
+  - tipo: texto
+    id: noticias
+    titulo: Noticias recientes
+    placeholder: true
+    cuerpo: ""

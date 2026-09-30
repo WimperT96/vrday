@@ -1,0 +1,105 @@
+# ============================================================================
+# CONFIGURACIÓN GLOBAL DEL SITIO
+# Todo lo que aparece en todas las páginas: nombre, menú, pie, auspiciantes, SEO base.
+# Las rutas de imágenes son relativas a la carpeta medios/.
+# ============================================================================
+
+sitio:
+  nombre: Virtual Reality Day
+  nombre_corto: VRD
+  lema: Virtual Reality Day Latam
+  dominio: https://vrdaylatam.org
+  idioma: es
+  hashtag: "#VRDayLatam"
+  logo: marca/logo-vrday-2026-provisional.png   # recorte provisional de la maqueta; PENDIENTE: logo SVG del diseñador
+  logo_anterior: marca/logo-vrday-latam.png      # logo 2023, se usa en memorias
+  favicon: marca/isotipo-visor.svg               # PENDIENTE: placeholder; generar desde el isotipo real
+  organizador: Universidad Técnica Particular de Loja (UTPL) — iniciativa "Realidad X UTPL"
+
+seo:
+  titulo_por_defecto: Virtual Reality Day – VRD
+  plantilla_titulo: "{pagina} – Virtual Reality Day"
+  descripcion_por_defecto: >-
+    VR Day LATAM 2026, 12 y 13 de noviembre en la UTPL. Innovación, educación y experiencias
+    inmersivas para un futuro sin límites.
+  imagen_compartir: inicio-2026/hero-persona-vr.svg   # PENDIENTE: imagen 1200×630 para redes
+
+analitica:
+  # Identificadores presentes en el sitio actual. Decidir si se conservan.
+  google_tag_manager: GTM-MCV3JJR
+  google_analytics_4: G-HMBRY9T73Y
+
+# ----------------------------------------------------------------------------
+# MENÚ PRINCIPAL (edición 2026, según la maqueta + Memorias)
+# url: ruta interna (empieza con /) o enlace externo (https://...)
+# Menú anterior (2023): Inicio · Acerca de · Agenda · Plataforma inmersiva ·
+#   Memorias ▾ · Centro de ayuda · Contacto. Plataforma inmersiva y Centro de
+#   ayuda pasaron al pie porque describen la edición 2020.
+# ----------------------------------------------------------------------------
+menu_principal:
+  - texto: Inicio
+    url: /
+  - texto: Acerca de
+    url: /acerca-de/
+  - texto: Ponentes
+    url: /ponentes/
+  - texto: Agenda
+    url: /agenda/
+  - texto: Lugar
+    url: /lugar/
+  - texto: Memorias
+    url: /memorias/
+    submenu:
+      - texto: VRD 2023
+        url: /memorias/2023/
+      - texto: VRD 2022
+        url: /memorias/2022/
+      - texto: VRD 2021
+        url: /memorias/2021/
+      - texto: VRD 2020
+        url: /memorias/2020/
+      - texto: VRD 2019
+        url: /memorias/2019/
+  - texto: Contacto
+    url: /contacto/
+
+# Botón destacado a la derecha del menú. Usa el enlace de inscripción de evento.yaml.
+# Mientras ese enlace esté vacío, el botón no se muestra.
+boton_cabecera:
+  texto: Inscríbete
+  url_desde: evento.inscripcion.url
+
+# ----------------------------------------------------------------------------
+# PIE DE PÁGINA
+# ----------------------------------------------------------------------------
+pie:
+  logo: marca/logo-vrday-2026-provisional.png
+  enlaces:                       # páginas que salieron del menú principal
+    - texto: Plataforma inmersiva
+      url: /plataforma-inmersiva/
+    - texto: Centro de ayuda
+      url: /centro-de-ayuda/
+    - texto: Memorias
+      url: /memorias/
+    - texto: Contacto
+      url: /contacto/
+  # Sede organizadora y aliados: se leen de evento.yaml (organizadores / aliados).
+  # Los auspiciantes 2023 (COP, Globant, iLRN, Unity, Libel Academy) se movieron a /memorias/2023/.
+  mostrar_aliados: true
+  redes_sociales: []
+    # - red: facebook
+    #   url: https://www.facebook.com/...
+  texto_legal: ""   # p. ej. "© 2026 Virtual Reality Day LATAM"
+
+# ----------------------------------------------------------------------------
+# REDIRECCIONES (URL antigua -> URL nueva). Ver docs/01-mapa-del-sitio.md
+# ----------------------------------------------------------------------------
+redirecciones:
+  /vrd-2023/: /memorias/2022/
+  /vrd-2021/: /memorias/2021/
+  /vrd-2020/: /memorias/2020/
+  /vrd-2019/: /memorias/2019/
+  /agenda-2019/: /memorias/2020/agenda/
+  /acerca-de-vrd-anterior/: /memorias/2020/acerca-de/
+  /prueba/: /
+  /portfolio/: /

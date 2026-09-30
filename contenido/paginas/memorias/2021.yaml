@@ -1,0 +1,48 @@
+# PÁGINA: MEMORIAS VRD 2021
+# URL actual: https://vrdaylatam.org/vrd-2021/        URL nueva: /memorias/2021/
+
+slug: memorias-2021
+url: /memorias/2021/
+titulo: VRD 2021
+estado: publicada
+url_original: https://vrdaylatam.org/vrd-2021/
+edicion: 2021
+
+secciones:
+  - tipo: cabecera
+    titulo: Virtual Reality Day 2021
+
+  - tipo: galeria
+    id: fotos
+    imagenes:
+      - memorias/2021/00-organizadores.jpg
+      - memorias/2021/01.png
+      - memorias/2021/02.png
+      - memorias/2021/03.png
+      - memorias/2021/04.png
+      - memorias/2021/05.png
+      - memorias/2021/06.png
+      - memorias/2021/07.png
+      - memorias/2021/08.png
+      - memorias/2021/09.png
+      - memorias/2021/10.png
+      - memorias/2021/11.png
+      - memorias/2021/12.png
+
+  # En el sitio actual hay 3 reproductores de YouTube SIN video (id vacío).
+  # Se dejan como placeholders hasta tener los enlaces.
+  - tipo: videos
+    id: videos
+    items:
+      - {titulo: "", youtube: ""}   # PENDIENTE
+      - {titulo: "", youtube: ""}   # PENDIENTE
+      - {titulo: "", youtube: ""}   # PENDIENTE
+
+  # MEJORA PROPUESTA: los 19 ponentes de 2021 existen en el sitio actual como modales ocultos
+  # de la página Agenda. Se pueden mostrar aquí. Cambiar "mostrar" a true para activarlo.
+  - tipo: ponentes
+    id: ponentes
+    titulo: Ponentes 2021
+    edicion: 2021
+    solo_visibles: false
+    mostrar: false

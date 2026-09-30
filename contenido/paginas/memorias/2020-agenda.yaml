@@ -1,0 +1,110 @@
+# PÁGINA: AGENDA VRD 2020
+# URL actual: https://vrdaylatam.org/agenda-2019/   (el slug dice 2019 pero es la agenda de 2020:
+#   VirBELA, juego Covid-19, Arte en cuarentena, iLRN Ecuador)
+# URL nueva: /memorias/2020/agenda/   (redirección 301 desde /agenda-2019/)
+# No enlazada desde el menú en el sitio actual.
+
+slug: memorias-2020-agenda
+url: /memorias/2020/agenda/
+titulo: Agenda 2020
+estado: oculta
+url_original: https://vrdaylatam.org/agenda-2019/
+edicion: 2020
+
+secciones:
+  - tipo: cabecera
+    titulo: Agenda
+    fondo: fondos/cabecera-paginas-2020.jpg
+
+  - tipo: agenda_lista
+    id: jornada
+    titulo: Jornada de la mañana       # título tal cual del sitio actual (aunque cubre todo el día)
+    sesiones:
+      - hora: 8:00-9:30
+        lugar: Plataforma Inmersiva
+        icono: agenda-2020/icono-conferencias.png
+        titulo: Inauguración "Virtual Reality Day" / conferencia del integrante de virtual Reality Day.
+        moderador: Misiones
+      - hora: 9:30-10:00
+        lugar: Plataforma Inmersiva
+        icono: agenda-2020/icono-juego.png
+        titulo: Lanzamiento del Juego Covid – 19 y reto redes sociales (SparkAR).
+        rol_ponentes: Expositor
+        ponentes: [Romario Borja - Representante del Club.]
+        moderador: Misiones
+      - hora: 10:30-13:00
+        lugar: Plataforma Inmersiva
+        icono: agenda-2020/icono-juego.png
+        titulo: Realidad extendida en la educación superior visión general (20 min).
+        rol_ponentes: Expositores
+        ponentes:
+          - Laura Raya González - U-TAD Centro Universitario de Tecnología y Arte Digital, España
+          - Vicky Vasán & Lorena González López (INMERSIVA xR) España
+          - Julio Cabero (Universidad de Sevilla) España
+          - Martha Agila (UTPL).
+          - Paulo Guerra (UDLA).
+        moderador: Inés Jara
+      - hora: 14:00-14:40
+        lugar: Plataforma Inmersiva
+        icono: agenda-2020/icono-juego.png
+        titulo: Lanzamiento de exposición "Arte en cuarentena".
+        rol_ponentes: Expositor
+        ponentes: [María Elisa Flores Proaño - Curadora certificada en bellas artes.]
+        extra:
+          - titulo: Artistas
+            items: [Juan Pérez, Juan Pérez, Juan Pérez]     # texto de relleno en el sitio actual
+          - titulo: Asistencia técnica
+            items: [Jennifer Samaniego]
+        moderador: Relaciones interinstitucionales
+      - hora: 15:00-18:00
+        lugar: Plataforma Inmersiva
+        icono: agenda-2020/icono-conferencias.png
+        titulo: Metodologías activas con Realidad extendida
+        rol_ponentes: Expositores
+        ponentes:
+          - Jorge Luis Bacca (Fundación Universitaria Konrad Lorenz, Ilrn) Colombia
+          - Leticia Neira Tovar.(Universidad Autónoma de Nuevo León) México.
+          - Elvira Rincón (Tecnológico de Monterrey) México.
+          - Juan Carlos Ramon (UTPL) Ecuador.
+          - Senecyt
+        moderador: Paola Sarango
+      - hora: 15:00-18:00
+        lugar: Plataforma Inmersiva
+        icono: agenda-2020/icono-conferencias.png
+        titulo: Experiencia de usuario, accesibilidad y evaluación en Realidad extendida (20min)
+        rol_ponentes: Expositores
+        ponentes:
+          - Alicia Ceñellas (VISYON (Grupo Mediapro))
+          - Jorge Martin Gutiérrez (Universidad La Laguna)
+          - Valeria Farinazzo (Universidad Presbiteriana Mackenzie).
+          - Rodrigo Saraguro (ESPOL) Ecuador.
+          - Lenovo Educación
+        moderador: Jennifer Samaniego
+      - hora: 18:00-19:00
+        lugar: Zoom
+        icono: agenda-2020/icono-conferencias.png
+        titulo: Iniciativa iLRN capítulo Ecuador
+        rol_ponentes: Expositores
+        ponentes:
+          - Jorge Luis Bacca (Fundación Universitaria Konrad Lorenz, Ilrn) Colombia.
+          - Jennifer Samaniego (primero pasos Ilrn-Ecuador).
+        extra:
+          - titulo: Invitados
+            items: [Rodrigo Saraguro (ESPOL), Senecyt, Paulo Guerra (UDLA)., Ministerio de educación, Universidades y Escuelas Politécnicas del País.]
+        moderador: Martha Agila
+      - hora: Todo el día
+        lugar: Plataforma inmersiva
+        icono: agenda-2020/icono-conferencias.png
+        titulo: Exposición de proyectos
+        rol_ponentes: Expositores
+        ponentes: [Club RV, UDLA, SENECYT, LENOVO]
+      - hora: 20:00 - 20:30
+        lugar: Plataforma inmersiva
+        icono: agenda-2020/icono-conferencias.png
+        titulo: Cierre de evento
+
+  - tipo: ponentes
+    id: ponentes
+    titulo: Ponentes confirmados
+    edicion: 2020
+    solo_visibles: true

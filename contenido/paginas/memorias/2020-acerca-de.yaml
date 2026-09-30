@@ -1,0 +1,66 @@
+# PÁGINA: ACERCA DEL VRD (versión 2020)
+# URL actual: https://vrdaylatam.org/acerca-de-vrd-anterior/
+# URL nueva: /memorias/2020/acerca-de/   (redirección 301)
+# No enlazada desde el menú en el sitio actual. La última sección es texto de relleno (lorem ipsum).
+
+slug: memorias-2020-acerca-de
+url: /memorias/2020/acerca-de/
+titulo: Acerca de VRD anterior
+estado: oculta
+url_original: https://vrdaylatam.org/acerca-de-vrd-anterior/
+edicion: 2020
+
+secciones:
+  - tipo: cabecera
+    titulo: Acerca de
+    fondo: fondos/cabecera-paginas-2020.jpg
+
+  - tipo: texto
+    id: que-es-el-vrd
+    titulo: ¿Qué es el VRD?
+    imagen: acerca-de-vrd-anterior/publicidad-rx.jpg
+    imagen_posicion: derecha
+    cuerpo: |
+      El Día de la Realidad Virtual es una serie de eventos de RV / RA organizados en todo el mundo para ayudar a que la realidad virtual y aumentada se difunda.
+
+      Cualquier individuo, empresa u organización puede organizar un evento público de realidad virtual / realidadaumentada gratuito y formar parte del fenómeno del Día de la Realidad Virtual. Este es un esfuerzo completamente voluntario y de base. Se trata de unir la energía y los intereses de la comunidad en general y enfocar esa energía en beneficio de todos en un día especial.
+
+  - tipo: texto
+    id: como-funciona
+    titulo: ¿Cómo funciona?
+    cuerpo: |
+      Organiza su evento local de RV / RA en cualquier lugar de su elección. Este podría ser un evento a pequeña escala en una cafetería local o un evento más grande en una escuela pública o un socio corporativo en su área. Siempre que el objetivo de su evento sea ayudar a las personas a exponerse a la realidad virtual / realidad aumentada y la asistencia sea gratuita, el tamaño, la ubicación y el lugar dependen de usted.
+
+  - tipo: texto
+    id: difusion
+    titulo: ¿Cómo vamos a hacer correr la voz?
+    cuerpo: |
+      1. Publicaremos varios comunicados de prensa para promover el Día de la Realidad Virtual antes del evento que comienza a principios de septiembre, informando al público que haga planes para asistir a un evento cerca de ellos.
+      2. Para cada evento que haya sido programado para el lunes 18 de noviembre, nos comunicaremos con los medios de comunicación locales de su ciudad esa semana para cubrir el evento.
+      3. Durante la semana anterior, también nos comunicaremos con los sistemas escolares públicos donde se llevan a cabo los eventos, informándoles que pidan a los maestros que hagan anuncios en sus aulas. También informaremos a las asociaciones de padres / maestros (PTA) de los alrededores.
+      4. Realizaremos una gran campaña en las redes sociales durante toda la semana anterior al 21 de noviembre.
+      5. Programaremos controles remotos de video en vivo con todos los eventos de ese día para que compartan lo que están haciendo localmente con la comunidad global de Internet en general.
+
+  - tipo: texto
+    id: por-que
+    titulo: ¿Por qué estamos haciendo esto?
+    cuerpo: |
+      Es difícil decir en este momento si 2020 es un año crítico o no para la industria de VR / AR. Sabemos que para cualquier empresa, nueva o establecida, generar interés y generar ingresos es siempre de suma importancia.
+
+      Además, AR / VR aún no se ha generalizado. Se está acercando. Sin embargo, será difícil encontrar a alguien que haya tenido una experiencia de realidad virtual de alta gama con Microsoft HoloLens, Oculus Rift o HTC Vive.
+
+      Queremos ayudar a cambiar eso. Por eso, decidimos apostar por el suelo y designar el sábado 21 de noviembre de 2020 como el tercer Día mundial anual de la realidad virtual.
+
+      Elegimos este día porque es el último sábado antes del Black Friday y el inicio de la temporada de compras navideñas. También es un día en el que la mayoría de los estudiantes de grado, secundaria y universidad todavía están en la escuela antes de las vacaciones de Acción de Gracias. Además, al tenerlo los fines de semana, permite a los padres traer a sus hijos.
+
+      Nos gustaría animar a individuos y grupos a organizar un evento público de realidad virtual gratuito en este día sobre cualquier tema que desee. Podría ser presentar la realidad virtual por primera vez a las personas o centrarse en un tema vertical de su elección, con el objetivo de educar e informar.
+
+  - tipo: texto
+    id: quien-organiza
+    titulo: ¿Quién organiza el VR Day Ecuador?
+    imagen: acerca-de-vrd-anterior/logo-realidad-x.png
+    imagen_posicion: izquierda
+    cuerpo: |
+      <!-- PLACEHOLDER: en el sitio actual este bloque es texto de relleno (lorem ipsum). -->
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+    placeholder: true

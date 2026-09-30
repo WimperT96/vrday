@@ -1,0 +1,73 @@
+# PÁGINA: CENTRO DE AYUDA
+# URL actual: https://vrdaylatam.org/centro-de-ayuda/        URL nueva: /centro-de-ayuda/
+# Nota: las preguntas hacen referencia a la edición 2020 (fechas, VirBELA, cupos). Ver docs/06.
+
+slug: centro-de-ayuda
+url: /centro-de-ayuda/
+titulo: Centro de ayuda
+estado: publicada
+url_original: https://vrdaylatam.org/centro-de-ayuda/
+
+secciones:
+  - tipo: cabecera
+    titulo: Centro de ayuda
+    fondo: fondos/cabecera-paginas.png
+
+  - tipo: botones
+    items:
+      - texto: Ayuda en línea
+        url: https://discordapp.com/widget?id=761688721304059944&theme=dark
+        externo: true
+
+  - tipo: faq
+    id: preguntas-frecuentes
+    titulo: Preguntas frecuentes
+    grupos:
+      - titulo: Virtual Reality Day (VRD)
+        preguntas:
+          - pregunta: ¿Cuándo será el VRD?
+            respuesta: El VRD se realizará el sábado 21 de noviembre del 2020, en esta ocasión el evento será totalmente virtual a través de la plataforma inmersiva VirBELA.
+          - pregunta: ¿Cómo puedo inscribirme al evento?
+            respuesta: "Para acceder ingrese a la página web y registre sus datos: [clic aquí](https://www.eventbrite.es/e/entradas-dia-de-la-realidad-virtual-ecuador-2020-126161954803)"
+          - pregunta: ¿Cómo puedo acceder al evento?
+            respuesta: |
+              Si te inscribiste, revisa la información enviada a tu correo electrónico (si no lo puedes observar en la bandeja principal, revisa en la bandeja de correos no deseados o SPAM) y sigue los pasos indicados. Más información [clic aquí](/plataforma-inmersiva/).
+
+              Si no lograste inscribirte, sigue la transmisión del evento a través de [Facebook Live UTPL](https://www.facebook.com/utpl.loja).
+          - pregunta: ¿Se entregará certificado de participación?
+            respuesta: El certificado será entregado únicamente a las personas que se inscribieron y participaron en el evento.
+          - pregunta: ¿Existe un límite de asistentes al evento?
+            respuesta: El cupo de inscripción del evento es de máximo 250 personas en la plataforma inmersiva; sin embargo, la trasmisión de Facebook Live UTPL es abierta y sin límite de asistentes.
+          - pregunta: ¿Puedo ser patrocinador o expositor del VRDayEc 2021?
+            respuesta: Gracias por tu interés, puedes escribirnos desde la [página de contactos](/contacto/).
+
+      - titulo: Arte en cuarentena
+        preguntas:
+          - pregunta: ¿Cómo accedo a la exposición "Arte en cuarentena"?
+            respuesta: Ingrese a la página web de la [exposición](/arte-en-cuarentena/).
+          - pregunta: ¿Puedo descargar las obras artísticas?
+            respuesta: No es posible descargar las obras artísticas.
+          - pregunta: ¿Cómo puedo contactarme con los artistas de la exposición?
+            respuesta: "Si requiere mayor información sobre la exposición, ingrese a la página web: <https://melylunaf.wixsite.com/soyartecuador>"
+
+      - titulo: Juego CUIDÉMONOS PLAY-UTPL
+        preguntas:
+          - pregunta: ¿Cómo descargo el juego CUIDÉMONOS PLAY-UTPL?
+            respuesta: La App estará disponible desde el día viernes 20 de noviembre 2020 para dispositivos móviles Android. Ingrese a la Play Store, buscando la aplicación "**CUIDÉMONOS** PLAY-UTPL".
+          - pregunta: ¿Cómo puedo obtener premios jugando CUIDÉMONOS PLAY-UTPL?
+            respuesta: Si cumpliste todos los retos del juego, debes seguir los pasos que los [encontrarás aquí](/juego-cuidemonos-play-utpl/).
+          - pregunta: ¿Cuáles son los premios que puedo ganar?
+            respuesta: Los varios premios que puedes ganar, las dos primeras personas que tenga más me gusta y mayor número de veces compartidos se harán acreedor a gafas de realidad virtual y la persona que obtenga el tercer lugar se hará acreedora a una Tablet. [Más información aquí](/juego-cuidemonos-play-utpl/)
+          - pregunta: ¿Cómo puedo saber si gané un premio?
+            respuesta: Los ganadores serán notificados a través de las redes sociales luego de culminado el VRDayEc 2020. [Más información aquí](/juego-cuidemonos-play-utpl/)
+
+      - titulo: iLRN
+        preguntas:
+          - pregunta: ¿Qué es el iLRN?
+            respuesta: Es una Red de Aprendizaje Inmersivo constituido a nivel mundial, con sede en California - Estados Unidos.
+          - pregunta: ¿Cómo puedo ser parte del iLRN Ecuador?
+            respuesta: Asiste a la asamblea general que se realizará el día del VRD (21 de noviembre 2020), actualmente está habilitada para los representantes de los centros de educación superior del Ecuador.
+          - pregunta: ¿Cuál es la ventaja de ser parte del iLRN Ecuador?
+            respuesta: |
+              - Acceso gratuito a recursos de Realidad eXtendida
+              - Participación en eventos y proyectos de Realidad eXtendida así como a eventos de aprendizaje inmersivo

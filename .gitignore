@@ -1,0 +1,20 @@
+# Entorno de Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Salida de la exportación estática y archivos generados por Django
+dist/
+staticfiles/
+static/medios-opt/
+*.sqlite3
+
+# Editores y sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Variables locales
+.env

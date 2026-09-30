@@ -1,0 +1,158 @@
+# ============================================================================
+# PÁGINA: MEMORIAS VR DAY LATAM 2023
+# Es el contenido del Inicio del sitio actual (edición 2023), movido aquí al crear el Inicio 2026.
+# URL actual: https://vrdaylatam.org/  (hasta el cambio)      URL nueva: /memorias/2023/
+# Contenido conservado tal cual (textos en futuro incluidos); ver docs/06.
+# ============================================================================
+
+slug: memorias-2023
+url: /memorias/2023/
+titulo: VRD 2023
+estado: publicada
+url_original: https://vrdaylatam.org/
+edicion: 2023
+seo:
+  titulo: VR Day LATAM 2023 – Memorias
+
+secciones:
+
+  # 1 ── Slider principal (Revolution Slider en el sitio actual, 4 diapositivas)
+  - tipo: slider
+    id: portada
+    efectos: {}          # reservado: p. ej. {parallax: true, fondo_3d: particulas}
+    diapositivas:
+      - imagen: inicio/slider/01-vrday-latam-2023.jpg
+        capa: inicio/slider/01-capa-paises.png
+        alt: "VR Day Latam — Argentina, Brasil, Chile, Ecuador, Bolivia, Panamá, Colombia, Perú — 18.NOV.2023"
+      - imagen: inicio/slider/02-anuncio.jpg
+        alt: Anuncio VR Day Latam 2023
+      - imagen: inicio/slider/03-game-latam.jpg
+        alt: VRDay Game LATAM
+        botones:
+          - texto: Inscríbete
+            url: https://docs.google.com/forms/d/e/1FAIpQLSdTNxhK8mDGt9x9js5qUwpjxLAS0Hv1ZJ2l6lZevwtDeDuJTw/viewform
+      - imagen: inicio/slider/04-knockout.jpg
+        alt: VR Knock Out — Juega y gana
+        titulo: Juega y gana
+        texto: "#VRDayEc2023"
+        botones:
+          - texto: ¿Jugar?
+            url: /juego-knockout/
+
+  # 2 ── Video destacado
+  - tipo: video_destacado
+    id: video-rx
+    titulo: La Realidad eXtendida (RX)
+    subtitulo: Una mirada a la educación del futuro
+    youtube: W6CFvmTOYu0          # "Virtual Reality Day Latam 2023"
+
+  # (En el sitio actual hay una sección vacía aquí; se omite.)
+
+  # 3 ── ¿Qué es el VRD?
+  - tipo: texto
+    id: que-es
+    titulo: ¿Qué es el Virtual Reality Day?
+    cuerpo: |
+      El Virtual Reality Day (VRD) o Día de la Realidad Virtual es un evento sin fines de lucro, abierto al público y gratuito. A nivel global se celebra el mismo día, 21 de noviembre, en más de 70 ciudades de todo el mundo.
+
+      Como Universidad Técnica Particular de Loja a través de la iniciativa "Realidad X UTPL" nos unimos a esta celebración para fomentar el conocimiento, el uso y el aprendizaje acerca de las Realidades eXtendidas.
+    boton:
+      texto: Ver más
+      url: /acerca-de/
+
+  # 4 ── Cifras
+  - tipo: estadisticas
+    id: cifras
+    titulo: "Nuestro evento en Latinoamérica contará con:"
+    items:
+      - valor: "800"
+        etiqueta: Participantes
+        icono: inicio/estadisticas/participantes.png
+      - valor: "70+"
+        etiqueta: Expositores
+        icono: inicio/estadisticas/expositores.png
+      - valor: "8"
+        etiqueta: Países
+        icono: inicio/estadisticas/paises.png
+
+  # 5 ── Inscripciones y países
+  - tipo: inscripcion_paises
+    id: inscripciones
+    mapa: inicio/mapa-latam.png
+    boton_internacional:
+      texto: Inscríbete en la programación internacional (en la tarde)
+      url: https://www.eventbrite.es/e/entradas-virtual-reality-day-latam-2023-749589050027?aff=oddtdtcreator
+    boton_pais:
+      texto: Inscríbete en la programación en tu país (en la mañana)
+      url: /memorias/2023/agenda/
+    paises:            # en el sitio actual solo Perú, Ecuador y Colombia tenían enlace
+      - {nombre: Perú,      bandera: banderas/peru.png,      url: /memorias/2023/agenda/#peru}
+      - {nombre: Chile,     bandera: banderas/chile.png,     url: /memorias/2023/agenda/#chile}
+      - {nombre: Brasil,    bandera: banderas/brasil.png,    url: /memorias/2023/agenda/#brasil}
+      - {nombre: Bolivia,   bandera: banderas/bolivia.png,   url: /memorias/2023/agenda/#bolivia}
+      - {nombre: Panamá,    bandera: banderas/panama.png,    url: ""}
+      - {nombre: Ecuador,   bandera: banderas/ecuador.png,   url: /memorias/2023/agenda/#ecuador}
+      - {nombre: Colombia,  bandera: banderas/colombia.png,  url: /memorias/2023/agenda/#colombia}
+      - {nombre: Argentina, bandera: banderas/argentina.png, url: ""}
+
+  # 6 ── Ponentes (se leen de contenido/ponentes.yaml)
+  - tipo: ponentes
+    id: ponentes
+    titulo: Ponentes latinoamericanos
+    fondo: fondos/fondo-general-azul.png
+    edicion: 2023
+    solo_visibles: true
+    # Al hacer clic en un ponente se abre su reseña (modal)
+
+  # 7 ── Actividades
+  - tipo: tarjetas
+    id: actividades
+    items:
+      - titulo: Plataforma inmersiva
+        imagen: inicio/actividades/plataforma-inmersiva.png
+        url: /plataforma-inmersiva/
+      - titulo: Stands virtuales
+        imagen: inicio/actividades/stands-virtuales.png
+        url: https://itch.io/jam/vrdaygamelatam   # así está en el sitio actual; ¿debería ir a /stands-virtuales/?
+      - titulo: VRDay Game – LATAM
+        imagen: inicio/actividades/vrday-game-latam.png
+        url: https://itch.io/jam/vrdaygamelatam
+      - titulo: Arte en cuarentena
+        etiqueta: "[Exposición]"
+        imagen: inicio/actividades/arte-en-cuarentena.png
+        url: /arte-en-cuarentena/
+      - titulo: Red de aprendizaje inmersivo
+        etiqueta: "[Proyecto]"
+        imagen: inicio/actividades/red-aprendizaje-inmersivo.png
+        url: /red-de-aprendizaje-inmersivo-ilrn-ecuador/
+
+  # 8 ── Voces VRDay Latam
+  - tipo: videos
+    id: voces
+    titulo: Voces VRDay Latam
+    boton:
+      texto: Ver todos
+      url: /memorias/2023/agenda/#ponentes
+    items:
+      - {titulo: Perú,     youtube: Vhj5OXVEs1o}   # "VR DAY promocional Perú"
+      - {titulo: Colombia, youtube: I7sxWPlXGug}   # "VR Day Latam - Colombia 2023"
+      - {titulo: Ecuador,  youtube: NlQJv8lMz-U}   # "Virtual Reality Day Latam 2023 - Ecuador - UTPL"
+
+  # 9 ── Llamado a memorias
+  - tipo: cta
+    id: memorias
+    titulo: Entérate lo que fue el VRD 2022
+    boton:
+      texto: Ver memorias
+      url: /memorias/2022/
+
+  # 10 ── Auspiciantes 2023 (antes en el pie de todas las páginas)
+  - tipo: logos
+    id: auspiciantes
+    titulo: "Auspiciaron:"
+    items:
+      - {nombre: COP,                                  logo: patrocinadores/cop.png}
+      - {nombre: Globant,                              logo: patrocinadores/globant.png}
+      - {nombre: iLRN — Immersive Learning Research Network, logo: patrocinadores/ilrn.png}
+      - {nombre: Unity,                                logo: patrocinadores/unity.png}
+      - {nombre: Libel Academy,                        logo: patrocinadores/libel-academy.png}

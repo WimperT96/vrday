@@ -1,0 +1,59 @@
+# PÁGINA: ACERCA DE
+# URL actual: https://vrdaylatam.org/acerca-de/        URL nueva: /acerca-de/
+
+slug: acerca-de
+url: /acerca-de/
+titulo: Acerca de
+estado: publicada
+url_original: https://vrdaylatam.org/acerca-de/
+
+secciones:
+  - tipo: cabecera
+    titulo: Acerca de           # el sitio actual solo muestra la imagen, sin título visible
+    fondo: acerca-de/cabecera.png
+
+  - tipo: texto
+    id: que-es-el-vrd
+    titulo: ¿Qué es el Día de la Realidad Virtual?
+    cuerpo: |
+      Es un evento sin fines de lucro, abierto al público y gratuito. A nivel global se celebra el mismo día, 21 de noviembre, en más de 70 ciudades de todo el mundo.
+
+      Como Universidad Técnica Particular de Loja a través de la iniciativa "Realidad X UTPL" nos unimos a esta celebración para fomentar el conocimiento, el uso y el aprendizaje acerca de las Realidades Extendidas (RX), así como para la creación de una red de aprendizaje inmersivo en Ecuador.
+
+      En este día vas a poder interactuar con diversas instituciones/universidades nacionales e internacionales que presentarán diversos proyectos de Realidad eXtendida a través de la plataforma inmersiva VirBELA.
+
+  - tipo: texto
+    id: quien-organiza
+    titulo: ¿Quién organiza el VR Day Ecuador?
+    cuerpo: |
+      El día de la Realidad Virtual es organizado año tras año por la iniciativa "Realidad X UTPL" donde se desarrollan, ejecutan y promueven diversos proyectos y prototipos ejecutados en la Universidad Técnica Particular de Loja con relación a tecnologías de RX.
+
+  - tipo: texto
+    id: que-es-rx
+    titulo: ¿Qué es la Realidad Extendida (RX)?
+    cuerpo: |
+      La Realidad eXtendida hace referencia a la combinación de entornos reales y virtuales en conjunto con la interacción humano-máquina generada por un computador, sirviendo como paraguas para poder abarcar diversas áreas como realidad aumentada, virtual, mixta y realidades futuras.
+    imagen: acerca-de/personajes-rx.png
+    imagen_posicion: derecha
+
+  # ⚠ ERROR EN EL SITIO ACTUAL: los textos de RV y RA están intercambiados.
+  #   Se conservan tal cual; ver docs/06-problemas-de-contenido.md para la corrección propuesta.
+  - tipo: texto
+    id: que-es-rv
+    titulo: ¿Qué es la Realidad Virtual (RV)?
+    cuerpo: |
+      Es una tecnología que permite la superposición de entornos virtuales en el entorno real mediante dispositivos móviles, en donde el usuario podrá interactuar con contenido virtualizado sin dejar de lado su entorno real, permitiéndole la experimentación con ambos entornos.
+
+  - tipo: texto
+    id: que-es-ra
+    titulo: ¿Qué es la Realidad Aumentada (RA)?
+    cuerpo: |
+      Es una tecnología basada en entornos virtuales generados por un computador que permite a los usuarios interactuar, moverse y estar completamente inmersos en un entorno virtual. Al combinar diferentes tipos de hardware, se pueden lograr experiencias inmersivas con una recepción sensorial completamente simulada.
+
+  - tipo: texto
+    id: que-es-rm
+    titulo: ¿Qué es la Realidad Mixta (RM)?
+    cuerpo: |
+      Es una mezcla entre la Realidad Aumentada y la Realidad Virtual, combinando los mejores aspectos de cada una.
+
+      Es una tecnología que combina el mundo real con el virtual, permitiendo la creación de nuevos espacios en donde podrán interactuar objetos como personas reales/virtuales, adaptados al entorno real.

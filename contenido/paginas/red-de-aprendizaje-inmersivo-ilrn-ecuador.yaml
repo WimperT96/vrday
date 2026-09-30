@@ -1,0 +1,28 @@
+# PÁGINA: RED DE APRENDIZAJE INMERSIVO (iLRN) – ECUADOR
+# URL actual: https://vrdaylatam.org/red-de-aprendizaje-inmersivo-ilrn-ecuador/   URL nueva: igual
+
+slug: red-de-aprendizaje-inmersivo-ilrn-ecuador
+url: /red-de-aprendizaje-inmersivo-ilrn-ecuador/
+titulo: Red de Aprendizaje Inmersivo (iLRN) – Ecuador
+estado: publicada
+url_original: https://vrdaylatam.org/red-de-aprendizaje-inmersivo-ilrn-ecuador/
+
+secciones:
+  - tipo: cabecera
+    titulo: Red de Aprendizaje Inmersivo (iLRN) - Ecuador
+    fondo: fondos/cabecera-paginas-2020.jpg
+
+  - tipo: texto
+    id: descripcion
+    imagen: red-aprendizaje-inmersivo/cabecera.jpg
+    imagen_posicion: arriba
+    cuerpo: |
+      Con el fin de compartir conocimientos y recursos para alcanzar un fin común, de interés general o particular, sin ánimo de lucro y promover/cooperar con instituciones y entidades en las actividades orientadas al uso de Realidades Extendidas en el Ecuador se plantea la creación de la Red de Aprendizaje Inmersivo – Ecuador, con el aval de Immersive Learning Research Network (iLRN).
+
+      Como objetivos específicos la red pretende:
+
+      - Promover el desarrollo y adopción de tecnologías extendidas en el Ecuador.
+      - Realizar investigaciones y desarrollos en tecnologías extendidas.
+      - Fortalecer la conexión entre todas las personas, instituciones o empresas que se encuentran desarrollando proyectos locales.
+
+      Luego del evento se socializarán los acuerdos establecidos para la red.

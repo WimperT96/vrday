@@ -1,0 +1,96 @@
+# ============================================================================
+# PÁGINA: INICIO — VR Day LATAM 2026
+# URL: /
+# Basada en la maqueta referencias/identidad/mockup-web-inicio-2026.png.
+# Fechas, lema, enlaces, características, sede y aliados se leen de contenido/evento.yaml:
+# cambiar la edición = editar evento.yaml, no esta página.
+# El Inicio anterior (edición 2023) está en paginas/memorias/2023.yaml.
+# ============================================================================
+
+slug: inicio
+url: /
+titulo: Inicio
+estado: publicada
+url_original: https://vrdaylatam.org/
+seo:
+  titulo: Virtual Reality Day LATAM 2026 – 12 y 13 de noviembre
+  descripcion: >-
+    Innovación, educación y experiencias inmersivas para un futuro sin límites.
+    VR Day LATAM 2026, 12 y 13 de noviembre en la Universidad Técnica Particular de Loja (UTPL).
+
+secciones:
+
+  # 1 ── Hero (maqueta: fecha, logo apilado, lema, 2 botones, foto con HUD)
+  - tipo: hero_evento
+    id: portada
+    fuente: evento                         # toma fechas, lema e inscripción de evento.yaml
+    logo: marca/logo-vrday-2026-apilado.svg   # PLACEHOLDER hasta tener el SVG
+    imagen: inicio-2026/hero-persona-vr.svg   # PLACEHOLDER hasta tener la foto
+    alt: Persona con visor de realidad virtual saludando con la mano
+    boton_secundario:
+      texto: Ver agenda
+      url: /agenda/
+      icono: calendario
+    efectos: {}                            # futuro: anillos HUD, circuitos, resplandor (docs/07)
+
+  # 2 ── Las 4 características (tarjetas bajo el hero)
+  - tipo: caracteristicas
+    id: que-encontraras
+    fuente: evento.caracteristicas
+
+  # 3 ── Convocatoria (afiche "Postulación de artículo")
+  - tipo: convocatorias
+    id: convocatoria
+    fuente: evento.convocatorias
+    # Si la fecha límite ya pasó, la plantilla oculta la convocatoria automáticamente.
+
+  # 4 ── Banda navy
+  - tipo: banda
+    id: conecta
+    estilo: navy
+    titulo: Un evento que **conecta**              # la palabra en ** ** va en azul
+    subtitulo: ideas, tecnología y personas
+    imagen: inicio-2026/banda-conecta.svg          # PLACEHOLDER
+
+  # 5 ── ¿Qué es el VRD? (texto institucional existente, sin cambios)
+  - tipo: texto
+    id: que-es
+    titulo: ¿Qué es el Virtual Reality Day?
+    cuerpo: |
+      El Virtual Reality Day (VRD) o Día de la Realidad Virtual es un evento sin fines de lucro, abierto al público y gratuito. A nivel global se celebra el mismo día, 21 de noviembre, en más de 70 ciudades de todo el mundo.
+
+      Como Universidad Técnica Particular de Loja a través de la iniciativa "Realidad X UTPL" nos unimos a esta celebración para fomentar el conocimiento, el uso y el aprendizaje acerca de las Realidades eXtendidas.
+    boton:
+      texto: Ver más
+      url: /acerca-de/
+
+  # 6 ── Resumen de la agenda (se genera desde paginas/agenda.yaml)
+  - tipo: agenda_resumen
+    id: agenda
+    titulo: Agenda
+    fuente: agenda                 # muestra los dos días con sus actividades principales
+    destacar:                      # actividades que se resaltan en el resumen
+      - Asamblea General RAIN Ecuador
+      - Bootcamp de Tecnologías Inmersivas
+      - Conferencia magistral internacional
+      - VRDay Talks – Docentes / Bloque 1
+      - VRDay Talks – Estudiantes
+      - Premiación y foto oficial
+    boton:
+      texto: Ver agenda completa
+      url: /agenda/
+
+  # 7 ── Sede organizadora y aliados (afiche 2026)
+  - tipo: aliados
+    id: aliados
+    fuente: evento
+    titulo_sede: "Sede organizadora:"
+    titulo_aliados: "Aliados:"
+
+  # 8 ── Memorias
+  - tipo: cta
+    id: memorias
+    titulo: Revive el VR Day LATAM 2023
+    boton:
+      texto: Ver memorias
+      url: /memorias/2023/

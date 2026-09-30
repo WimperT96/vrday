@@ -1,0 +1,322 @@
+# ============================================================================
+# PÁGINA: AGENDA VR DAY LATAM 2023 (memorias)
+# URL actual: https://vrdaylatam.org/agenda/        URL nueva: /memorias/2023/agenda/
+# Movida aquí al publicar la agenda 2026 en /agenda/.
+#
+# Estructura: una "jornada" por país. Cada país tiene un ancla (#colombia, #ecuador...)
+# que usa /memorias/2023/ para enlazar desde las banderas.
+# Textos transcritos tal cual del sitio actual (incluidas erratas; ver docs/06).
+#
+# Campos de sesión:
+#   hora, modalidad (Presencial | Virtual | Presencial y Virtual), titulo,
+#   ponentes (lista), rol_ponentes (Conferencista/Ponente/Panelistas…),
+#   lugar, lista (lista extra, p. ej. universidades), moderador
+# ============================================================================
+
+slug: memorias-2023-agenda
+url: /memorias/2023/agenda/
+titulo: Agenda 2023
+estado: publicada
+url_original: https://vrdaylatam.org/agenda/
+edicion: 2023
+
+secciones:
+  - tipo: cabecera
+    titulo: Agenda
+    fondo: fondos/cabecera-paginas.png
+
+  - tipo: agenda_paises
+    id: jornada-por-paises
+    titulo: Jornada por Países
+    presentacion: pestanas        # pestanas | acordeon | lista
+
+    paises:
+      # ────────────────────────────────────────────────────────── COLOMBIA
+      - id: colombia
+        nombre: Colombia
+        bandera: banderas/colombia.png
+        ubicacion: Fundación Universitaria Konrad Lorenz, carrera 9bis # 62-43, Bogotá.
+        inscripcion: {texto: Inscríbete Aquí, url: "https://cipte.co/vrdaycol/inscripciones/"}
+        titulo_programacion: Programación para Colombia
+        sesiones:
+          - hora: 7:20am - 7:50am
+            modalidad: Presencial
+            titulo: Registro
+          - hora: 8:00am - 8:15am
+            modalidad: Presencial y Virtual
+            titulo: Palabras de Apertura
+            rol_ponentes: Conferencista
+            ponentes: [Dra. Sidney Bernal (Viceministra de Transformación Digital de MinTIC)]
+          - hora: 8:15am - 8:45am
+            modalidad: Presencial y Virtual
+            titulo: Conferencia de Apertura
+            rol_ponentes: Conferencista
+            ponentes: [Sergio Ramirez]
+          - hora: 8:45am - 9:15am
+            modalidad: Presencial y Virtual
+            titulo: Primeros pasos para entrar a la industria de desarrollo de videojuegos
+            rol_ponentes: Conferencista
+            ponentes: [Carlos Reyes (IGDA Colombia)]
+          - hora: 9:15am - 9:45am
+            modalidad: Presencial y Virtual
+            titulo: Unity en el contexto de la evolución del XR en el Mundo
+            rol_ponentes: Conferencista
+            ponentes: [Andres Castro (Unity)]
+          - hora: 9:45am - 10:15am
+            modalidad: Presencial
+            titulo: Receso
+          - hora: 10:15am - 11:15am
+            modalidad: Presencial
+            titulo: Presentaciones de Universidades
+            rol_ponentes: Universidades Ponentes
+            ponentes: [Universidad EAN, Universidad de la Salle, Politécnico GranColombiano]
+          - hora: 10:30am - 12:45pm
+            modalidad: Presencial
+            lugar: Aula 301-N
+            titulo: "Taller: EXTIENDE TU REALIDAD. Introducción a la Realidad Aumentada en Social Media."
+            rol_ponentes: Conferencista
+            ponentes: [Karina Acuña (Shift Active)]
+          - hora: 10:30am - 12:45pm
+            modalidad: Presencial
+            lugar: Aula -----
+            titulo: "Taller: Taller sobre el uso de la inteligencia artificial generativa para la creación de campañas XR"
+            rol_ponentes: Conferencista
+            ponentes: [Juan Felipe Santos (Viewy)]
+          - hora: 11:15am - 11:45am
+            modalidad: Presencial y Virtual
+            titulo: "Proyecto: Co-Creación de Narrativas Inmersivas sobre migración en Colombia: una propuesta metodológica."
+            rol_ponentes: Conferencista
+            ponentes: [Jorge Bacca-Acosta, Juan Camilo Chaves]
+          - hora: 11:45am - 1:00pm
+            modalidad: Presencial y Virtual
+            titulo: Showroom Empresarial
+            rol_ponentes: Empresas Ponentes
+            ponentes: [Be-orion.com, Newrona SAS, CET Real, 3GO Video, Demiurgo]
+
+      # ────────────────────────────────────────────────────────── ECUADOR
+      - id: ecuador
+        nombre: Ecuador
+        bandera: banderas/ecuador.png
+        ubicacion: Coliseo Aguilas Rojas, Vargas Machuca, Cuenca
+        inscripcion: {texto: Inscríbete Aquí, url: "https://forms.gle/ao4qJarbKBj5PyQP7"}
+        titulo_programacion: Programación para Ecuador
+        sesiones:
+          - hora: 08:00am - 08:30am
+            titulo: Ingreso/Registro
+          - hora: 08:30am - 08:55am
+            titulo: Bienvenida Director RAIN / Ignaguración Vicerectora UCACUE
+            rol_ponentes: Ponentes
+            ponentes: [Augusto Cabrera, Vanessa Bermeo]
+          - hora: 09:00am - 09:10am
+            titulo: META- Metaverse Community Challenge
+            rol_ponentes: Ponente
+            ponentes: [Mohammad]
+          - hora: 09:15am - 10:00am
+            modalidad: Presencial
+            titulo: 'Conversatorio: "Realidad Virtual desarrollo en la educación y sus retos de implementación en Ecuador"'
+            rol_ponentes: Ponente
+            ponentes: [Francisco García Peñalvo, Martha Agila, Vanessa Salamea, Joaquin Carrasco]
+          - hora: 10:05am - 10:20am
+            modalidad: Presencial
+            titulo: "CITEC - Tema:"
+            rol_ponentes: Ponente
+            ponentes: [Daniela Flores]
+          - hora: 10:25am - 10:40am
+            modalidad: Presencial
+            titulo: ENCUBA - Educación Inmersiva en el sector financiero
+            rol_ponentes: Ponente
+            ponentes: [Edison Guaspa]
+          - hora: 10:45am - 11:00am
+            modalidad: Presencial
+            titulo: "UNAE - Tema:"
+            rol_ponentes: Ponente
+            ponentes: [Erick Michael Mogrovejo Mogrovejo, Byron Florencio Bravo Guzhñay, Jose Luis Plaza Chalco]
+          - hora: 11:05am - 11:20am
+            modalidad: Presencial
+            titulo: |-
+              Asistente virtual para la validación de oraciones
+              Gemelos digitales y Realidad Aumentada en la minería y energía
+            rol_ponentes: Ponentes
+            ponentes: [José Guamán, José Leonardo Benavides Maldonado, Pablo F. Ordóñez Ordóñez]
+          - hora: 11:25am - 11:40am
+            modalidad: Presencial
+            titulo: "Renovando la experiencia Audiovisual: Innovaciones y Estrategias utilizando Tecnologías Emergentes"
+            rol_ponentes: Ponente
+            ponentes: [Erick Michael Mogrovejo Mogrovejo, Byron Florencio Bravo Guzhñay, Jose Luis Plaza Chalco]
+          - hora: 11:45am - 12:00pm
+            modalidad: Presencial
+            titulo: Globant
+          - hora: 12:05am - 12:20am
+            modalidad: Presencial
+            titulo: "Mahu: Videojuego ecuatoriano sobre la cultura Manteño Hualcavilca"
+            rol_ponentes: Ponente
+            ponentes: [Milton Sancan]
+          - hora: 12:25am - 12:40am
+            modalidad: Presencial
+            titulo: Carrera Innovadoras, Sociedad y Futuro
+            rol_ponentes: Ponente
+            ponentes: [Tatiana Cabrera]
+          - hora: 11:45pm - 12:00pm
+            modalidad: Presencial
+            titulo: IEEE (Instituto de Ingenieros Eléctricos y Eléctronicos)
+            rol_ponentes: Ponente
+            ponentes: [Omar Gustavo Bravo Quezada]
+          - hora: 13:00pm - 13:10pm
+            modalidad: Presencial
+            titulo: Resultados RAIN
+          - hora: 15:00pm - 15:10pm
+            modalidad: Virtual
+            titulo: Bienvenida Sub directora RAIN
+            rol_ponentes: Ponente
+            ponentes: [Jennifer Samaniego]
+          - hora: 15:00pm - 15:10pm
+            modalidad: Virtual
+            titulo: Conversatorio XR LATAM Desde Ecuador
+            rol_ponentes: Ponente
+            ponentes: [Augusto Cabrera]
+          - hora: 17:00pm - 18:00pm
+            modalidad: Virtual
+            titulo: Game Jam
+            rol_ponentes: Ponente
+            ponentes: [Tatiana Cabrera]
+
+      # ────────────────────────────────────────────────────────── PERÚ
+      - id: peru
+        nombre: Perú
+        bandera: banderas/peru.png
+        ubicacion: "OPEN PUCP Dirección: Av. Universitaria 1801, San Miguel, Lima"
+        inscripcion: {texto: Incríbete Aquí, url: "https://nfticket.events/event/?QmNRU89ZZPdEz3SxH1tYm58Z6VFNGngQUBJJ3BqecmvcGB0x8F3CdE86EfD6000423D881a9e562b01679b90786"}
+        titulo_programacion: Programación para Perú
+        sesiones:
+          - hora: 09:00am - 10:00am
+            modalidad: Presencial
+            titulo: Inauguración del VRDay XR Perú
+          - hora: 10:00am - 11:00am
+            modalidad: Presencial
+            titulo: UNITY - "Tecnologías 3D en Latinoamérica"
+            rol_ponentes: Ponente
+            ponentes: [Arturo Núñez - Developer Relations, Unity Technologies]
+          - hora: 11:00am - 11:45am
+            modalidad: Presencial y Virtual
+            titulo: PANEL EMPRESARIAL - "Tecnologías XR"
+            rol_ponentes: Ponentes
+            ponentes: [Katherine Villacorta (NTT DATA), Henry Lara (INMERZUM), Roy Guzmán (METACERV), Rodrigo Rodrich (Fábrica 360), Oscar Aquino (WYDNEX XR)]
+          - hora: 11:45am - 12:30pm
+            modalidad: Presencial y Virtual
+            titulo: PANEL EDUCATIVO - "Realidades Extendidas en Educación"
+            rol_ponentes: Ponente
+            ponentes: [Ponentes locales universidades]
+          - hora: 12:30pm - 1:30pm
+            modalidad: Presencial
+            titulo: PICO - "Realidad Virtual desde las Pico 4"
+            rol_ponentes: Ponente
+            ponentes: [Nicolas Syris - Sales Manager, PICO XR]
+          - hora: 15:00pm - 17:00pm
+            modalidad: Virtual
+            titulo: Conversatorio XR LATAM
+            rol_ponentes: Ponente
+            ponentes: [Andrés León]
+          - hora: 17:00am - 18:00pm
+            modalidad: Virtual
+            titulo: GAME JAM
+          - hora: 18:30pm
+            modalidad: Virtual
+            titulo: CIERRE DEL EVENTO
+
+      # ────────────────────────────────────────────────────────── BRASIL
+      - id: brasil
+        nombre: Brasil
+        bandera: banderas/brasil.png
+        ubicacion: "Learning Village Dirección: Rua Harmonia, 1250 - Vila Magdalena, São Paulo"
+        inscripcion: {texto: Assine aqui, url: "https://www.sympla.com.br/evento/vrday-latam-2023/2233142"}
+        titulo_programacion: Programación para Brasil
+        sesiones:
+          - hora: 14:00pm - 14:30pm
+            modalidad: Presencial
+            titulo: Abertura VR Day Latam
+          - hora: 14:30pm - 15:30pm
+            modalidad: Presencial
+            titulo: Painel Julia Pazos
+            rol_ponentes: Ponente
+            ponentes: [Julia Pazos]
+          - hora: 15:30pm - 16:00pm
+            modalidad: Presencial
+            titulo: Painel E-commerce Latam
+          - hora: 16:00pm - 16:30pm
+            modalidad: Presencial y Virtual
+            titulo: Painel Imago (Brasil - Paraguai)
+          - hora: 12:30pm - 1:30pm
+            modalidad: Presencial
+            titulo: Painel SPCine
+          - hora: 18:30pm
+            modalidad: Virtual
+            titulo: Encontro Latino dos 8 países
+
+      # ────────────────────────────────────────────────────────── BOLIVIA
+      - id: bolivia
+        nombre: Bolivia
+        bandera: banderas/bolivia.png
+        ubicacion: Alianza Francea de Cochabamba (Calle La Paz N° 784 casi Crisóstomo Carrillo)
+        inscripcion: {texto: Inscríbete Aquí, url: "https://fb.me/e/v6vEyzKxo"}
+        titulo_programacion: Programación para Bolivia
+        sesiones:
+          - hora: 10:00am - 10:10am
+            modalidad: Presencial
+            titulo: Registro
+          - hora: 10:10am - 10:15am
+            modalidad: Presencial
+            titulo: Palabras de Bienvenida
+            rol_ponentes: Ponente
+            ponentes: [Directora Alianza Francesa de Cochabamba]
+          - hora: 10:15am - 10:45am
+            modalidad: Presencial
+            titulo: 'Charla "Experiencias Inmersivas: Una nueva mirada hacia la realidad y museografía tecnológica"'
+            rol_ponentes: Ponentes
+            ponentes: [Dino Garzoni, Neysa Rivadeneira]
+          - hora: 10:45am - 11:00am
+            modalidad: Presencial
+            titulo: Dudas y Comentarios de la Conferencia
+          - hora: 11:00am - 12:00pm
+            modalidad: Presencial
+            titulo: Exhibición de proyectos implementados en Bolivia
+
+      # ────────────────────────────────────────────────────────── CHILE
+      - id: chile
+        nombre: Chile              # en el sitio actual falta el título "Chile" (solo aparece la bandera)
+        bandera: banderas/chile.png
+        ubicacion: Aula Magna Universidad del Desarrollo sede San Carlos de Apoquindo
+        inscripcion: {texto: "", url: ""}   # vacío en el sitio actual
+        titulo_programacion: Programación para Chile
+        sesiones:
+          - hora: 10:00am - 10:10pm
+            modalidad: Presencial
+            titulo: Protocolar y kickoff
+            rol_ponentes: Ponentes
+            ponentes: [Oscar MacKenney, José Gregorio Diaz, Oscar Cartagena]
+          - hora: 10:30am - 11:00am
+            modalidad: Presencial
+            titulo: Regulaciones de IA y Metaverso. Entre la identidad digital y Neurodatos
+            rol_ponentes: Ponente
+            ponentes: [Dra. Isabel Cornejo]
+          - hora: 11:00am - 11:30am
+            modalidad: Presencial
+            titulo: Educación y virtualidad. La experiencia de Realitec UDD
+            rol_ponentes: Ponente
+            ponentes: [Dante Crovetto]
+          - hora: 11:30am - 12:00pm
+            modalidad: Presencial
+            titulo: "Industrias Creativas y VR: el poder del storytelling y la experiencia inmersiva"
+            rol_ponentes: Ponente
+            ponentes: [Isidora Cabezón]
+          - hora: 12:30pm - 14:00pm
+            modalidad: Presencial
+            titulo: Panel "El futuro de la industria XR en Chile"
+            rol_ponentes: Panelistas
+            ponentes: [Joaquin Gonzalez, Alejandra Ferrari, Trinidad Matta, Gloria Moya]
+            moderador: Oscar Cartagena
+
+  - tipo: ponentes
+    id: ponentes
+    titulo: Ponentes
+    edicion: 2023
+    solo_visibles: true

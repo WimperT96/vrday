@@ -1,0 +1,34 @@
+# PÁGINA NUEVA: MEMORIAS (índice de ediciones)
+# En el sitio actual "Memorias" es solo un desplegable del menú (enlace "#").
+# Se añade esta página índice como mejora de estructura; no hay contenido nuevo inventado:
+# solo enlaza a las ediciones existentes con su imagen de portada.
+
+slug: memorias
+url: /memorias/
+titulo: Memorias
+estado: publicada
+url_original: ""       # no existía
+
+secciones:
+  - tipo: cabecera
+    titulo: Memorias
+    fondo: fondos/cabecera-paginas.png
+
+  - tipo: tarjetas
+    id: ediciones
+    items:
+      - titulo: VRD 2023
+        imagen: inicio/slider/01-vrday-latam-2023.jpg
+        url: /memorias/2023/
+      - titulo: VRD 2022
+        imagen: memorias/2022/01.jpg
+        url: /memorias/2022/
+      - titulo: VRD 2021
+        imagen: memorias/2021/00-organizadores.jpg
+        url: /memorias/2021/
+      - titulo: VRD 2020
+        imagen: memorias/2020/00-portada.jpg
+        url: /memorias/2020/
+      - titulo: VRD 2019
+        imagen: memorias/2019/00-afiche.jpg
+        url: /memorias/2019/

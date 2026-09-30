@@ -1,0 +1,73 @@
+# ============================================================================
+# EDICIÓN ACTUAL DEL EVENTO — VR Day LATAM 2026
+# Datos tomados de las piezas de identidad 2026 (referencias/identidad/).
+# Las páginas leerán de aquí fecha, lema, llamados a la acción, sede y aliados,
+# para que cambiar de edición sea editar solo este archivo.
+# ============================================================================
+
+edicion: 2026
+nombre: Virtual Reality Day LATAM 2026
+fechas:
+  inicio: 2026-11-12
+  fin: 2026-11-13
+  texto: 12 y 13 de noviembre de 2026
+lugar:
+  sede: Universidad Técnica Particular de Loja (UTPL)
+  ciudad: Loja
+  pais: Ecuador
+  espacios:                # según la agenda tentativa 2026
+    - Centro de Convenciones UTPL
+    - Hall del Aula Magna (stands)
+    - Sector de ingreso al Rectorado (stands)
+  direccion: ""            # PENDIENTE: dirección exacta
+  mapa_url: ""             # PENDIENTE: URL de Google Maps (también en paginas/lugar.yaml)
+lema: Innovación, educación y experiencias inmersivas para un futuro sin límites.
+frase_destacada: Un evento que conecta ideas, tecnología y personas   # "conecta" en azul
+
+inscripcion:
+  texto: Inscríbete ahora
+  url: ""                  # PENDIENTE: enlace de inscripción 2026
+
+convocatorias:
+  - titulo: Postulación de artículo
+    fecha_limite: 2026-10-15
+    texto: hasta el 15 de octubre 2026
+    url: ""                # PENDIENTE: enlace de postulación (Google Form / plataforma de envíos)
+
+caracteristicas:           # 4 tarjetas bajo el hero de la maqueta
+  - titulo: Conferencias
+    texto: Expertos en tecnología, educación y salud.
+    icono: visor-vr        # íconos lineales (Lucide u otro set)
+  - titulo: Exhibición de soluciones
+    texto: Hardware, software y experiencias inmersivas.
+    icono: cubo
+  - titulo: Networking
+    texto: Conecta con profesionales y empresas del sector.
+    icono: usuarios
+  - titulo: Talleres prácticos
+    texto: Aprende, crea y vive la realidad virtual.
+    icono: bombilla
+
+organizadores:             # "Sede organizadora" en el afiche
+  - nombre: Universidad Técnica Particular de Loja (UTPL)
+    logo: ""               # PENDIENTE: logo individual (solo existe dentro del afiche)
+  - nombre: RAIN — Red de Aprendizaje Inmersivo
+    logo: ""
+
+aliados:                   # en el orden del afiche; logos PENDIENTES
+  - {nombre: ESPOL, logo: ""}
+  - {nombre: Universidad Indoamérica, logo: ""}
+  - {nombre: Instituto Superior Tecnológico del Austro, logo: ""}
+  - {nombre: TEC Azuay Instituto Universitario, logo: ""}
+  - {nombre: Universidad Católica de Cuenca, logo: ""}
+  - {nombre: Pontificia Universidad Católica del Ecuador, logo: ""}
+  - {nombre: Universidad Politécnica Salesiana, logo: ""}
+  - {nombre: Universidad Nacional de Loja (UNL), logo: ""}
+  - {nombre: Universidad Católica de Santiago de Guayaquil (UCSG), logo: ""}
+  - {nombre: Universidad Nacional de Educación (UNAE), logo: ""}
+  - {nombre: "Institución por confirmar (sello circular rojo y negro)", logo: ""}   # PENDIENTE: ilegible en el afiche
+  - {nombre: "Instituto Tecnológico Loja (por confirmar)", logo: ""}               # PENDIENTE: confirmar nombre
+  - {nombre: Universidad de Guayaquil, logo: ""}
+  - {nombre: Universidad Espíritu Santo (UEES), logo: ""}
+  - {nombre: ITSO Universitario, logo: ""}
+  - {nombre: "Universidad Politécnica Estatal del Carchi (UPEC)", logo: ""}

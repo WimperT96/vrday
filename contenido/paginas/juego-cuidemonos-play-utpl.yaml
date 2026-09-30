@@ -1,0 +1,62 @@
+# PÁGINA: JUEGO CUIDÉMONOS PLAY-UTPL (edición 2020)
+# URL actual: https://vrdaylatam.org/juego-cuidemonos-play-utpl/        URL nueva: igual
+
+slug: juego-cuidemonos-play-utpl
+url: /juego-cuidemonos-play-utpl/
+titulo: Juego Cuidémonos Play-UTPL
+estado: publicada
+url_original: https://vrdaylatam.org/juego-cuidemonos-play-utpl/
+
+secciones:
+  - tipo: cabecera
+    titulo: Juego CUIDÉMONOS PLAY-UTPL
+    fondo: fondos/cabecera-paginas-2020.jpg
+
+  - tipo: video_local
+    id: video
+    archivo: juego-cuidemonos/video-cuidemonos-play-utpl.mp4   # 2,7 MB — se sirve como archivo local
+
+  - tipo: texto
+    id: descripcion
+    cuerpo: |
+      Con el fin de concienciar sobre el distanciamiento social y uso de mascarilla ante un accidente doméstico en tiempo de la Covid-19, el Club de Realidad Virtual UTPL comparte con la comunidad en general el juego CUIDÉMONOS PLAY-UTPL.
+
+  - tipo: texto
+    id: pasos
+    titulo: "Pasos para acceder al juego:"
+    cuerpo: |
+      1. Debes dirigirte a la Play Store y buscar la aplicación "CUIDÉMONOS PLAY-UTPL".
+      2. Selecciona el resultado correspondiente
+      3. Y presiona el botón: instalar
+      4. Para iniciar la aplicación debes presionar en abrir
+
+      **Una vez instalada la aplicación contarás con las siguientes opciones:**
+
+      1. Iniciar un nuevo juego.
+      2. Ver el tutorial con las instrucciones del juego.
+      3. Ver créditos de los desarrolladores.
+      4. Salir.
+
+  - tipo: texto
+    id: reto
+    titulo: Participa en el reto digital CUIDÉMONOS PLAY-UTPL
+    cuerpo: |
+      Una vez superado el juego solo debe presionar en compartir y publicar en su cuenta de Facebook con alguna descripción y el hashtag #CuidémonosPlayUTPL. Si al momento de jugar, perdió, solo debe dar clic en jugar nuevamente hasta superar el juego.
+
+  - tipo: premios
+    id: premios
+    titulo: Premios
+    texto: |
+      ¡Habrá 3 grandes premios para 3 ganadores!. Las dos primeras personas que tenga mayor cantidad de "me gusta" y mayor número de veces compartidos, se harán acreedores a gafas de realidad virtual y la persona que obtenga el tercer lugar se hará acreedora a una tablet.
+    items:
+      - titulo: Gafas Mirage Lenovo
+        subtitulo: Primer y segundo lugar
+        imagen: juego-cuidemonos/premio-gafas.jpg
+      - titulo: Tablet UTPL
+        subtitulo: Tercer lugar
+        imagen: juego-cuidemonos/premio-tablet.jpg
+
+  - tipo: galeria
+    id: capturas
+    titulo: Capturas del juego CUIDÉMONOS PLAY-UTPL
+    carpeta: juego-cuidemonos/capturas     # se listan todas las imágenes de la carpeta en orden (01..16)

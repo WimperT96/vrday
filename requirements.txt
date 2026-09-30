@@ -1,0 +1,13 @@
+# Dependencias del sitio (versiones fijadas). Instalar con:
+#   python -m venv .venv
+#   .venv\Scripts\activate            (Windows)   |   source .venv/bin/activate   (Linux/macOS)
+#   pip install -r requirements.txt
+Django==5.2.17
+django-distill==4.0.6
+PyYAML==6.0.3
+Markdown==3.11
+pillow==12.3.0
+# dependencias indirectas
+asgiref==3.12.1
+sqlparse==0.6.0
+tzdata==2026.4

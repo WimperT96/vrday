@@ -1,0 +1,47 @@
+# ============================================================================
+# PÁGINA NUEVA: PONENTES — VR Day LATAM 2026
+# URL: /ponentes/   (en el menú de la maqueta 2026)
+# Los ponentes se leen de contenido/ponentes.yaml filtrando por edición.
+# Aún no hay ponentes 2026 confirmados: se muestra el conferencista magistral
+# como placeholder y accesos a los ponentes de ediciones anteriores.
+# ============================================================================
+
+slug: ponentes
+url: /ponentes/
+titulo: Ponentes
+estado: publicada
+url_original: ""          # no existía como página
+
+secciones:
+  - tipo: cabecera
+    titulo: Ponentes
+    subtitulo: VR Day LATAM 2026
+
+  # Conferencia magistral (dato de la agenda 2026: "Expositor francés")
+  - tipo: texto
+    id: conferencia-magistral
+    titulo: Conferencia magistral internacional
+    imagen: ponentes/2026/conferencista-magistral.svg   # PLACEHOLDER
+    imagen_posicion: izquierda
+    cuerpo: |
+      **Tecnologías inmersivas y videojuegos**
+
+      Viernes 13 de noviembre · 09:00 – 09:45 · Expositor francés.
+    placeholder: true          # PENDIENTE: nombre, foto y reseña del conferencista
+
+  - tipo: ponentes
+    id: ponentes-2026
+    titulo: Ponentes 2026
+    edicion: 2026
+    solo_visibles: true
+    # Mientras no haya ponentes 2026 en ponentes.yaml, se muestra este mensaje (texto provisional):
+    mensaje_vacio: Pronto anunciaremos a los ponentes del VR Day LATAM 2026.
+
+  - tipo: botones
+    id: ediciones-anteriores
+    titulo: Ponentes de ediciones anteriores
+    items:
+      - texto: Ponentes 2023
+        url: /memorias/2023/agenda/#ponentes
+      - texto: Ponentes 2020
+        url: /memorias/2020/agenda/#ponentes

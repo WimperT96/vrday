@@ -1,0 +1,62 @@
+# PÁGINA: JUEGO VR KNOCK OUT (edición 2022)
+# URL actual: https://vrdaylatam.org/juego-knockout/        URL nueva: /juego-knockout/
+
+slug: juego-knockout
+url: /juego-knockout/
+titulo: Juego Knockout
+estado: publicada
+url_original: https://vrdaylatam.org/juego-knockout/
+
+secciones:
+  - tipo: cabecera
+    titulo: VR Knock Out
+    subtitulo: Juega y gana
+    fondo: fondos/cabecera-paginas-2020.jpg
+    imagen: juego-knockout/logo.png
+
+  - tipo: embed
+    id: juego
+    titulo: VR Knock Out
+    proveedor: itch
+    url: https://itch.io/embed/1790971
+    alto: 167
+    credito: "[VR Days by bsancanCato](https://bsancancato.itch.io/vrday)"
+
+  - tipo: texto
+    id: como-jugar
+    titulo: ¿Cómo jugar?
+    imagen: juego-knockout/como-jugar.png
+    imagen_posicion: izquierda
+    cuerpo: |
+      Para poder jugar solo sigue las siguientes indicaciones:
+
+      1. Ingresa al juego que se encuentra en la parte de abajo, dando clic en Play on itch.io
+      2. Para moverte usa los controles de:
+         1. Teclas WSAD para izquierda y derecha.
+         2. Barra espaciadora para el salto.
+         3. También puedes usar el control de la parte inferior para activar:
+            - Joystick para los movimientos.
+            - Botón para el salto.
+      3. Al avanzar deberás de ingresar un nickname y un correo válido.
+      4. Tienes un máximo de 3 intentos durante toda la partida.
+      5. Selecciona la respuesta correcta de cada pregunta.
+      6. Existen puntos de guardado en cada minijuego.
+      7. Supera el juego en el menor tiempo posible.
+      8. ¡Listo para jugar!
+
+      Recuerda: si pierdes en el primer intento, vuelve a jugarlo, hasta mejorar tu tiempo.
+
+  - tipo: texto
+    id: premios
+    titulo: ¿Cómo puedo ganar fabulosos premios?
+    imagen: juego-knockout/premios.png
+    imagen_posicion: derecha
+    cuerpo: |
+      Si culminaste el videojuego, realiza una captura de pantalla, guárdala y compártela en Facebook con alguna descripción y utiliza las siguientes etiquetas: #VrDayLatam2022 #vrknockout
+
+      Entre las personas que realicen la publicación, se seleccionará a la que tenga más me gusta a nivel de Latinoamérica.
+
+      ### Premios
+
+      1. Primer lugar: Tarjeta digital de Play Station valorada en $50.00
+      2. Segundo lugar: 1 curso de CEDIA a su elección, revisa [aquí](http://catalogo.aprendiendo.ec/informatica-y-comunicaciones-2-1.html).

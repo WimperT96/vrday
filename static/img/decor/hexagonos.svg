@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420" fill="none">
+  <g stroke="#4D9CF6" stroke-opacity=".22" stroke-width="1.2">
+    <path d="M110 40l52 30v60l-52 30-52-30V70z"/>
+    <path d="M214 100l52 30v60l-52 30-52-30v-60z"/>
+    <path d="M110 160l52 30v60l-52 30-52-30v-60z"/>
+    <path d="M214 220l52 30v60l-52 30-52-30v-60z"/>
+    <path d="M318 160l52 30v60l-52 30-52-30v-60z" stroke="#7C4DDB" stroke-opacity=".18"/>
+  </g>
+</svg>

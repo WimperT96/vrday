@@ -1,0 +1,13 @@
+<div class="contenedor">
+  {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
+  <ul class="tarjetas tarjetas--2">
+    {% for t in s.items %}
+    <li class="tarjeta testimonio">
+      <div class="tarjeta__cuerpo">
+        {% if t.texto %}<blockquote class="testimonio__texto">{{ t.texto }}</blockquote>{% endif %}
+        <p class="testimonio__autor"><strong>{{ t.nombre }}</strong>{% if t.cargo %} · {{ t.cargo }}{% endif %}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

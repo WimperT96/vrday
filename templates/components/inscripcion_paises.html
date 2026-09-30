@@ -1,0 +1,14 @@
+<div class="contenedor inscripcion">
+  <div class="grupo-botones grupo-botones--centro">
+    {% if s.boton_internacional %}<a class="boton boton--primario" {% enlace s.boton_internacional.url %}>{{ s.boton_internacional.texto }}</a>{% endif %}
+    {% if s.boton_pais %}<a class="boton boton--secundario" {% enlace s.boton_pais.url %}>{{ s.boton_pais.texto }}</a>{% endif %}
+  </div>
+  {% if s.mapa %}<div class="inscripcion__mapa">{% img s.mapa "Mapa de Latinoamérica" %}</div>{% endif %}
+  <ul class="banderas">
+    {% for p in s.paises %}
+    <li>{% if p.url %}<a class="bandera" {% enlace p.url %}>{% else %}<span class="bandera">{% endif %}
+      {% img p.bandera "" "bandera__img" %}<span>{{ p.nombre }}</span>
+    {% if p.url %}</a>{% else %}</span>{% endif %}</li>
+    {% endfor %}
+  </ul>
+</div>

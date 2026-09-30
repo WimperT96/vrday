@@ -1,0 +1,16 @@
+<div class="contenedor contenedor--estrecho">
+  {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
+  {% for g in s.grupos %}
+  <div class="faq__grupo">
+    <h3 class="faq__grupo-titulo">{{ g.titulo }}</h3>
+    <div class="acordeon">
+      {% for q in g.preguntas %}
+      <details class="acordeon__item">
+        <summary class="acordeon__titulo">{{ q.pregunta }}{% icono "chevron" "acordeon__icono" %}</summary>
+        <div class="acordeon__cuerpo prosa">{{ q.respuesta|md }}</div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>

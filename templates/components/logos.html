@@ -1,0 +1,8 @@
+<div class="contenedor aliados">
+  <div class="aliados__grupo">
+    {% if s.titulo %}<h2 class="aliados__titulo">{{ s.titulo }}</h2>{% endif %}
+    <ul class="lista-logos lista-logos--sobre-oscuro">
+      {% for l in s.items %}<li>{% if l.url %}<a {% enlace l.url %}>{% endif %}{% if l.logo %}{% img l.logo l.nombre "lista-logos__img" %}{% else %}<span class="lista-logos__nombre">{{ l.nombre }}</span>{% endif %}{% if l.url %}</a>{% endif %}</li>{% endfor %}
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="contenedor">
+  {% if s.titulo %}<h2 class="titulo-seccion titulo-seccion--pequeno">{{ s.titulo }}</h2>{% endif %}
+  <div class="grupo-botones">
+    {% for b in s.items %}
+      {% if b.url %}
+      <a class="boton {% if forloop.first %}boton--primario{% else %}boton--secundario{% endif %}" {% enlace b.url %}>{{ b.texto }}{% if b.url|externo %} {% icono "externo" %}{% else %} {% icono "flecha" %}{% endif %}</a>
+      {% else %}
+      <span class="boton boton--deshabilitado" aria-disabled="true" title="Enlace pendiente">{{ b.texto }}</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

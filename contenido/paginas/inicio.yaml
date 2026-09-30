@@ -25,6 +25,7 @@ secciones:
     id: portada
     fuente: evento                         # toma fechas, lema e inscripción de evento.yaml
     logo: marca/logo-vrday-2026-apilado.svg   # PLACEHOLDER hasta tener el SVG
+    usar_logo_imagen: false                # false = logotipo compuesto con texto y CSS; true cuando llegue el SVG
     imagen: inicio-2026/hero-persona-vr.svg   # PLACEHOLDER hasta tener la foto
     alt: Persona con visor de realidad virtual saludando con la mano
     boton_secundario:

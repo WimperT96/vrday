@@ -1,0 +1,16 @@
+<div class="contenedor">
+  {% if s.titulo or s.boton %}
+  <div class="encabezado-seccion">
+    {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
+    {% if s.boton %}<a class="boton boton--secundario" {% enlace s.boton.url %}>{{ s.boton.texto }} {% icono "flecha" %}</a>{% endif %}
+  </div>
+  {% endif %}
+  <ul class="videos">
+    {% for v in s.items %}
+    <li class="video">
+      {% include "components/_youtube.html" with id=v.youtube titulo=v.titulo %}
+      {% if v.titulo %}<p class="video__titulo">{{ v.titulo }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

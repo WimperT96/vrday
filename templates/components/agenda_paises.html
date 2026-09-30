@@ -1,0 +1,22 @@
+<div class="contenedor">
+  {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
+  <div class="pestanas" data-pestanas>
+    <div class="pestanas__lista" role="tablist" aria-label="{{ s.titulo|default:'Países' }}">
+      {% for p in s.paises %}
+      <button type="button" role="tab" class="pestanas__boton" id="tab-{{ p.id }}" aria-controls="{{ p.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"{% if not forloop.first %} tabindex="-1"{% endif %}>
+        {% img p.bandera "" "pestanas__bandera" %}{{ p.nombre }}
+      </button>
+      {% endfor %}
+    </div>
+    {% for p in s.paises %}
+    <div class="pestanas__panel" role="tabpanel" id="{{ p.id }}" aria-labelledby="tab-{{ p.id }}" tabindex="0"{% if not forloop.first %} hidden{% endif %}>
+      <div class="agenda-info">
+        {% if p.ubicacion %}<p>{% icono "ubicacion" %}<span><strong>Ubicación:</strong> {{ p.ubicacion }}</span></p>{% endif %}
+        {% if p.inscripcion.url %}<p><a class="boton boton--primario boton--compacto" {% enlace p.inscripcion.url %}>{{ p.inscripcion.texto|default:"Inscríbete" }} {% icono "externo" %}</a></p>{% endif %}
+      </div>
+      {% if p.titulo_programacion %}<h3 class="agenda__subtitulo">{{ p.titulo_programacion }}</h3>{% endif %}
+      <ol class="agenda">{% for x in p.sesiones %}{% include "components/_sesion.html" %}{% endfor %}</ol>
+    </div>
+    {% endfor %}
+  </div>
+</div>

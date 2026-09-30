@@ -1,0 +1,9 @@
+<div class="contenedor">
+  {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
+  <ul class="galeria" data-galeria>
+    {% for im in s.imagenes %}
+    {% firstof im.alt pagina.titulo as alt %}
+    <li><a class="galeria__item" href="{% medio im.src %}" data-lightbox data-alt="{{ alt }}">{% img im.src alt "galeria__img" %}</a></li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,20 @@
+{% with ev=s.evento %}
+<div class="contenedor aliados">
+  {% if ev.organizadores %}
+  <div class="aliados__grupo">
+    <h2 class="aliados__titulo">{{ s.titulo_sede|default:"Sede organizadora:" }}</h2>
+    <ul class="lista-logos">
+      {% for o in ev.organizadores %}<li>{% if o.logo %}{% img o.logo o.nombre "lista-logos__img" %}{% else %}<span class="lista-logos__nombre lista-logos__nombre--grande">{{ o.nombre }}</span>{% endif %}</li>{% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {% if ev.aliados %}
+  <div class="aliados__grupo">
+    <h2 class="aliados__titulo">{{ s.titulo_aliados|default:"Aliados:" }}</h2>
+    <ul class="lista-logos">
+      {% for a in ev.aliados %}<li>{% if a.logo %}{% img a.logo a.nombre "lista-logos__img" %}{% else %}<span class="lista-logos__nombre">{{ a.nombre }}</span>{% endif %}</li>{% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>
+{% endwith %}

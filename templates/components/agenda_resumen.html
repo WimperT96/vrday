@@ -1,0 +1,21 @@
+<div class="contenedor">
+  <div class="encabezado-seccion">
+    <div>
+      {% if s.tentativa %}<p class="etiqueta etiqueta--aviso">Agenda tentativa</p>{% endif %}
+      <h2 class="titulo-seccion">{{ s.titulo|default:"Agenda" }}</h2>
+    </div>
+    {% if s.boton %}<a class="boton boton--secundario" {% enlace s.boton.url %}>{% icono "calendario" %} {{ s.boton.texto }}</a>{% endif %}
+  </div>
+  <div class="resumen-agenda">
+    {% for dia in s.dias %}
+    <article class="resumen-agenda__dia">
+      <h3 class="resumen-agenda__titulo">{{ dia.etiqueta }}</h3>
+      <ol class="resumen-agenda__lista">
+        {% for x in dia.sesiones %}
+        <li><span class="resumen-agenda__hora">{{ x.hora }}</span><span>{{ x.actividad }}</span></li>
+        {% endfor %}
+      </ol>
+    </article>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<header class="cabecera-sitio" data-cabecera>
+  <div class="contenedor cabecera-sitio__fila">
+    <a class="cabecera-sitio__logo" href="/" aria-label="{{ sitio.nombre }} – Inicio">
+      {% img sitio.logo sitio.nombre "logo" "eager" %}
+    </a>
+
+    <button class="cabecera-sitio__toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-toggle>
+      {% icono "menu" %}<span class="sr-only">Abrir menú</span>
+    </button>
+
+    <nav class="menu" id="menu-principal" aria-label="Principal">
+      <ul class="menu__lista">
+        {% for item in menu %}
+        <li class="menu__item{% if item.submenu %} menu__item--sub{% endif %}">
+          {% if item.submenu %}
+          <div class="menu__grupo">
+            <a class="menu__enlace{% if item.activo %} es-activo{% endif %}" {% enlace item.url %}{% if item.activo %} aria-current="page"{% endif %}>{{ item.texto }}</a>
+            <button class="menu__desplegar" type="button" aria-expanded="false" data-submenu-toggle>
+              {% icono "chevron" %}<span class="sr-only">Ver {{ item.texto }}</span>
+            </button>
+          </div>
+          <ul class="submenu">
+            {% for sub in item.submenu %}
+            <li><a class="submenu__enlace{% if sub.activo %} es-activo{% endif %}" {% enlace sub.url %}{% if sub.activo %} aria-current="page"{% endif %}>{{ sub.texto }}</a></li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <a class="menu__enlace{% if item.activo %} es-activo{% endif %}" {% enlace item.url %}{% if item.activo %} aria-current="page"{% endif %}>{{ item.texto }}</a>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% if boton_cabecera.url %}
+      <a class="boton boton--primario boton--compacto menu__cta" {% enlace boton_cabecera.url %}>{{ boton_cabecera.texto }} {% icono "flecha" %}</a>
+      {% endif %}
+    </nav>
+  </div>
+</header>

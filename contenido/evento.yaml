@@ -29,7 +29,7 @@ inscripcion:
   url: ""                  # PENDIENTE: enlace de inscripción 2026
 
 convocatorias:
-  - titulo: Postulación de artículo
+  - titulo: Postulación de **artículo**   # ** ** = negrita, como en el afiche
     fecha_limite: 2026-10-15
     texto: hasta el 15 de octubre 2026
     url: ""                # PENDIENTE: enlace de postulación (Google Form / plataforma de envíos)
@@ -54,7 +54,7 @@ organizadores:             # "Sede organizadora" en el afiche
   - nombre: RAIN — Red de Aprendizaje Inmersivo
     logo: ""
 
-aliados:                   # en el orden del afiche; logos PENDIENTES
+aliados:                   # en el orden del afiche; logos PENDIENTES · publicar: false = no se muestra en la web
   - {nombre: ESPOL, logo: ""}
   - {nombre: Universidad Indoamérica, logo: ""}
   - {nombre: Instituto Superior Tecnológico del Austro, logo: ""}
@@ -65,8 +65,8 @@ aliados:                   # en el orden del afiche; logos PENDIENTES
   - {nombre: Universidad Nacional de Loja (UNL), logo: ""}
   - {nombre: Universidad Católica de Santiago de Guayaquil (UCSG), logo: ""}
   - {nombre: Universidad Nacional de Educación (UNAE), logo: ""}
-  - {nombre: "Institución por confirmar (sello circular rojo y negro)", logo: ""}   # PENDIENTE: ilegible en el afiche
-  - {nombre: "Instituto Tecnológico Loja (por confirmar)", logo: ""}               # PENDIENTE: confirmar nombre
+  - {nombre: "Institución por confirmar (sello circular rojo y negro)", logo: "", publicar: false}   # PENDIENTE: ilegible en el afiche
+  - {nombre: "Instituto Tecnológico Loja (por confirmar)", logo: "", publicar: false}               # PENDIENTE: confirmar nombre
   - {nombre: Universidad de Guayaquil, logo: ""}
   - {nombre: Universidad Espíritu Santo (UEES), logo: ""}
   - {nombre: ITSO Universitario, logo: ""}

@@ -1,0 +1,4 @@
+<div class="contenedor contenedor--estrecho">
+  {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
+  <ol class="agenda">{% for x in s.sesiones %}{% include "components/_sesion.html" %}{% endfor %}</ol>
+</div>

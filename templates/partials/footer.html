@@ -1,0 +1,46 @@
+<footer class="pie">
+  <div class="pie__decor" aria-hidden="true"></div>
+  <div class="contenedor">
+    {% if pie.mostrar_aliados %}
+    <div class="pie__aliados">
+      {% if evento.organizadores %}
+      <div class="pie__grupo">
+        <p class="pie__titulo">Sede organizadora</p>
+        <ul class="lista-logos lista-logos--inv">
+          {% for o in evento.organizadores %}
+          <li>{% if o.logo %}{% img o.logo o.nombre "lista-logos__img" %}{% else %}<span class="lista-logos__nombre">{{ o.nombre }}</span>{% endif %}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      {% if evento.aliados %}
+      <div class="pie__grupo">
+        <p class="pie__titulo">Aliados</p>
+        <ul class="lista-logos lista-logos--inv lista-logos--pequena">
+          {% for a in evento.aliados %}
+          <li>{% if a.logo %}{% img a.logo a.nombre "lista-logos__img" %}{% else %}<span class="lista-logos__nombre">{{ a.nombre }}</span>{% endif %}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="pie__base">
+      <a href="/" class="pie__logo" aria-label="{{ sitio.nombre }} – Inicio">{% firstof pie.logo sitio.logo as logo_pie %}{% img logo_pie sitio.nombre %}</a>
+      {% if pie.enlaces %}
+      <nav aria-label="Pie de página">
+        <ul class="pie__enlaces">
+          {% for e in pie.enlaces %}<li><a {% enlace e.url %}>{{ e.texto }}</a></li>{% endfor %}
+        </ul>
+      </nav>
+      {% endif %}
+      {% if pie.redes_sociales %}
+      <ul class="pie__redes">
+        {% for r in pie.redes_sociales %}<li><a {% enlace r.url %}>{{ r.red|capfirst }}</a></li>{% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <p class="pie__legal">{% if pie.texto_legal %}{{ pie.texto_legal }}{% else %}{{ evento.nombre }} · {{ evento.fechas.texto }}{% endif %}</p>
+  </div>
+</footer>

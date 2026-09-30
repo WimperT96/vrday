@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% comment %}
+  Recorre las secciones de la página (contenido/paginas/*.yaml) e incluye
+  components/<tipo>.html para cada una. Estructura en capas preparada para
+  efectos (docs/07): .seccion__fondo (decoración / futuro canvas 3D) + contenido.
+{% endcomment %}
+{% block clase_body %}pagina-{{ pagina.slug }}{% endblock %}
+{% block contenido %}
+  {% for s in pagina.secciones %}
+  <section class="seccion seccion--{{ s.tipo }}{% if s.estilo %} seccion--{{ s.estilo }}{% endif %}{% if s.placeholder and mostrar_placeholders %} es-placeholder{% endif %}"
+           {% if s.id %}id="{{ s.id }}"{% endif %}
+           data-componente="{{ s.tipo }}"
+           {% if s.efectos %}data-efectos='{{ s.efectos|a_json }}'{% endif %}>
+    <div class="seccion__fondo" aria-hidden="true"></div>
+    {% if s.placeholder and mostrar_placeholders %}<p class="aviso-placeholder">Contenido provisional</p>{% endif %}
+    {% with plantilla="components/"|add:s.tipo|add:".html" %}
+      {% include plantilla %}
+    {% endwith %}
+  </section>
+  {% endfor %}
+{% endblock %}

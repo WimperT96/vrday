@@ -1,0 +1,32 @@
+{% with ev=s.evento %}
+<div class="contenedor hero">
+  <div class="hero__texto">
+    {% if s.fecha_dias %}
+    <p class="banda-fecha"><span class="banda-fecha__dias">{{ s.fecha_dias }}</span><span class="banda-fecha__mes">{{ s.fecha_mes }}</span></p>
+    {% endif %}
+    <h1 class="hero__marca">
+      {% if s.usar_logo_imagen and s.logo %}
+        {% img s.logo ev.nombre "hero__logo-img" "eager" %}
+      {% else %}
+        <span class="logotipo" aria-hidden="true">
+          <span class="logotipo__visor">{% icono "visor-vr" %}</span>
+          <span class="logotipo__vr"><span class="logotipo__virtual">Virtual</span><span class="logotipo__reality">Reality</span></span>
+          <span class="logotipo__day">DAY</span>
+        </span>
+        <span class="logotipo__edicion" aria-hidden="true"><span class="logotipo__latam">LATAM</span> {{ ev.edicion }}</span>
+        <span class="sr-only">{{ ev.nombre }}</span>
+      {% endif %}
+    </h1>
+    {% if ev.lema %}<p class="hero__lema">{{ ev.lema }}</p>{% endif %}
+    <div class="grupo-botones">
+      {% if ev.inscripcion.url %}<a class="boton boton--primario boton--grande" {% enlace ev.inscripcion.url %}>{{ ev.inscripcion.texto|default:"Inscríbete" }} {% icono "flecha" %}</a>{% endif %}
+      {% if s.boton_secundario %}<a class="boton boton--secundario boton--grande" {% enlace s.boton_secundario.url %}>{% if s.boton_secundario.icono %}{% icono s.boton_secundario.icono %}{% endif %} {{ s.boton_secundario.texto }}</a>{% endif %}
+    </div>
+  </div>
+  <div class="hero__visual">
+    <div class="hero__halo" aria-hidden="true"></div>
+    <div class="hero__foto">{% img s.imagen s.alt "hero__img" "eager" %}</div>
+    <div class="hud" aria-hidden="true"><span></span><span></span><span></span></div>
+  </div>
+</div>
+{% endwith %}

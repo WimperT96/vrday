@@ -1,0 +1,18 @@
+<div class="contenedor">
+  {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
+  {% if s.subtitulo %}<p class="subtitulo-seccion">{{ s.subtitulo }}</p>{% endif %}
+  <ul class="tarjetas">
+    {% for t in s.items %}
+    <li class="tarjeta{% if t.url %} tarjeta--enlace{% endif %}">
+      {% if t.url %}<a class="tarjeta__enlace" {% enlace t.url %}>{% endif %}
+        {% if t.imagen %}<div class="tarjeta__imagen">{% img t.imagen t.titulo %}</div>{% endif %}
+        <div class="tarjeta__cuerpo">
+          {% if t.etiqueta %}<p class="etiqueta">{{ t.etiqueta }}</p>{% endif %}
+          <h3 class="tarjeta__titulo">{{ t.titulo }}</h3>
+          {% if t.texto %}<p class="tarjeta__texto">{{ t.texto }}</p>{% endif %}
+        </div>
+      {% if t.url %}</a>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

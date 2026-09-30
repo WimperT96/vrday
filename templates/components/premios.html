@@ -1,0 +1,12 @@
+<div class="contenedor">
+  {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
+  {% if s.texto %}<div class="prosa">{{ s.texto|md }}</div>{% endif %}
+  <ul class="tarjetas tarjetas--2">
+    {% for p in s.items %}
+    <li class="tarjeta">
+      {% if p.imagen %}<div class="tarjeta__imagen">{% img p.imagen p.titulo %}</div>{% endif %}
+      <div class="tarjeta__cuerpo"><h3 class="tarjeta__titulo">{{ p.titulo }}</h3>{% if p.subtitulo %}<p class="etiqueta">{{ p.subtitulo }}</p>{% endif %}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

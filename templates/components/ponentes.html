@@ -1,0 +1,31 @@
+<div class="contenedor">
+  {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
+  {% if s.lista %}
+  <ul class="ponentes">
+    {% for p in s.lista %}
+    {% with dialogo="ponente-"|add:s.id|add:"-"|add:p.slug %}
+    <li>
+      <button type="button" class="ponente" data-abrir="{{ dialogo }}">
+        <span class="ponente__foto">{% if p.foto %}{% img p.foto p.nombre %}{% else %}<span class="ponente__iniciales">{{ p.nombre|iniciales }}</span>{% endif %}</span>
+        <span class="ponente__nombre">{{ p.nombre }}</span>
+        {% if p.institucion or p.pais %}<span class="ponente__meta">{% firstof p.institucion p.pais %}</span>{% endif %}
+      </button>
+      <dialog class="dialogo" id="{{ dialogo }}" aria-labelledby="{{ dialogo }}-nombre">
+        <div class="dialogo__caja ficha">
+          <button type="button" class="dialogo__cerrar" data-cerrar>{% icono "cerrar" %}<span class="sr-only">Cerrar</span></button>
+          <div class="ficha__foto">{% if p.foto %}{% img p.foto p.nombre %}{% endif %}</div>
+          <div class="ficha__texto">
+            <h3 class="ficha__nombre" id="{{ dialogo }}-nombre">{{ p.nombre }}</h3>
+            <p class="ficha__meta">{% if p.institucion %}{{ p.institucion }}{% endif %}{% if p.institucion and p.pais %} · {% endif %}{% if p.pais %}{{ p.pais }}{% endif %}</p>
+            <div class="prosa">{% if p.resena %}{{ p.resena|md }}{% elif mostrar_placeholders %}<p class="vacio">Reseña pendiente.</p>{% endif %}</div>
+          </div>
+        </div>
+      </dialog>
+    </li>
+    {% endwith %}
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="vacio">{{ s.mensaje_vacio|default:"Aún no hay ponentes publicados para esta edición." }}</p>
+  {% endif %}
+</div>

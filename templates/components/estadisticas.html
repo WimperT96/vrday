@@ -1,0 +1,12 @@
+<div class="contenedor">
+  {% if s.titulo %}<h2 class="titulo-seccion titulo-seccion--centro">{{ s.titulo }}</h2>{% endif %}
+  <ul class="cifras">
+    {% for c in s.items %}
+    <li class="cifra">
+      {% if c.icono %}<span class="cifra__icono">{% img c.icono "" %}</span>{% endif %}
+      <span class="cifra__valor" data-contador>{{ c.valor }}</span>
+      <span class="cifra__etiqueta">{{ c.etiqueta }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

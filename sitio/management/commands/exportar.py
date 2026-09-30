@@ -1,0 +1,27 @@
+"""
+python manage.py exportar [--borrador]
+
+Genera el sitio estático completo en dist/ (listo para subir al hosting):
+  1. valida el contenido (se detiene si hay errores),
+  2. copia estáticos (collectstatic) y exporta todas las páginas con django-distill,
+  3. oculta las marcas de "Contenido provisional" (salvo con --borrador).
+"""
+from django.conf import settings
+from django.core.management import call_command
+from django.core.management.base import BaseCommand
+from django.test.utils import override_settings
+
+
+class Command(BaseCommand):
+    help = "Valida el contenido y exporta el sitio estático a dist/."
+
+    def add_arguments(self, parser):
+        parser.add_argument("--borrador", action="store_true",
+                            help="Muestra las marcas de contenido provisional (para revisión interna).")
+
+    def handle(self, *args, **options):
+        call_command("validar_contenido")
+        with override_settings(MOSTRAR_PLACEHOLDERS=options["borrador"]):
+            call_command("distill", "generate", collectstatic=True, force=True, quiet=True)
+        html = sum(1 for _ in settings.DISTILL_DIR.rglob("*.html"))
+        self.stdout.write(self.style.SUCCESS(f"Sitio exportado en {settings.DISTILL_DIR} ({html} páginas HTML)."))

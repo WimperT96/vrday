@@ -1,0 +1,12 @@
+<div class="contenedor">
+  {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
+  <ul class="ponentes">
+    {% for m in s.miembros %}
+    <li class="ponente ponente--estatico">
+      <span class="ponente__foto">{% if m.foto %}{% img m.foto m.nombre %}{% else %}<span class="ponente__iniciales">{{ m.nombre|iniciales }}</span>{% endif %}</span>
+      <span class="ponente__nombre">{{ m.nombre }}</span>
+      {% if m.cargo %}<span class="ponente__meta">{{ m.cargo }}</span>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

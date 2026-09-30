@@ -1,0 +1,11 @@
+<div class="contenedor">
+  <ul class="caracteristicas">
+    {% for c in s.items %}
+    <li class="caracteristica">
+      <span class="caracteristica__icono">{% icono c.icono|default:"cubo" %}</span>
+      <h2 class="caracteristica__titulo">{{ c.titulo }}</h2>
+      <p class="caracteristica__texto">{{ c.texto }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

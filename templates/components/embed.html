@@ -1,0 +1,11 @@
+<div class="contenedor">
+  {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
+  {% if s.url %}
+  <div class="embed embed--{{ s.proveedor|default:'iframe' }}{% if s.alto %} embed--alto-fijo{% endif %}"{% if s.alto %} style="--alto: {{ s.alto }}px"{% endif %}>
+    <iframe src="{{ s.url }}" title="{% firstof s.titulo s.proveedor %}" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking"></iframe>
+  </div>
+  {% elif s.imagen_respaldo %}
+  <div class="marco">{% img s.imagen_respaldo s.titulo %}</div>
+  {% endif %}
+  {% if s.credito %}<div class="embed__credito">{{ s.credito|md }}</div>{% endif %}
+</div>

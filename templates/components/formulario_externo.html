@@ -1,0 +1,13 @@
+<div class="contenedor contenedor--estrecho formulario">
+  {% if s.titulo %}<h2 class="titulo-seccion titulo-seccion--centro">{{ s.titulo }}</h2>{% endif %}
+  {% if s.url and s.modo == "incrustado" %}
+  <div class="formulario__marco marco"><iframe src="{{ s.url }}" title="{{ s.titulo|default:'Formulario' }}" loading="lazy"></iframe></div>
+  {% elif s.url %}
+  <p class="grupo-botones grupo-botones--centro"><a class="boton boton--primario" {% enlace s.url %}>{{ s.texto_boton|default:"Abrir formulario" }} {% icono "externo" %}</a></p>
+  {% else %}
+  <div class="aviso">
+    {% icono "documento" %}
+    <p>El formulario de contacto estará disponible próximamente.</p>
+  </div>
+  {% endif %}
+</div>

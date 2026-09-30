@@ -1,0 +1,4 @@
+<div class="contenedor cta">
+  <h2 class="cta__titulo">{{ s.titulo|md_linea }}</h2>
+  {% if s.boton %}<a class="boton boton--primario" {% enlace s.boton.url %}>{{ s.boton.texto }} {% icono "flecha" %}</a>{% endif %}
+</div>

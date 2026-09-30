@@ -1,0 +1,14 @@
+{% with imagen=s.imagen|default:"" %}
+<div class="contenedor cabecera-pagina{% if imagen or s.fondo and not s.fondo|empieza:'fondos/' %} cabecera-pagina--con-imagen{% endif %}">
+  <div class="cabecera-pagina__texto">
+    {% if pagina.edicion %}<p class="etiqueta">Edición {{ pagina.edicion }}</p>{% endif %}
+    <h1 class="cabecera-pagina__titulo">{% firstof s.titulo pagina.titulo %}</h1>
+    {% if s.subtitulo %}<p class="cabecera-pagina__subtitulo">{{ s.subtitulo }}</p>{% endif %}
+  </div>
+  {% if imagen %}
+  <div class="cabecera-pagina__imagen">{% img imagen s.titulo "" "eager" %}</div>
+  {% elif s.fondo and not s.fondo|empieza:"fondos/" %}
+  <div class="cabecera-pagina__imagen marco">{% img s.fondo s.titulo "" "eager" %}</div>
+  {% endif %}
+</div>
+{% endwith %}

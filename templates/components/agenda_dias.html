@@ -1,0 +1,23 @@
+<div class="contenedor">
+  {% if s.tentativa %}<p class="etiqueta etiqueta--aviso">Agenda tentativa</p>{% endif %}
+  {% for sede in s.sedes %}
+  <div class="agenda-sede" id="{{ sede.id }}">
+    <h2 class="titulo-seccion">{% if sede.bandera %}{% img sede.bandera "" "agenda-sede__bandera" %}{% endif %}{{ sede.nombre }}</h2>
+    <div class="pestanas" data-pestanas>
+      <div class="pestanas__lista" role="tablist" aria-label="Días">
+        {% for dia in sede.dias %}
+        <button type="button" role="tab" class="pestanas__boton" id="tab-{{ sede.id }}-{{ dia.id }}" aria-controls="{{ sede.id }}-{{ dia.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"{% if not forloop.first %} tabindex="-1"{% endif %}>
+          {% icono "calendario" %}{{ dia.etiqueta }}
+        </button>
+        {% endfor %}
+      </div>
+      {% for dia in sede.dias %}
+      <div class="pestanas__panel" role="tabpanel" id="{{ sede.id }}-{{ dia.id }}" aria-labelledby="tab-{{ sede.id }}-{{ dia.id }}" tabindex="0"{% if not forloop.first %} hidden{% endif %}>
+        <ol class="agenda">{% for x in dia.sesiones %}{% include "components/_sesion.html" %}{% endfor %}</ol>
+      </div>
+      {% endfor %}
+    </div>
+    {% if sede.nota %}<p class="nota"><strong>Nota:</strong> {{ sede.nota }}</p>{% endif %}
+  </div>
+  {% endfor %}
+</div>

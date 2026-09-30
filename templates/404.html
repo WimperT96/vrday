@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block titulo %}Página no encontrada – {{ sitio.nombre }}{% endblock %}
+{% block contenido %}
+<section class="seccion seccion--cabecera">
+  <div class="seccion__fondo" aria-hidden="true"></div>
+  <div class="contenedor cabecera-pagina">
+    <p class="etiqueta">Error 404</p>
+    <h1 class="cabecera-pagina__titulo">Página no encontrada</h1>
+    <p class="cabecera-pagina__subtitulo">La página que buscas no existe o cambió de dirección.</p>
+    <div class="grupo-botones">
+      <a class="boton boton--primario" href="/">Ir al inicio {% icono "flecha" %}</a>
+      <a class="boton boton--secundario" href="/memorias/">Ver memorias</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

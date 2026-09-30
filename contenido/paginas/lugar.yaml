@@ -30,9 +30,8 @@ secciones:
       - **Centro de Convenciones UTPL** — recorrido por instalaciones y espacios tecnológicos (jueves 12).
       - **Hall del Aula Magna** — stands y experiencias inmersivas.
       - **Sector de ingreso al Rectorado** — stands y experiencias inmersivas.
-
-      **Dirección:** PENDIENTE
-    placeholder: true                    # PENDIENTE: dirección exacta, indicaciones de llegada
+    # PENDIENTE: agregar aquí la dirección exacta y las indicaciones de llegada
+    placeholder: true
 
   - tipo: embed
     id: mapa

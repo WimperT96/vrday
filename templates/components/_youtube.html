@@ -1,0 +1,6 @@
+{% if id %}<div class="yt" data-youtube="{{ id }}">
+  <button type="button" class="yt__boton" aria-label="Reproducir video{% if titulo %}: {{ titulo }}{% endif %}">
+    <img class="yt__miniatura" src="{{ id|yt_miniatura }}" alt="" loading="lazy" width="480" height="360">
+    <span class="yt__play">{% icono "play" %}</span>
+  </button>
+</div>{% else %}<div class="yt yt--vacio"><p>{% icono "play" %}<br>Video pendiente</p></div>{% endif %}

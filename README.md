@@ -63,6 +63,7 @@ vrday/
 
 ## Estado actual (30-sep-2026)
 
+- **Sitio Django funcionando**: las 25 páginas se generan desde los YAML con la identidad 2026, y se exportan a HTML estático (`python manage.py exportar`).
 - Sitio reorganizado para la **edición 2026** (12 y 13 de noviembre, UTPL): nuevo Inicio, Agenda tentativa, páginas Ponentes y Lugar, menú de la maqueta.
 - Edición 2023 archivada en `/memorias/2023/`.
 - Pendientes consolidados en **`docs/09-pendientes.md`**.
@@ -91,6 +92,18 @@ python referencias/herramientas/validar_contenido.py
 - `requirements.txt`: lo que necesita el sitio (Django 5.2 LTS, django-distill, PyYAML, Markdown, Pillow), con versiones fijadas.
 - `requirements-dev.txt`: lo anterior + herramientas usadas para capturar el sitio actual.
 - Python 3.12. El entorno `.venv/` no se sube al repositorio.
+
+## Ejecutar y exportar el sitio
+
+```powershell
+.venv\Scripts\activate
+python manage.py runserver            # desarrollo: http://127.0.0.1:8000
+python manage.py test sitio           # comprueba que todas las páginas funcionan
+python manage.py exportar             # genera el sitio estático en dist/
+python -m http.server 8080 --directory dist   # previsualizar lo exportado
+```
+
+Detalle de comandos: `docs/03-arquitectura-django.md §6`.
 
 ## Cómo editar contenido (resumen)
 

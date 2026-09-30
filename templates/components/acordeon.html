@@ -1,0 +1,14 @@
+<div class="contenedor contenedor--estrecho">
+  {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
+  <div class="acordeon">
+    {% for item in s.items %}
+    <details class="acordeon__item"{% if forloop.first %} open{% endif %}>
+      <summary class="acordeon__titulo">{{ item.titulo }}{% icono "chevron" "acordeon__icono" %}</summary>
+      <div class="acordeon__cuerpo prosa">
+        {% if item.youtube %}{% include "components/_youtube.html" with id=item.youtube titulo=item.titulo %}{% endif %}
+        {{ item.cuerpo|md }}
+      </div>
+    </details>
+    {% endfor %}
+  </div>
+</div>

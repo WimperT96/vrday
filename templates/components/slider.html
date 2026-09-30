@@ -1,0 +1,19 @@
+<div class="slider" data-slider aria-roledescription="carrusel" aria-label="{{ pagina.titulo }}">
+  <div class="slider__pista" data-slider-pista tabindex="0">
+    {% for d in s.diapositivas %}
+    <figure class="slider__diapositiva" aria-roledescription="diapositiva" aria-label="{{ forloop.counter }} de {{ s.diapositivas|length }}">
+      {% if forloop.first %}{% img d.imagen d.alt "slider__img" "eager" %}{% else %}{% img d.imagen d.alt "slider__img" %}{% endif %}
+      {% if d.capa %}{% img d.capa "" "slider__capa" %}{% endif %}
+      {% if d.titulo or d.texto or d.botones %}
+      <figcaption class="slider__texto">
+        {% if d.titulo %}<p class="slider__titulo">{{ d.titulo }}</p>{% endif %}
+        {% if d.texto %}<p>{{ d.texto }}</p>{% endif %}
+        {% for b in d.botones %}<a class="boton boton--primario" {% enlace b.url %}>{{ b.texto }} {% icono "flecha" %}</a>{% endfor %}
+      </figcaption>
+      {% endif %}
+    </figure>
+    {% endfor %}
+  </div>
+  <button type="button" class="slider__nav slider__nav--prev" data-slider-prev>{% icono "flecha-izq" %}<span class="sr-only">Anterior</span></button>
+  <button type="button" class="slider__nav slider__nav--next" data-slider-next>{% icono "flecha" %}<span class="sr-only">Siguiente</span></button>
+</div>

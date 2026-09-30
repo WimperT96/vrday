@@ -1,0 +1,7 @@
+<div class="contenedor video-destacado">
+  <div class="video-destacado__texto">
+    <h2 class="titulo-seccion">{{ s.titulo }}</h2>
+    {% if s.subtitulo %}<p class="subtitulo-seccion">{{ s.subtitulo }}</p>{% endif %}
+  </div>
+  <div class="video-destacado__video">{% include "components/_youtube.html" with id=s.youtube titulo=s.titulo %}</div>
+</div>

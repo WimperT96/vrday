@@ -1,0 +1,11 @@
+<li class="sesion{% if x.tipo == 'pausa' %} sesion--pausa{% endif %}{% if x.destacada %} sesion--destacada{% endif %}">
+  <div class="sesion__hora">{% icono "reloj" %}<span>{{ x.hora }}</span></div>
+  <div class="sesion__cuerpo">
+    <h4 class="sesion__titulo">{% if x.icono %}{% img x.icono "" "sesion__icono" %}{% endif %}{% firstof x.titulo x.actividad as titulo_sesion %}{{ titulo_sesion|linebreaksbr }}</h4>
+    {% if x.detalle %}<p class="sesion__detalle">{{ x.detalle }}</p>{% endif %}
+    {% if x.modalidad or x.lugar %}<p class="sesion__meta">{% if x.modalidad %}<span class="chip">{{ x.modalidad }}</span>{% endif %}{% if x.lugar %}<span class="chip chip--suave">{% icono "ubicacion" %}{{ x.lugar }}</span>{% endif %}</p>{% endif %}
+    {% if x.ponentes %}<p class="sesion__ponentes"><strong>{{ x.rol_ponentes|default:"Ponentes" }}:</strong> {{ x.ponentes|join:", " }}</p>{% endif %}
+    {% for e in x.extra %}<p class="sesion__ponentes"><strong>{{ e.titulo }}:</strong> {{ e.items|join:", " }}</p>{% endfor %}
+    {% if x.moderador %}<p class="sesion__ponentes"><strong>Moderador:</strong> {{ x.moderador }}</p>{% endif %}
+  </div>
+</li>

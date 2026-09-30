@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{ sitio.idioma|default:'es' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% firstof pagina.seo.descripcion seo_base.descripcion_por_defecto as descripcion %}
+  {% firstof pagina.seo.titulo pagina.titulo sitio.nombre as titulo_og %}
+  {% firstof pagina.seo.imagen seo_base.imagen_compartir as imagen_og %}
+  <title>{% block titulo %}{% if pagina.seo.titulo %}{{ pagina.seo.titulo }}{% elif pagina.url == "/" %}{{ seo_base.titulo_por_defecto }}{% else %}{{ pagina.titulo }} – {{ sitio.nombre }}{% endif %}{% endblock %}</title>
+  <meta name="description" content="{{ descripcion }}">
+  {% if pagina.estado == "oculta" %}<meta name="robots" content="noindex">{% endif %}
+  {% if pagina.url %}<link rel="canonical" href="{{ sitio.dominio }}{{ pagina.url }}">{% endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ sitio.nombre }}">
+  <meta property="og:title" content="{{ titulo_og }}">
+  <meta property="og:description" content="{{ descripcion }}">
+  <meta property="og:image" content="{{ sitio.dominio }}{% medio imagen_og %}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{% medio sitio.favicon %}">
+  <meta name="theme-color" content="#071A38">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+  <link rel="stylesheet" href="{% static 'css/tokens.css' %}">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/componentes.css' %}">
+  {% block head %}{% endblock %}
+</head>
+<body class="{% block clase_body %}{% endblock %}">
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  {% include "partials/iconos.html" %}
+  {% include "partials/header.html" %}
+
+  <main id="contenido">
+    {% block contenido %}{% endblock %}
+  </main>
+
+  {% include "partials/footer.html" %}
+  <script type="module" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

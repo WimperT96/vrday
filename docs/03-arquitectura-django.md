@@ -18,72 +18,55 @@
 | Contenido | YAML (`PyYAML`) + Markdown en los campos de texto (`markdown`) | Validado con un comando propio. |
 | Exportación estática | **django-distill** | Genera `dist/` con un HTML por URL. Se puede publicar en cualquier hosting estático. |
 | Estilos | CSS nativo con variables (tokens de `02-identidad-visual.md §2`), sin framework | Opcional más adelante: Sass o Tailwind si el equipo lo prefiere. |
-| JavaScript | Módulos ES nativos, uno por componente, cargados solo si la sección existe en la página | Sin jQuery. |
-| Librerías puntuales | Swiper (slider), GLightbox (galerías), lite-youtube-embed (videos) | Todas vía npm o archivo local en `static/vendor/`. |
-| Imágenes | Pillow → versiones WebP/AVIF en varios anchos + `<picture>` con `srcset` | Varios originales pesan varios MB (el fondo mide 6092 px). |
+| JavaScript | Un solo módulo `static/js/main.js` sin dependencias (menú, diálogos, visor de galerías, pestañas, YouTube ligero, slider) + efectos cargados bajo demanda desde `static/js/efectos/` | Sin jQuery ni librerías externas: se descartaron Swiper/GLightbox porque lo necesario se resolvió con ~250 líneas propias. |
+| Imágenes | Hoy: originales con `width`/`height`, `loading="lazy"`. Pendiente: versiones WebP/AVIF + `srcset` (fase 4) | Varios originales pesan varios MB (el fondo mide 6092 px). |
 | Futuro 3D / efectos | Three.js, `<model-viewer>`, GSAP + ScrollTrigger | Ver `07-efectos-y-3d.md`. |
 
-## 3. Estructura del proyecto Django (propuesta)
+## 3. Estructura del proyecto Django (construida)
 
 ```
 vrday/
-├── contenido/                  ← (ya existe) YAML: fuente de verdad
-├── medios/                     ← (ya existe) imágenes y videos
 ├── manage.py
-├── requirements.txt            Django, django-distill, PyYAML, Markdown, Pillow
+├── requirements.txt / requirements-dev.txt
 ├── vrday/                      proyecto Django
-│   ├── settings.py             DATABASES = {} · INSTALLED_APPS mínimas · STATICFILES_DIRS
-│   └── urls.py
+│   ├── settings.py             DATABASES = {} · apps: staticfiles, django_distill, sitio · medios/ → /static/medios/
+│   ├── urls.py                 Inicio + <path:ruta>/ (todas las páginas y redirecciones salen de los YAML), sitemap, robots, 404
+│   └── wsgi.py
 ├── sitio/                      app única
-│   ├── contenido.py            cargador: lee y cachea YAML, resuelve ponentes, valida
-│   ├── views.py                una sola vista genérica: pagina(url) -> plantilla pagina.html
-│   ├── urls.py                 rutas generadas desde los YAML + redirecciones (distill)
-│   ├── templatetags/
-│   │   └── vr.py               {% imagen %}, {% youtube %}, |markdown, {% seccion %}
+│   ├── contenido.py            cargador: lee y cachea los YAML (se recarga al guardar), resuelve `fuente:`, ponentes, galerías
+│   ├── views.py                vista genérica `pagina` + redirecciones, sitemap.xml, robots.txt, 404
+│   ├── context_processors.py   sitio, evento, menú (con ítem activo), botón Inscríbete, pie
+│   ├── templatetags/vr.py      {% medio %} {% img %} {% enlace %} {% icono %} |md |md_linea |a_json |fecha_larga …
+│   ├── tests.py                renderiza todas las páginas, redirecciones, enlaces e imágenes
 │   └── management/commands/
-│       ├── validar_contenido.py   (= referencias/herramientas/validar_contenido.py)
-│       └── optimizar_imagenes.py  genera WebP/AVIF responsive en static/medios-opt/
+│       ├── validar_contenido.py   medios, enlaces internos, plantillas faltantes, PENDIENTES
+│       └── exportar.py            validar + collectstatic + distill → dist/
 ├── templates/
-│   ├── base.html               <head>, SEO, fuentes, tokens, header, footer, carga de JS
-│   ├── partials/  header.html  footer.html  menu.html  modal-ponente.html
-│   ├── pagina.html             recorre pagina.secciones e incluye components/<tipo>.html
-│   └── components/             UNA plantilla por tipo de sección (ver catálogo)
-│       ├── cabecera.html  texto.html  galeria.html  videos.html  ponentes.html …
+│   ├── base.html               <head> (SEO, Open Graph, canonical, fuentes), cabecera, pie, main.js
+│   ├── pagina.html             recorre las secciones e incluye components/<tipo>.html
+│   ├── partials/               header.html  footer.html  iconos.html (sprite SVG propio)
+│   ├── components/             33 plantillas: una por tipo de sección + _youtube.html, _sesion.html
+│   ├── redireccion.html  404.html  sitemap.xml  robots.txt
 ├── static/
-│   ├── css/  tokens.css  base.css  components/<tipo>.css
-│   ├── js/   main.js (registro de componentes)  components/<tipo>.js  efectos/*.js
-│   ├── vendor/                 librerías de terceros
-│   └── modelos-3d/             (futuro) .glb / .gltf
-└── dist/                       salida de `python manage.py distill-local` (no se versiona)
+│   ├── css/  tokens.css (identidad 2026) · base.css (layout, botones, cabecera, pie) · componentes.css (un bloque por tipo)
+│   ├── js/   main.js · efectos/entrada.js (ejemplo del patrón de efectos)
+│   └── img/decor/  circuito.svg · hexagonos.svg
+├── contenido/  medios/  docs/  referencias/
+└── dist/                       salida de `python manage.py exportar` (no se versiona)
 ```
 
 ### Flujo de una página
 
 ```
-URL /agenda/  →  sitio.urls (generada desde contenido/paginas/agenda.yaml)
-             →  views.pagina(slug="agenda")
-             →  contenido.cargar_pagina("agenda")  (+ sitio.yaml, + ponentes.yaml)
+URL /agenda/  →  vrday/urls.py: <path:ruta>/  →  views.pagina(ruta="agenda")
+             →  contenido.pagina("/agenda/")  (+ sitio.yaml, evento.yaml, ponentes.yaml)
              →  templates/pagina.html
-                   for seccion in pagina.secciones:
-                       include "components/{{ seccion.tipo }}.html"
+                   for s in pagina.secciones:
+                       <section class="seccion seccion--{tipo}" data-componente data-efectos>
+                         include "components/{tipo}.html"
 ```
 
-`pagina.html` (idea):
-
-```django
-{% extends "base.html" %}
-{% block contenido %}
-  {% for s in pagina.secciones %}
-    {% if s.mostrar is not False %}
-    <section id="{{ s.id|default:'' }}" class="seccion seccion--{{ s.tipo }}"
-             data-componente="{{ s.tipo }}"
-             {% if s.efectos %}data-efectos='{{ s.efectos|json }}'{% endif %}>
-      {% include "components/"|add:s.tipo|add:".html" with s=s %}
-    </section>
-    {% endif %}
-  {% endfor %}
-{% endblock %}
-```
+Agregar una página = crear su YAML en `contenido/paginas/` (la URL sale del campo `url:`). No hay que tocar código.
 
 ## 4. Formato del contenido
 
@@ -177,20 +160,23 @@ Campos nuevos en tipos existentes: `ponentes.mensaje_vacio` (texto si no hay pon
 
 **Agregar un tipo nuevo** = crear su plantilla (y CSS/JS si aplica) y usarlo en un YAML. No hay que tocar vistas ni URLs.
 
-## 6. Exportación y publicación
+## 6. Comandos
 
-```bash
-python manage.py validar_contenido          # 0 errores antes de publicar
-python manage.py optimizar_imagenes         # genera versiones WebP/AVIF
-python manage.py collectstatic --noinput
-python manage.py distill-local dist/ --force
-```
+| Comando | Qué hace |
+|---|---|
+| `python manage.py runserver` | Servidor de desarrollo en http://127.0.0.1:8000 (el contenido se recarga al guardar un YAML; muestra las marcas "Contenido provisional") |
+| `python manage.py validar_contenido` | Revisa YAML, imágenes, enlaces internos, plantillas y lista los PENDIENTES |
+| `python manage.py test sitio` | Renderiza todas las páginas y verifica enlaces, imágenes y redirecciones |
+| `python manage.py exportar` | Valida y genera el sitio estático completo en `dist/` (sin marcas de borrador) |
+| `python manage.py exportar --borrador` | Igual, pero mostrando las marcas de contenido provisional (para revisión interna) |
+| `python -m http.server 8080 --directory dist` | Previsualizar el sitio exportado |
 
-`dist/` es un sitio estático completo: se sube a cualquier hosting (servidor Nginx de la universidad, GitHub Pages, Netlify, Cloudflare Pages).
+`dist/` es un sitio estático completo: se sube a cualquier hosting (servidor de la universidad, GitHub Pages, Netlify, Cloudflare Pages).
 
-- **Redirecciones**: django-distill genera una página HTML por cada redirección de `sitio.yaml` (meta refresh + canonical). Si el hosting admite reglas (`_redirects` de Netlify/Cloudflare o `return 301` de Nginx), el comando de exportación puede generar también ese archivo.
-- **URLs con barra final** (`/acerca-de/` → `acerca-de/index.html`), igual que hoy: los enlaces existentes siguen funcionando.
-- **Durante el desarrollo** se usa `python manage.py runserver` normal; el contenido se recarga al guardar el YAML.
+- **Redirecciones**: cada URL antigua de `sitio.yaml → redirecciones` se exporta como una página HTML con `meta refresh` + `location.replace` + `canonical`. Si el hosting admite reglas 301 (Nginx, `_redirects`), conviene declararlas también (pendiente E3).
+- **URLs con barra final** (`/acerca-de/` → `acerca-de/index.html`), igual que hoy.
+- **Fecha de corte**: las convocatorias vencidas se ocultan **al exportar**; hay que volver a exportar después de la fecha límite.
+- El aviso "MEDIA_URL and MEDIA_ROOT must be set" de distill es inofensivo: el sitio no usa archivos subidos por usuarios.
 
 ## 7. SEO, rendimiento y accesibilidad
 

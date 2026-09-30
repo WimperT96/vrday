@@ -31,25 +31,27 @@
 
 - [x] Repositorio git + entorno virtual con dependencias fijadas
 
-- [ ] Proyecto Django 5.2 + app `sitio` + `requirements.txt`
-- [ ] Cargador de YAML y vista genérica (`03 §3`)
-- [ ] `base.html` con header (menú + submenú), footer (auspiciantes) y SEO
-- [ ] `tokens.css` + `base.css` (tokens 2026 de `02 §2`, Poppins, tema claro + secciones navy)
-- [ ] Comando `validar_contenido` (portar el script existente)
-- [ ] Exportación con django-distill + redirecciones
-- **Resultado:** todas las URLs responden con cabecera y texto plano.
+- [x] Proyecto Django 5.2 + app `sitio` + `requirements.txt`
+- [x] Cargador de YAML y vista genérica (`03 §3`)
+- [x] `base.html` con header (menú + submenú + menú móvil), footer (sede y aliados) y SEO (title, description, Open Graph, canonical, sitemap, robots)
+- [x] `tokens.css` + `base.css` (tokens 2026 de `02 §2`, Poppins, tema claro + secciones navy)
+- [x] Comando `validar_contenido` (+ verificación de plantillas) y pruebas automáticas (`python manage.py test sitio`)
+- [x] Exportación con django-distill + redirecciones (`python manage.py exportar`)
+- **Resultado:** ✅ las 25 páginas, 8 redirecciones, 404, sitemap y robots se exportan a `dist/` (34 HTML).
 
 ## Fase 3 — Componentes (en orden de impacto)
 
-1. [ ] `cabecera`, `texto`, `botones`, `cta` → cubren la mayoría de páginas
-2. [ ] `ponentes` + modal de reseña → Inicio y Agenda
-2b. [ ] **Tipos 2026**: `hero_evento`, `caracteristicas`, `convocatorias`, `banda`, `agenda_dias`, `agenda_resumen`, `aliados` → Inicio y Agenda 2026 (prioridad si se publica primero solo el Inicio, ver `09 A4`)
-3. [ ] `galeria` (lightbox) → Memorias, Plataforma, Stands, Juegos
-4. [ ] `videos`, `video_destacado` (YouTube ligero) → Inicio y Memorias
-5. [ ] `agenda_paises` (pestañas por país) → Agenda
-6. [ ] `slider`, `estadisticas`, `inscripcion_paises`, `tarjetas` → Inicio
-7. [ ] `faq`, `acordeon`, `tabla`, `formulario_externo`, `embed`, `video_local`, `premios`
-8. [ ] `agenda_lista`, `equipo`, `testimonios` → páginas 2020 y heredadas
+> ✅ **Versión 1 de los 31 componentes hecha** (30-sep-2026): todos los tipos renderizan con la identidad 2026, en escritorio y móvil. Queda pulir detalles visuales cuando lleguen los recursos gráficos reales.
+
+1. [x] `cabecera`, `texto`, `botones`, `cta` → cubren la mayoría de páginas
+2. [x] `ponentes` + modal de reseña → Inicio y Agenda
+2b. [x] **Tipos 2026**: `hero_evento`, `caracteristicas`, `convocatorias`, `banda`, `agenda_dias`, `agenda_resumen`, `aliados` → Inicio y Agenda 2026 (prioridad si se publica primero solo el Inicio, ver `09 A4`)
+3. [x] `galeria` (lightbox) → Memorias, Plataforma, Stands, Juegos
+4. [x] `videos`, `video_destacado` (YouTube ligero) → Inicio y Memorias
+5. [x] `agenda_paises` (pestañas por país) → Agenda
+6. [x] `slider`, `estadisticas`, `inscripcion_paises`, `tarjetas` → Inicio
+7. [x] `faq`, `acordeon`, `tabla`, `formulario_externo`, `embed`, `video_local`, `premios`
+8. [x] `agenda_lista`, `equipo`, `testimonios` → páginas 2020 y heredadas
 
 ## Fase 4 — Calidad y publicación
 

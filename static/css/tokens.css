@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Tokens de diseño — VR Day LATAM 2026
+   Fuente: docs/02-identidad-visual.md §2. Cambiar la marca = editar este archivo.
+   ========================================================================== */
+:root {
+  /* Fondos (tema claro) */
+  --vr-blanco: #FFFFFF;
+  --vr-fondo: #F4F8FC;
+  --vr-fondo-2: #EAF1FA;
+  --vr-borde: #D6E2F0;
+
+  /* Navy */
+  --vr-navy-900: #071A38;
+  --vr-navy-800: #0F2344;
+  --vr-navy-700: #1B3358;
+
+  /* Azules: marca (decorativo) vs acción (texto/botones, contraste AA) */
+  --vr-azul-500: #4D9CF6;
+  --vr-azul-300: #6DAAFE;
+  --vr-azul-100: #E5F0FD;
+  --vr-azul-accion: #1F6FD6;
+  --vr-azul-accion-hover: #1A5FB8;
+
+  /* Holográfico */
+  --vr-lavanda-200: #E6D5F7;
+  --vr-violeta-600: #7C4DDB;
+
+  /* Texto */
+  --vr-texto: #071A38;
+  --vr-texto-2: #4A5B78;
+  --vr-texto-inv: #FFFFFF;
+  --vr-texto-inv-2: #B9CBE6;
+
+  /* Degradés */
+  --vr-degrade-holo: radial-gradient(60% 60% at 70% 40%, #C9E0FD 0%, #E6D5F7 45%, transparent 75%);
+  --vr-degrade-azul: linear-gradient(90deg, #1F6FD6, #4D9CF6);
+
+  /* Formas y sombras */
+  --vr-radio-pildora: 999px;
+  --vr-radio-card: 20px;
+  --vr-radio-sm: 12px;
+  --vr-corte: 16px;
+  --vr-sombra-card: 0 8px 30px rgba(7, 26, 56, .06);
+  --vr-sombra-card-hover: 0 14px 40px rgba(7, 26, 56, .12);
+  --vr-brillo-azul: 0 8px 24px rgba(77, 156, 246, .35);
+
+  /* Tipografía */
+  --vr-fuente: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --vr-h1: clamp(2.75rem, 2rem + 3vw, 4.5rem);
+  --vr-h2: clamp(2rem, 1.6rem + 1.6vw, 3rem);
+  --vr-h3: clamp(1.375rem, 1.2rem + .6vw, 1.75rem);
+  --vr-cuerpo: clamp(1rem, .95rem + .2vw, 1.125rem);
+  --vr-pequeno: .875rem;
+
+  /* Espaciado y layout */
+  --vr-ancho: 1200px;
+  --vr-ancho-estrecho: 860px;
+  --vr-margen: clamp(16px, 4vw, 32px);
+  --vr-seccion: clamp(48px, 6vw, 88px);
+  --vr-cabecera-alto: 76px;
+
+  /* Movimiento */
+  --vr-transicion: .25s cubic-bezier(.2, .7, .2, 1);
+}

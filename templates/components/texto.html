@@ -1,0 +1,9 @@
+<div class="contenedor texto texto--{{ s.imagen_posicion|default:'derecha' }}{% if not s.imagen %} texto--solo{% endif %}">
+  {% if s.imagen and s.imagen_posicion == "arriba" %}<figure class="texto__imagen marco">{% img s.imagen s.titulo %}</figure>{% endif %}
+  <div class="texto__cuerpo prosa">
+    {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
+    {{ s.cuerpo|md }}
+    {% if s.boton %}<p><a class="boton boton--secundario" {% enlace s.boton.url %}>{{ s.boton.texto }} {% icono "flecha" %}</a></p>{% endif %}
+  </div>
+  {% if s.imagen and s.imagen_posicion != "arriba" %}<figure class="texto__imagen marco">{% img s.imagen s.titulo %}</figure>{% endif %}
+</div>

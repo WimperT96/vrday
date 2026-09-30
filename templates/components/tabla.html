@@ -1,0 +1,11 @@
+<div class="contenedor">
+  {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
+  <div class="tabla-scroll" tabindex="0" role="region" aria-label="{{ s.titulo|default:'Tabla' }}">
+    <table class="tabla">
+      <thead><tr>{% for c in s.columnas %}<th scope="col">{{ c }}</th>{% endfor %}</tr></thead>
+      <tbody>
+        {% for fila in s.filas %}<tr>{% for celda in fila %}<td>{{ celda }}</td>{% endfor %}</tr>{% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>

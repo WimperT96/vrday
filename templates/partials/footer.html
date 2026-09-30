@@ -27,7 +27,7 @@
     {% endif %}
 
     <div class="pie__base">
-      <a href="/" class="pie__logo" aria-label="{{ sitio.nombre }} – Inicio">{% firstof pie.logo sitio.logo as logo_pie %}{% img logo_pie sitio.nombre %}</a>
+      <a href="{% ruta "/" %}" class="pie__logo" aria-label="{{ sitio.nombre }} – Inicio">{% firstof pie.logo sitio.logo as logo_pie %}{% img logo_pie sitio.nombre %}</a>
       {% if pie.enlaces %}
       <nav aria-label="Pie de página">
         <ul class="pie__enlaces">

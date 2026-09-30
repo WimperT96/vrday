@@ -59,7 +59,13 @@ USE_TZ = True
 # ── Archivos estáticos ───────────────────────────────────────────────────────
 # medios/ se publica bajo /static/medios/ para que el contenido use rutas cortas
 # (p. ej. "ponentes/2023/aura-forero.png").
-STATIC_URL = "/static/"
+# Subcarpeta donde se publica el sitio (vacío = raíz del dominio).
+# GitHub Pages publica en https://<usuario>.github.io/<repo>/ → VR_BASE_URL=/<repo>
+SITIO_BASE = os.environ.get("VR_BASE_URL", "").strip().rstrip("/")
+if SITIO_BASE and not SITIO_BASE.startswith("/"):
+    SITIO_BASE = "/" + SITIO_BASE
+
+STATIC_URL = f"{SITIO_BASE}/static/"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     ("medios", BASE_DIR / "medios"),
@@ -70,6 +76,9 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 CONTENIDO_DIR = BASE_DIR / "contenido"
 MEDIOS_DIR = BASE_DIR / "medios"
 DISTILL_DIR = BASE_DIR / "dist"
+
+# Vista previa pública (GitHub Pages): pide a los buscadores no indexar el sitio.
+NO_INDEXAR = os.environ.get("VR_NOINDEX", "0") == "1"
 
 # Marca visualmente el contenido provisional (placeholder: true) mientras se desarrolla.
 MOSTRAR_PLACEHOLDERS = os.environ.get("VR_MOSTRAR_PLACEHOLDERS", "1" if DEBUG else "0") == "1"

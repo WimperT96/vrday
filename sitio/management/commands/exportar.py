@@ -6,6 +6,8 @@ Genera el sitio estático completo en dist/ (listo para subir al hosting):
   2. copia estáticos (collectstatic) y exporta todas las páginas con django-distill,
   3. oculta las marcas de "Contenido provisional" (salvo con --borrador).
 """
+import shutil
+
 from django.conf import settings
 from django.core.management import call_command
 from django.core.management.base import BaseCommand
@@ -23,5 +25,13 @@ class Command(BaseCommand):
         call_command("validar_contenido")
         with override_settings(MOSTRAR_PLACEHOLDERS=options["borrador"]):
             call_command("distill", "generate", collectstatic=True, force=True, quiet=True)
+        # Con subcarpeta (p. ej. /vrday), distill copia los estáticos en dist/vrday/static,
+        # pero el hosting sirve dist/ como /vrday/ → deben quedar en dist/static.
+        if settings.SITIO_BASE:
+            anidado = settings.DISTILL_DIR / settings.SITIO_BASE.strip("/")
+            if (anidado / "static").is_dir():
+                shutil.move(str(anidado / "static"), str(settings.DISTILL_DIR / "static"))
+                shutil.rmtree(anidado, ignore_errors=True)
         html = sum(1 for _ in settings.DISTILL_DIR.rglob("*.html"))
-        self.stdout.write(self.style.SUCCESS(f"Sitio exportado en {settings.DISTILL_DIR} ({html} páginas HTML)."))
+        base = f" · publicado bajo {settings.SITIO_BASE}/" if settings.SITIO_BASE else ""
+        self.stdout.write(self.style.SUCCESS(f"Sitio exportado en {settings.DISTILL_DIR} ({html} páginas HTML){base}."))

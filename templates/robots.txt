@@ -1,4 +1,6 @@
 User-agent: *
-Allow: /
+{% if no_indexar %}Disallow: /
+{% else %}Allow: /
 
 Sitemap: {{ dominio }}/sitemap.xml
+{% endif %}

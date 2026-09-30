@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Redirigiendo…</title>
   <meta name="robots" content="noindex">
-  <link rel="canonical" href="{{ sitio.dominio }}{{ destino }}">
+  <link rel="canonical" href="{{ destino }}">
   <meta http-equiv="refresh" content="0; url={{ destino }}">
   <script>location.replace({{ destino|a_json|safe }});</script>
 </head>

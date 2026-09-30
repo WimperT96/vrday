@@ -15,7 +15,7 @@ def pagina(request, ruta=""):
 
 def redireccion(request, url):
     """Página HTML de redirección (el sitio estático no puede enviar 301 reales)."""
-    destino = contenido.cargar().redirecciones[url]
+    destino = contenido.url_sitio(contenido.cargar().redirecciones[url])
     return render(request, "redireccion.html", {"destino": destino, "origen": url})
 
 

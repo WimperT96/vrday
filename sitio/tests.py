@@ -8,7 +8,7 @@ import re
 from pathlib import Path
 
 from django.conf import settings
-from django.test import SimpleTestCase
+from django.test import SimpleTestCase, override_settings
 
 from sitio import contenido
 
@@ -55,6 +55,22 @@ class PaginasTest(SimpleTestCase):
                 elif ref not in paginas and ref not in ("/sitemap.xml",):
                     rotos.append((url, ref))
         self.assertEqual(rotos, [], f"Referencias rotas: {rotos}")
+
+    @override_settings(SITIO_BASE="/vrday", STATIC_URL="/vrday/static/")
+    def test_publicacion_en_subcarpeta(self):
+        """GitHub Pages: todas las rutas internas deben llevar la subcarpeta."""
+        sin_prefijo = []
+        for url in contenido.urls_paginas():
+            html = self.client.get(url).content.decode()
+            for ref in re.findall(r'(?:href|src)="(/[^"]*)', html):
+                if not ref.startswith(("/vrday/", "//")):
+                    sin_prefijo.append((url, ref))
+        self.assertEqual(sin_prefijo, [], f"Rutas sin subcarpeta: {sin_prefijo[:10]}")
+
+    @override_settings(NO_INDEXAR=True)
+    def test_vista_previa_no_indexable(self):
+        self.assertContains(self.client.get("/"), '<meta name="robots" content="noindex">')
+        self.assertContains(self.client.get("/robots.txt"), "Disallow: /")
 
     def test_menu_2026(self):
         r = self.client.get("/")

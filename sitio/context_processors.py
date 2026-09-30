@@ -38,4 +38,5 @@ def sitio(request):
         "pie": datos.sitio.get("pie", {}),
         "evento": datos.evento,
         "mostrar_placeholders": settings.MOSTRAR_PLACEHOLDERS,
+        "no_indexar": settings.NO_INDEXAR,
     }

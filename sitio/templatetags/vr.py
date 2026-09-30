@@ -3,7 +3,8 @@ Etiquetas y filtros de plantilla del sitio (disponibles en todas las plantillas 
 
   {% medio ruta %}                    URL de un archivo de medios/
   {% img ruta alt clase carga %}      <img> con width/height, lazy loading y texto alternativo
-  {% enlace url %}                    atributos href (+ target/rel si es externo)
+  {% enlace url %}                    atributos href (+ target/rel si es externo; subcarpeta si es interno)
+  {% ruta "/memorias/" %}             ruta interna con la subcarpeta de publicación
   {% icono "cubo" %}                  ícono SVG del sprite (templates/partials/iconos.html)
   {{ texto|md }}                      Markdown -> HTML
   {{ texto|md_linea }}                Markdown en línea (sin <p>), p. ej. "Un evento que **conecta**"
@@ -27,7 +28,7 @@ from django.utils.safestring import mark_safe
 
 register = template.Library()
 
-from sitio.contenido import MESES
+from sitio.contenido import MESES, url_sitio
 
 
 @register.simple_tag
@@ -85,7 +86,13 @@ def enlace(url):
         return mark_safe('href="#" aria-disabled="true"')
     if es_externo(url):
         return format_html('href="{}" target="_blank" rel="noopener"', url)
-    return format_html('href="{}"', url)
+    return format_html('href="{}"', url_sitio(url))
+
+
+@register.simple_tag
+def ruta(url):
+    """Ruta interna con la subcarpeta de publicación: {% ruta "/memorias/" %}"""
+    return url_sitio(url)
 
 
 @register.simple_tag
@@ -99,9 +106,12 @@ def icono(nombre, clase=""):
 class _EnlacesExternos(md_lib.treeprocessors.Treeprocessor):
     def run(self, root):
         for a in root.iter("a"):
-            if es_externo(a.get("href", "")):
+            href = a.get("href", "")
+            if es_externo(href):
                 a.set("target", "_blank")
                 a.set("rel", "noopener")
+            else:
+                a.set("href", url_sitio(href))
 
 
 class _ExtEnlaces(md_lib.Extension):

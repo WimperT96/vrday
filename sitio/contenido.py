@@ -80,6 +80,14 @@ def cargar() -> Datos:
         return datos
 
 
+def url_sitio(url):
+    """Antepone la subcarpeta de publicación (settings.SITIO_BASE) a las rutas internas."""
+    base = getattr(settings, "SITIO_BASE", "")
+    if base and isinstance(url, str) and url.startswith("/") and not url.startswith("//"):
+        return base + url
+    return url
+
+
 def urls_paginas(incluir_ocultas=True):
     datos = cargar()
     return [

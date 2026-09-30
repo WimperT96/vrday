@@ -8,7 +8,7 @@
   {% firstof pagina.seo.imagen seo_base.imagen_compartir as imagen_og %}
   <title>{% block titulo %}{% if pagina.seo.titulo %}{{ pagina.seo.titulo }}{% elif pagina.url == "/" %}{{ seo_base.titulo_por_defecto }}{% else %}{{ pagina.titulo }} – {{ sitio.nombre }}{% endif %}{% endblock %}</title>
   <meta name="description" content="{{ descripcion }}">
-  {% if pagina.estado == "oculta" %}<meta name="robots" content="noindex">{% endif %}
+  {% if pagina.estado == "oculta" or no_indexar %}<meta name="robots" content="noindex">{% endif %}
   {% if pagina.url %}<link rel="canonical" href="{{ sitio.dominio }}{{ pagina.url }}">{% endif %}
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ sitio.nombre }}">

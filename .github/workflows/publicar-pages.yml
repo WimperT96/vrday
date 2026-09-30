@@ -1,0 +1,64 @@
+# Publica la vista previa del sitio en GitHub Pages en cada push a main.
+# URL: https://<usuario-u-organizacion>.github.io/<repositorio>/
+#
+# Requisito (una sola vez): Settings → Pages → Build and deployment → Source: "GitHub Actions".
+#
+# La vista previa:
+#   - se sirve bajo la subcarpeta /<repositorio>/ (VR_BASE_URL),
+#   - pide a los buscadores no indexarla (VR_NOINDEX), para no competir con vrdaylatam.org,
+#   - muestra las marcas de "Contenido provisional" (--borrador) para que el equipo vea qué falta.
+name: Publicar vista previa (GitHub Pages)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Pruebas
+        run: python manage.py test sitio
+
+      - name: Exportar sitio estático
+        env:
+          VR_BASE_URL: /${{ github.event.repository.name }}
+          VR_NOINDEX: "1"
+        run: python manage.py exportar --borrador
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  desplegar:
+    needs: construir
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.despliegue.outputs.page_url }}
+    steps:
+      - id: despliegue
+        uses: actions/deploy-pages@v5

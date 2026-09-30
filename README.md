@@ -20,6 +20,7 @@ vrday/
 │   ├── 07-efectos-y-3d.md            preparación para animaciones, efectos y objetos 3D
 │   ├── 08-plan-de-trabajo.md         fases y checklist para construir el sitio
 │   ├── 09-pendientes.md              ← TODO lo que falta, en una sola lista
+│   ├── 10-guia-de-prueba.md          paso a paso para probar la web en tu computador
 │   └── anexos/inventario-medios.csv  lista completa archivo por archivo
 │
 ├── contenido/               ← FUENTE DE VERDAD: todo el texto del sitio en YAML
@@ -104,6 +105,21 @@ python -m http.server 8080 --directory dist   # previsualizar lo exportado
 ```
 
 Detalle de comandos: `docs/03-arquitectura-django.md §6`.
+
+## Vista previa en GitHub Pages
+
+Cada `push` a `main` ejecuta `.github/workflows/publicar-pages.yml`: corre las pruebas, exporta el sitio y lo publica en
+`https://<usuario-u-organizacion>.github.io/<repositorio>/`.
+
+- Se publica bajo una subcarpeta (variable `VR_BASE_URL`): todas las rutas del sitio se ajustan solas.
+- Es una **vista previa**: pide a los buscadores no indexarla y muestra las marcas de "Contenido provisional".
+- Configuración inicial (una sola vez): **Settings → Pages → Source: GitHub Actions**.
+- Probar lo mismo en local (PowerShell):
+  ```powershell
+  $env:VR_BASE_URL="/vrday"; $env:VR_NOINDEX="1"; .venv\Scripts\python.exe manage.py exportar --borrador
+  Remove-Item Env:VR_BASE_URL, Env:VR_NOINDEX
+  ```
+  En Git Bash hay que anteponer `MSYS_NO_PATHCONV=1`, porque Git Bash convierte `/vrday` en una ruta de Windows.
 
 ## Cómo editar contenido (resumen)
 

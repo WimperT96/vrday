@@ -288,6 +288,19 @@ a.bandera:hover { border-color: var(--vr-azul-500); box-shadow: var(--vr-sombra-
 .lista-logos__nombre--grande { font-size: 1.0625rem; font-weight: 600; padding: 14px 22px; }
 .lista-logos--inv .lista-logos__nombre { background: rgba(255,255,255,.06); border-color: rgba(185,203,230,.25); color: var(--vr-texto-inv); }
 .lista-logos--pequena .lista-logos__nombre { font-size: .8125rem; padding: 6px 12px; }
+/* Muro de logos (sede y aliados): tarjetas blancas del mismo tamaño; el logo se ajusta dentro */
+.lista-logos--muro { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); align-items: stretch; gap: 12px; }
+.lista-logos--muro li { display: flex; align-items: center; justify-content: center; min-height: 96px; padding: 14px 18px; background: #fff; border: 1px solid var(--vr-borde); border-radius: var(--vr-radio-sm); }
+.lista-logos--muro .lista-logos__img { min-width: 0; max-width: 100%; max-height: 66px; width: auto; height: auto; object-fit: contain; }
+.lista-logos--muro .lista-logos__nombre { padding: 0; border: 0; background: none; text-align: center; font-size: .8125rem; line-height: 1.3; color: var(--vr-texto-2); }
+.lista-logos--muro-grande { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.lista-logos--muro-grande li { min-height: 120px; }
+.lista-logos--muro-grande .lista-logos__img { max-height: 88px; }
+.lista-logos--inv.lista-logos--muro li { border-color: transparent; }
+.lista-logos--pequena.lista-logos--muro { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
+.lista-logos--pequena.lista-logos--muro li { min-height: 68px; padding: 10px 12px; }
+.lista-logos--pequena.lista-logos--muro .lista-logos__img { max-height: 46px; }
+.lista-logos--pequena.lista-logos--muro .lista-logos__nombre { font-size: .75rem; }
 
 /* ── slider (memorias 2023) ─────────────────────────────────────────────── */
 .seccion--slider { padding-top: 24px !important; }

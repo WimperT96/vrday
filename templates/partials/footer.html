@@ -6,7 +6,7 @@
       {% if evento.organizadores %}
       <div class="pie__grupo">
         <p class="pie__titulo">Sede organizadora</p>
-        <ul class="lista-logos lista-logos--inv">
+        <ul class="lista-logos lista-logos--inv lista-logos--muro">
           {% for o in evento.organizadores %}
           <li>{% if o.logo %}{% img o.logo o.nombre "lista-logos__img" %}{% else %}<span class="lista-logos__nombre">{{ o.nombre }}</span>{% endif %}</li>
           {% endfor %}
@@ -16,7 +16,7 @@
       {% if evento.aliados %}
       <div class="pie__grupo">
         <p class="pie__titulo">Aliados</p>
-        <ul class="lista-logos lista-logos--inv lista-logos--pequena">
+        <ul class="lista-logos lista-logos--inv lista-logos--muro lista-logos--pequena">
           {% for a in evento.aliados %}
           <li>{% if a.logo %}{% img a.logo a.nombre "lista-logos__img" %}{% else %}<span class="lista-logos__nombre">{{ a.nombre }}</span>{% endif %}</li>
           {% endfor %}

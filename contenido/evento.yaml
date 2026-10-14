@@ -50,24 +50,25 @@ caracteristicas:           # 4 tarjetas bajo el hero de la maqueta
 
 organizadores:             # "Sede organizadora" en el afiche
   - nombre: Universidad Técnica Particular de Loja (UTPL)
-    logo: ""               # PENDIENTE: logo individual (solo existe dentro del afiche)
+    logo: aliados/utpl.png
   - nombre: RAIN — Red de Aprendizaje Inmersivo
-    logo: ""
+    logo: aliados/rain.png
 
-aliados:                   # en el orden del afiche; logos PENDIENTES · publicar: false = no se muestra en la web
-  - {nombre: ESPOL, logo: ""}
-  - {nombre: Universidad Indoamérica, logo: ""}
-  - {nombre: Instituto Superior Tecnológico del Austro, logo: ""}
-  - {nombre: TEC Azuay Instituto Universitario, logo: ""}
-  - {nombre: Universidad Católica de Cuenca, logo: ""}
-  - {nombre: Pontificia Universidad Católica del Ecuador, logo: ""}
-  - {nombre: Universidad Politécnica Salesiana, logo: ""}
-  - {nombre: Universidad Nacional de Loja (UNL), logo: ""}
-  - {nombre: Universidad Católica de Santiago de Guayaquil (UCSG), logo: ""}
-  - {nombre: Universidad Nacional de Educación (UNAE), logo: ""}
-  - {nombre: "Institución por confirmar (sello circular rojo y negro)", logo: "", publicar: false}   # PENDIENTE: ilegible en el afiche
-  - {nombre: "Instituto Tecnológico Loja (por confirmar)", logo: "", publicar: false}               # PENDIENTE: confirmar nombre
-  - {nombre: Universidad de Guayaquil, logo: ""}
-  - {nombre: Universidad Espíritu Santo (UEES), logo: ""}
-  - {nombre: ITSO Universitario, logo: ""}
-  - {nombre: "Universidad Politécnica Estatal del Carchi (UPEC)", logo: ""}
+# Lista actualizada el 13-oct-2026. Logos de la carpeta de Drive de aliados, recortados a PNG
+# transparente (máx. 600×240) · sin logo se muestra el nombre · publicar: false = no se muestra en la web
+aliados:
+  - {nombre: Universidad Católica de Cuenca (UCACUE), logo: aliados/ucacue.png}
+  - {nombre: Universidad Nacional de Chimborazo (UNACH), logo: aliados/unach.png}
+  - {nombre: Instituto Superior Tecnológico Cotopaxi, logo: aliados/ist-cotopaxi.png}   # logo de isuc.edu.ec (versión blanca pasada al azul de su sello)
+  - {nombre: Universidad Católica de Santiago de Guayaquil (UCSG), logo: aliados/ucsg.png}
+  - {nombre: Universidad Nacional de Loja (UNL), logo: aliados/unl.png}
+  - {nombre: Universidad Espíritu Santo (UEES), logo: aliados/uees.png}
+  - {nombre: Escuela Superior Politécnica del Litoral (ESPOL), logo: aliados/espol.png}
+  - {nombre: Universidad de Guayaquil (UG), logo: aliados/ug.png}
+  - {nombre: "Pontificia Universidad Católica del Ecuador, sede Ibarra (PUCE Ibarra)", logo: aliados/puce-ibarra.png}
+  - {nombre: Instituto Superior Tecnológico Luis Rogerio González Azogues, logo: aliados/ist-luis-rogerio-gonzalez.png}   # PENDIENTE: confirmar; logo de 2022, hoy opera como IST del Austro (insteclrg.edu.ec)
+  - {nombre: Universidad Indoamérica, logo: aliados/indoamerica.png}
+  - {nombre: Instituto Superior Tecnológico Loja, logo: aliados/ist-loja.png}
+  - {nombre: Instituto Superior Tecnológico del Austro, logo: aliados/ist-austro.png}
+  - {nombre: Instituto Tecnológico Superior Oriente (ITSO), logo: aliados/itso.png}
+  - {nombre: Universidad Nacional de Educación (UNAE), logo: aliados/unae.png}

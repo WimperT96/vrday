@@ -18,7 +18,7 @@ Prioridad: 🔴 afecta la credibilidad o es un error de hecho · 🟠 desactuali
 
 | # | Dónde | Problema | Propuesta | Archivo |
 |---|---|---|---|---|
-| 1 🔴 | Acerca de | Las definiciones de **Realidad Virtual** y **Realidad Aumentada** están **intercambiadas** (la de RV describe la RA y viceversa). | Intercambiar los dos `cuerpo:` | `paginas/acerca-de.yaml` |
+| 1 ✅ | Acerca de | Las definiciones de **Realidad Virtual** y **Realidad Aumentada** estaban **intercambiadas**. Corregido el 22-oct-2026. | Hecho | `paginas/acerca-de.yaml` |
 | 2 🔴 | Menú → VRD 2022 | La URL es `/vrd-2023/`. | ✅ Nueva URL `/memorias/2022/` + redirección | `sitio.yaml` |
 | 3 🟠 | Agenda 2019 | La página `/agenda-2019/` contiene la agenda de **2020**. | ✅ Movida a `/memorias/2020/agenda/` + redirección | `memorias/2020-agenda.yaml` |
 | 4 🟠 | Memorias 2022 | La galería incluye la foto de **ganadores de 2019** y repite una foto. | ✅ Foto repetida quitada; la de 2019 quedó comentada | `memorias/2022.yaml` |

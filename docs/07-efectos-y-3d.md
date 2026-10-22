@@ -77,7 +77,7 @@ Cada sección se genera con esta estructura, para poder poner un fondo animado *
 |---|---|---|---|
 | Hero del Inicio | Anillos HUD animados sobre la mano, líneas de circuito que se trazan, resplandor holográfico que sigue al mouse | SVG + CSS/GSAP | Baja-media |
 | Tarjetas de características | Ícono lineal que se "dibuja" al entrar (stroke-dashoffset) | SVG + IntersectionObserver | Baja |
-| Banda navy | Partículas azules y red de nodos detrás del titular | Canvas 2D o Three.js | Media |
+| Banda navy | ✅ Red de nodos con las palabras del subtítulo (`efectos: {red_nodos: true}`, `static/js/efectos/red-nodos.js`): líneas que se dibujan, nodos que aparecen, pulsos de luz. SVG + CSS, sin librerías | SVG + CSS | Hecho |
 | Logo (visor) | Isotipo del visor en 3D, rotación suave | `<model-viewer>` | Media |
 
 Ideas generales (válidas también):

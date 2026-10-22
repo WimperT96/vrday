@@ -120,7 +120,7 @@ Cada tipo = `templates/components/<tipo>.html` + (si necesita) `static/css/compo
 | `cabecera` | titulo, subtitulo, fondo, imagen | casi todas | — (futuro: fondo 3D) |
 | `slider` | diapositivas[imagen, capa, alt, titulo, texto, botones[]] | Inicio | Swiper |
 | `video_destacado` | titulo, subtitulo, youtube | Inicio | lite-youtube |
-| `texto` | titulo, cuerpo (md), imagen, imagen_posicion (izquierda/derecha/arriba/abajo), boton, fondo | casi todas | — |
+| `texto` | titulo, cuerpo (md), imagen, alt, ilustracion (rx/rv/ra/rm: SVG en `components/ilustraciones/`), imagen_posicion (izquierda/derecha/arriba/abajo), boton, fondo | casi todas | — |
 | `estadisticas` | titulo, items[valor, etiqueta, icono] | Inicio | contador animado (futuro) |
 | `inscripcion_paises` | mapa, boton_internacional, boton_pais, paises[nombre, bandera, url] | Inicio | — |
 | `ponentes` | titulo, edicion, solo_visibles, fondo, mostrar | Inicio, Agenda, Memorias | modal de reseña |
@@ -133,7 +133,7 @@ Cada tipo = `templates/components/<tipo>.html` + (si necesita) `static/css/compo
 | `faq` | titulo, grupos[titulo, preguntas[pregunta, respuesta(md)]] | Centro de ayuda | `<details>` nativo |
 | `acordeon` | items[titulo, cuerpo(md) o youtube], fondo | heredadas | `<details>` nativo |
 | `formulario_externo` | titulo, url (Google Form), modo (incrustado/boton), texto_boton | Contacto | — |
-| `embed` | titulo, proveedor (sketchfab/itch/iframe), url, proporcion, alto, credito | Arte, Knockout | carga diferida |
+| `embed` | titulo, proveedor (sketchfab/itch/google-maps/iframe), url, proporcion, alto, credito, boton{texto, url, icono} | Arte, Knockout | carga diferida |
 | `video_local` | archivo | Juego Cuidémonos | — |
 | `premios` | titulo, texto, items[titulo, subtitulo, imagen] | Juego Cuidémonos | — |
 | `agenda_paises` | titulo, presentacion (pestanas/acordeon/lista), paises[id, nombre, bandera, ubicacion, inscripcion, sesiones[]] | Agenda | pestañas |
@@ -149,10 +149,11 @@ Estos tipos leen sus datos de `contenido/evento.yaml` (campo `fuente:`), para qu
 |---|---|---|---|
 | `hero_evento` | fuente: evento, logo, imagen, alt, boton_secundario | Inicio | efectos HUD (futuro) |
 | `caracteristicas` | fuente: evento.caracteristicas (titulo, texto, icono) | Inicio | — |
-| `convocatorias` | fuente: evento.convocatorias (titulo, fecha_limite, texto, url) — se oculta sola al vencer | Inicio | — |
-| `banda` | estilo (navy/claro), titulo (con `**palabra**` resaltada), subtitulo, imagen | Inicio | — |
+| `inscripcion` | fuente: evento (inscripcion.texto/url + organizadores), titulo, texto, imagen, alt, texto_sin_enlace — sin URL el botón sale desactivado | Inicio | — |
+| `convocatorias` | fuente: evento.convocatorias (titulo, fecha_limite, texto, url, boton) — se oculta sola al vencer | Inicio | — |
+| `banda` | estilo (navy/claro), titulo (con `**palabra**` resaltada), subtitulo, imagen o nodos[{texto, icono}] (red de hasta 4 palabras unidas al isotipo; con nodos el titular va centrado y la red a todo el ancho) | Inicio | efecto `red_nodos` |
 | `agenda_resumen` | fuente: agenda, destacar[], boton | Inicio | — |
-| `agenda_dias` | tentativa, sedes[id, nombre, pais, bandera, dias[id, fecha, etiqueta, sesiones[hora, actividad, detalle, tipo, destacada]], nota] | Agenda 2026 | pestañas por día |
+| `agenda_dias` | tentativa, sedes[id, nombre, pais, bandera, dias[id, fecha, etiqueta, sesiones[hora, actividad, detalle, tipo, destacada], nota], nota] | Agenda 2026 | pestañas por día |
 | `aliados` | fuente: evento (organizadores + aliados), titulo_sede, titulo_aliados — si falta el logo muestra el nombre | Inicio, pie | — |
 | `logos` | titulo, items[nombre, logo, url] | Memorias 2023 | — |
 

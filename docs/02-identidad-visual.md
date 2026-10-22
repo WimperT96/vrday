@@ -179,7 +179,7 @@ Pie de página: Plataforma inmersiva · Centro de ayuda · Memorias · Aliados
 - [ ] Logo 2026 en SVG: horizontal, apilado, isotipo, versión blanca
 - [ ] Nombre y licencia de la fuente de "DAY" / "12 Y 13 DE"
 - [ ] Foto del hero en alta resolución, fondo transparente o limpio + confirmación de derechos
-- [ ] Foto de la banda navy (persona con visor, iluminación azul)
+- [x] Banda navy: sin foto, red de nodos animada (efecto `red_nodos`, docs/07)
 - [ ] Patrones SVG: circuitos, hexágonos, anillos HUD
 - [ ] Logos individuales de sede y aliados (UTPL, RAIN y 16 aliados) en SVG o PNG transparente — hoy solo existen dentro del afiche
 - [ ] Favicon y `apple-touch-icon` (desde el isotipo)

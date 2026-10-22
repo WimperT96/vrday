@@ -60,8 +60,6 @@ menu_principal:
         url: /memorias/2020/
       - texto: VRD 2019
         url: /memorias/2019/
-  - texto: Contacto
-    url: /contacto/
 
 # Botón destacado a la derecha del menú. Usa el enlace de inscripción de evento.yaml.
 # Mientras ese enlace esté vacío, el botón no se muestra.
@@ -81,20 +79,25 @@ pie:
       url: /centro-de-ayuda/
     - texto: Memorias
       url: /memorias/
-    - texto: Contacto
-      url: /contacto/
   # Sede organizadora y aliados: se leen de evento.yaml (organizadores / aliados).
   # Los auspiciantes 2023 (COP, Globant, iLRN, Unity, Libel Academy) se movieron a /memorias/2023/.
   mostrar_aliados: true
-  redes_sociales: []
-    # - red: facebook
-    #   url: https://www.facebook.com/...
+  # red = nombre del ícono (templates/partials/iconos.html: instagram, youtube); nombre = texto accesible
+  titulo_redes: Síguenos
+  redes_sociales:
+    - red: instagram
+      nombre: Instagram
+      url: https://www.instagram.com/vrdaylatam/
+    - red: youtube
+      nombre: YouTube
+      url: https://www.youtube.com/@vrdaylatam
   texto_legal: ""   # p. ej. "© 2026 Virtual Reality Day LATAM"
 
 # ----------------------------------------------------------------------------
 # REDIRECCIONES (URL antigua -> URL nueva). Ver docs/01-mapa-del-sitio.md
 # ----------------------------------------------------------------------------
 redirecciones:
+  /contacto/: /                 # la página Contacto se eliminó (22-oct-2026); el sitio anterior la tenía
   /vrd-2023/: /memorias/2022/
   /vrd-2021/: /memorias/2021/
   /vrd-2020/: /memorias/2020/

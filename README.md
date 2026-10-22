@@ -73,8 +73,7 @@ vrday/
 
 1. **Revisar `docs/09-pendientes.md`**: lista única de datos, recursos y decisiones que faltan.
 2. **Identidad visual 2026** ✅ recibida y validada (`docs/02-identidad-visual.md`). Falta pedir al diseñador los recursos en vector (logo SVG, logos de aliados, foto del hero) — lista en la sección 6 de ese documento.
-3. **Crear el Google Form de contacto** y pegar su URL en `contenido/paginas/contacto.yaml`.
-4. Revisar la lista de **PENDIENTES** con:
+3. Revisar la lista de **PENDIENTES** con:
    ```
    python referencias/herramientas/validar_contenido.py
    ```

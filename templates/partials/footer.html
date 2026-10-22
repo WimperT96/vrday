@@ -36,9 +36,14 @@
       </nav>
       {% endif %}
       {% if pie.redes_sociales %}
-      <ul class="pie__redes">
-        {% for r in pie.redes_sociales %}<li><a {% enlace r.url %}>{{ r.red|capfirst }}</a></li>{% endfor %}
-      </ul>
+      <div class="pie__redes-bloque">
+        {% if pie.titulo_redes %}<p class="pie__redes-titulo">{{ pie.titulo_redes }}</p>{% endif %}
+        <ul class="pie__redes">
+          {% for r in pie.redes_sociales %}
+          <li><a class="red-social red-social--{{ r.red }}" {% enlace r.url %} aria-label="{% firstof r.nombre r.red|capfirst %} de {{ sitio.nombre }} (se abre en otra pestaña)" title="{% firstof r.nombre r.red|capfirst %}">{% icono r.red "red-social__icono" %}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
       {% endif %}
     </div>
     <p class="pie__legal">{% if pie.texto_legal %}{{ pie.texto_legal }}{% else %}{{ evento.nombre }} · {{ evento.fechas.texto }}{% endif %}</p>

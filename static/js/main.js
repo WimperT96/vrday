@@ -155,6 +155,7 @@ function iniciarSliders() {
 /* ── Efectos opcionales declarados en el YAML (campo `efectos:`) ────────── */
 const EFECTOS = {
   entrada: () => import('./efectos/entrada.js'),
+  red_nodos: () => import('./efectos/red-nodos.js'),
   // parallax: () => import('./efectos/parallax.js'),
   // fondo_3d: () => import('./efectos/fondo-3d.js'),
 };

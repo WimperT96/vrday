@@ -8,4 +8,5 @@
   <div class="marco">{% img s.imagen_respaldo s.titulo %}</div>
   {% endif %}
   {% if s.credito %}<div class="embed__credito">{{ s.credito|md }}</div>{% endif %}
+  {% if s.boton.url %}<p class="embed__boton"><a class="boton boton--secundario" {% enlace s.boton.url %}>{% if s.boton.icono %}{% icono s.boton.icono %} {% endif %}{{ s.boton.texto }}</a></p>{% endif %}
 </div>

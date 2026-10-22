@@ -1,0 +1,48 @@
+{# Dos lienzos con el mismo dibujo: ancho (escritorio) y compacto (móvil); el CSS muestra uno. #}
+<div class="red-nodos" data-red-nodos>
+  <svg class="red-nodos__lienzo red-nodos__lienzo--ancha" viewBox="0 0 1120 460" aria-hidden="true" focusable="false">
+    <g class="red-nodos__fondo">
+      <path d="M0 50 H120 L160 10 H330"/><circle cx="330" cy="10" r="3"/>
+      <path d="M1120 70 H1030 L990 30 H880"/><circle cx="880" cy="30" r="3"/>
+      <path d="M0 230 H90 L130 190"/><circle cx="130" cy="190" r="3"/>
+      <path d="M1120 240 H1040 L1000 200"/><circle cx="1000" cy="200" r="3"/>
+      <path d="M380 460 V420 L420 380 H500"/><circle cx="500" cy="380" r="3"/>
+      <path d="M760 460 V430 L790 400 H880"/><circle cx="880" cy="400" r="3"/>
+      <path d="M680 0 V40 L720 80"/><circle cx="720" cy="80" r="3"/>
+    </g>
+    {% for n in s.red %}
+    <path class="red-nodos__linea" d="{{ n.ancha.ruta }}" pathLength="1" style="--i: {{ forloop.counter0 }}"/>
+    <path class="red-nodos__pulso" d="{{ n.ancha.ruta }}" pathLength="1" style="--i: {{ forloop.counter0 }}"/>
+    {% endfor %}
+    {% for n in s.red %}<circle class="red-nodos__nodo" cx="{{ n.ancha.x }}" cy="{{ n.ancha.y }}" r="11" style="--i: {{ forloop.counter0 }}"/>{% endfor %}
+    <circle class="red-nodos__anillo" cx="560" cy="230" r="70"/>
+    <circle class="red-nodos__halo" cx="560" cy="230" r="46"/>
+    <circle class="red-nodos__nucleo" cx="560" cy="230" r="46"/>
+    <use class="red-nodos__icono" href="#i-visor-vr" x="528" y="198" width="64" height="64"/>
+  </svg>
+  <svg class="red-nodos__lienzo red-nodos__lienzo--compacta" viewBox="0 0 360 540" aria-hidden="true" focusable="false">
+    <g class="red-nodos__fondo">
+      <path d="M0 40 H60 L90 10 H170"/><circle cx="170" cy="10" r="3"/>
+      <path d="M360 260 H320 L295 235"/><circle cx="295" cy="235" r="3"/>
+      <path d="M0 250 H30 L50 270"/><circle cx="50" cy="270" r="3"/>
+      <path d="M120 540 V505 L150 475 H210"/><circle cx="210" cy="475" r="3"/>
+    </g>
+    {% for n in s.red %}
+    <path class="red-nodos__linea" d="{{ n.compacta.ruta }}" pathLength="1" style="--i: {{ forloop.counter0 }}"/>
+    <path class="red-nodos__pulso" d="{{ n.compacta.ruta }}" pathLength="1" style="--i: {{ forloop.counter0 }}"/>
+    {% endfor %}
+    {% for n in s.red %}<circle class="red-nodos__nodo" cx="{{ n.compacta.x }}" cy="{{ n.compacta.y }}" r="8" style="--i: {{ forloop.counter0 }}"/>{% endfor %}
+    <circle class="red-nodos__anillo" cx="180" cy="270" r="54"/>
+    <circle class="red-nodos__halo" cx="180" cy="270" r="36"/>
+    <circle class="red-nodos__nucleo" cx="180" cy="270" r="36"/>
+    <use class="red-nodos__icono" href="#i-visor-vr" x="155" y="245" width="50" height="50"/>
+  </svg>
+  <ul class="red-nodos__etiquetas">
+    {% for n in s.red %}
+    <li class="red-nodos__etiqueta" data-lado="{{ n.ancha.lado }}" data-lado-movil="{{ n.compacta.lado }}"
+        style="--x: {{ n.ancha.x_pct }}%; --y: {{ n.ancha.y_pct }}%; --xm: {{ n.compacta.x_pct }}%; --ym: {{ n.compacta.y_pct }}%; --ancla-m: {{ n.compacta.ancla }}; --i: {{ forloop.counter0 }}">
+      {% if n.icono %}{% icono n.icono "red-nodos__etiqueta-icono" %}{% endif %}{{ n.texto }}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

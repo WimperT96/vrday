@@ -1,7 +1,8 @@
-<div class="contenedor banda">
+<div class="contenedor banda{% if s.red %} banda--red{% endif %}">
   <div class="banda__texto">
     <h2 class="banda__titulo">{{ s.titulo|md_linea }}</h2>
     {% if s.subtitulo %}<p class="banda__subtitulo">{{ s.subtitulo }}</p>{% endif %}
   </div>
-  {% if s.imagen %}<div class="banda__imagen">{% img s.imagen "" %}</div>{% endif %}
+  {% if s.red %}<div class="banda__visual">{% include "components/_red_nodos.html" %}</div>
+  {% elif s.imagen %}<div class="banda__imagen">{% img s.imagen s.alt|default:"" %}</div>{% endif %}
 </div>

@@ -2,8 +2,8 @@
 # PÁGINA NUEVA: PONENTES — VR Day LATAM 2026
 # URL: /ponentes/   (en el menú de la maqueta 2026)
 # Los ponentes se leen de contenido/ponentes.yaml filtrando por edición.
-# Aún no hay ponentes 2026 confirmados: se muestra el conferencista magistral
-# como placeholder y accesos a los ponentes de ediciones anteriores.
+# Conferencia magistral 2026 confirmada: Vincent Moulinet (Francia), con apoyo de la
+# Embajada de Francia en Ecuador. Debajo, el resto de ponentes 2026 y las ediciones anteriores.
 # ============================================================================
 
 slug: ponentes
@@ -17,17 +17,21 @@ secciones:
     titulo: Ponentes
     subtitulo: VR Day LATAM 2026
 
-  # Conferencia magistral (dato de la agenda 2026: "Expositor francés")
+  # Conferencia magistral (ficha también en contenido/ponentes.yaml, edición 2026)
   - tipo: texto
     id: conferencia-magistral
     titulo: Conferencia magistral internacional
-    imagen: ponentes/2026/conferencista-magistral.svg   # PLACEHOLDER
+    imagen: ponentes/2026/vincent-moulinet.jpg
+    alt: Vincent Moulinet, conferencista magistral del VR Day LATAM 2026
     imagen_posicion: izquierda
     cuerpo: |
+      ### Vincent Moulinet
+
+      La conferencia magistral estará a cargo de **Vincent Moulinet**, artista francés de medios en tiempo real, curador y diseñador de videojuegos, gracias al apoyo de la **Embajada de Francia en Ecuador**.
+
       **Tecnologías inmersivas y videojuegos**
 
-      Viernes 13 de noviembre · 09:00 – 09:45 · Expositor francés.
-    placeholder: true          # PENDIENTE: nombre, foto y reseña del conferencista
+      Viernes 13 de noviembre · 09:00 – 09:45
 
   - tipo: ponentes
     id: ponentes-2026

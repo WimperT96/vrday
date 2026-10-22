@@ -3,11 +3,11 @@
 ## 0. Nuevo menú 2026 (aplicado)
 
 ```
-Inicio · Acerca de · Ponentes · Agenda · Lugar · Memorias ▾ · Contacto        [Inscríbete →]
+Inicio · Acerca de · Ponentes · Agenda · Lugar · Memorias ▾        [Inscríbete →]
                                                    ├─ VRD 2023   /memorias/2023/
                                                    ├─ VRD 2022   /memorias/2022/
                                                    ├─ VRD 2021 · VRD 2020 · VRD 2019
-Pie: Plataforma inmersiva · Centro de ayuda · Memorias · Contacto + sede organizadora y aliados 2026
+Pie: Plataforma inmersiva · Centro de ayuda · Memorias + redes sociales + sede organizadora y aliados 2026
 ```
 
 - **Inicio** y **Agenda** ahora muestran la edición **2026** (maqueta + agenda tentativa).
@@ -64,7 +64,7 @@ No hay menú en el pie. El pie solo muestra "AUSPICIAN:" y 5 logos (COP, Globant
 | 8 | VRD 2020 | `/vrd-2020/` | `/memorias/2020/` | Menú › Memorias | publicada | `paginas/memorias/2020.yaml` |
 | 9 | VRD 2019 | `/vrd-2019/` | `/memorias/2019/` | Menú › Memorias | publicada | `paginas/memorias/2019.yaml` |
 | 10 | Centro de ayuda | `/centro-de-ayuda/` | `/centro-de-ayuda/` | **Pie** (antes menú) | publicada | `paginas/centro-de-ayuda.yaml` |
-| 11 | Contacto | `/contacto/` | `/contacto/` | Menú | publicada | `paginas/contacto.yaml` |
+| 11 | ~~Contacto~~ | `/contacto/` | → `/` (redirección) | — | **eliminada** el 22-oct-2026 (no se usará) | — |
 | 12 | Arte en cuarentena | `/arte-en-cuarentena/` | igual | Tarjeta en Inicio, FAQ | publicada | `paginas/arte-en-cuarentena.yaml` |
 | 13 | Red de Aprendizaje Inmersivo (iLRN) – Ecuador | `/red-de-aprendizaje-inmersivo-ilrn-ecuador/` | igual | Tarjeta en Inicio | publicada | `paginas/red-de-aprendizaje-inmersivo-ilrn-ecuador.yaml` |
 | 14 | Juego VR Knock Out | `/juego-knockout/` | igual | Slider del Inicio | publicada | `paginas/juego-knockout.yaml` |

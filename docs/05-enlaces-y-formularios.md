@@ -6,16 +6,17 @@ El sitio nuevo **no procesa formularios**. Todo formulario se reemplaza por un s
 
 | Dónde | Hoy | Nuevo | Estado |
 |---|---|---|---|
-| **Contacto** (`/contacto/`) | Formulario propio del tema: *Su nombre*, *E-mail*, *Asunto*, *Mensaje* → "Enviar" | **Google Form** con los mismos 4 campos, incrustado en la página (o botón que lo abre) | **PENDIENTE**: crear el form y pegar la URL en `contenido/paginas/contacto.yaml → url` |
+| **Contacto** (`/contacto/`) | Formulario propio del tema: *Su nombre*, *E-mail*, *Asunto*, *Mensaje* → "Enviar" | **Página eliminada** el 22-oct-2026; `/contacto/` redirige al Inicio | — |
 | Inscripción VRDay Game LATAM (slider del Inicio) | Ya es un Google Form | Se mantiene | OK |
 | Inscripción Ecuador 2023 (Agenda) | Ya es un Google Form (`forms.gle/ao4qJarbKBj5PyQP7`) | Se mantiene | OK |
 | Buscador (página "Prueba") | Buscador de WordPress | Se elimina (página descartada) | — |
 
-### Guía rápida: Google Form de contacto
+### Guía rápida: Google Form incrustado (componente `formulario_externo`)
+> La página Contacto ya no existe; la guía sirve para cualquier otro formulario de Google.
 1. Crear el formulario con: *Nombre* (respuesta corta, obligatorio), *Correo electrónico* (validación de email, obligatorio), *Asunto* (respuesta corta), *Mensaje* (párrafo, obligatorio).
 2. En Configuración → Respuestas: activar notificaciones por correo al equipo organizador.
 3. Enviar → pestaña `< >` → copiar la URL del `src` del iframe (termina en `viewform?embedded=true`).
-4. Pegarla en `contacto.yaml` (`url:`). Con `modo: incrustado` se muestra dentro de la página; con `modo: boton` se abre en otra pestaña.
+4. Pegarla en el `url:` de la sección `formulario_externo`. Con `modo: incrustado` se muestra dentro de la página; con `modo: boton` se abre en otra pestaña.
 
 ## 2. Enlaces de inscripción y externos
 

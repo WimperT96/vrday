@@ -29,14 +29,12 @@ secciones:
       - memorias/2021/11.png
       - memorias/2021/12.png
 
-  # En el sitio actual hay 3 reproductores de YouTube SIN video (id vacío).
-  # Se dejan como placeholders hasta tener los enlaces.
+  # El sitio anterior tenía 3 reproductores vacíos; se completaron con los 2 videos recibidos (22-oct-2026).
   - tipo: videos
     id: videos
     items:
-      - {titulo: "", youtube: ""}   # PENDIENTE
-      - {titulo: "", youtube: ""}   # PENDIENTE
-      - {titulo: "", youtube: ""}   # PENDIENTE
+      - {titulo: Virtual Reality Day Latam 2021, youtube: O2Tj34g1tg0}   # transmisión en vivo · canal Eventos UTPL
+      - {titulo: VRDay GameLatam,                youtube: dkoe2M7ousE}   # canal Openlab EC
 
   # MEJORA PROPUESTA: los 19 ponentes de 2021 existen en el sitio actual como modales ocultos
   # de la página Agenda. Se pueden mostrar aquí. Cambiar "mostrar" a true para activarlo.

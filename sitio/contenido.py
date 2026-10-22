@@ -131,6 +131,42 @@ def _galeria(s):
     return imagenes
 
 
+# Red de nodos de la banda "Un evento que conecta" (protagonista de la sección).
+# Dos capas: "ancha" (lienzo 1120×460, centro 560,230) y "compacta" para móvil
+# (360×540, centro 180,270). Cada nodo: posición, lado de la etiqueta, desplazamiento
+# horizontal de la etiqueta en móvil y trazo tipo circuito que sale del centro.
+# Hay 4 posiciones; si el YAML trae más palabras, se usan las 4 primeras.
+_RED_CAPAS = {
+    "ancha": ((1120, 460), [
+        {"x": 230, "y": 96, "lado": "arriba", "ruta": "M527 197 L470 140 V96 H230"},
+        {"x": 900, "y": 120, "lado": "arriba", "ruta": "M593 197 L640 150 H760 L790 120 H900"},
+        {"x": 960, "y": 360, "lado": "abajo", "ruta": "M593 263 L640 310 V360 H960"},
+        {"x": 170, "y": 340, "lado": "abajo", "ruta": "M514 230 H400 L320 310 V340 H170"},
+    ]),
+    "compacta": ((360, 540), [
+        # Alturas escalonadas para que las etiquetas no se monten en pantallas de 360 px.
+        {"x": 64, "y": 100, "lado": "arriba", "ancla": "-18%", "ruta": "M154 244 L120 210 V100 H64"},
+        {"x": 296, "y": 175, "lado": "arriba", "ancla": "-82%", "ruta": "M206 244 L240 210 V175 H296"},
+        {"x": 296, "y": 445, "lado": "abajo", "ancla": "-82%", "ruta": "M206 296 L240 330 V445 H296"},
+        {"x": 64, "y": 375, "lado": "abajo", "ancla": "-18%", "ruta": "M154 296 L120 330 V375 H64"},
+    ]),
+}
+
+
+def _red_nodos(nodos):
+    """`nodos` admite palabras sueltas o {texto, icono}."""
+    red = []
+    for i, nodo in enumerate(nodos[:4]):
+        nodo = nodo if isinstance(nodo, dict) else {"texto": nodo}
+        item = {"texto": nodo.get("texto", ""), "icono": nodo.get("icono", "")}
+        for capa, ((ancho, alto), posiciones) in _RED_CAPAS.items():
+            n = posiciones[i]
+            # Como texto: un float se localizaría con coma decimal ("19,64") y rompería el CSS.
+            item[capa] = {**n, "x_pct": f"{n['x'] / ancho * 100:.2f}", "y_pct": f"{n['y'] / alto * 100:.2f}"}
+        red.append(item)
+    return red
+
+
 def _agenda_dias(datos):
     agenda = datos.paginas.get("/agenda/", {})
     for s in agenda.get("secciones", []):
@@ -148,7 +184,9 @@ def resolver_seccion(datos: Datos, s: dict) -> dict:
         s["lista"] = _ponentes(datos, s)
     elif tipo == "galeria":
         s["imagenes"] = _galeria(s)
-    elif tipo in ("hero_evento", "aliados"):
+    elif tipo == "banda" and s.get("nodos"):
+        s["red"] = _red_nodos(s["nodos"])
+    elif tipo in ("hero_evento", "aliados", "inscripcion"):
         s["evento"] = datos.evento
         ini = (datos.evento.get("fechas") or {}).get("inicio")
         fin = (datos.evento.get("fechas") or {}).get("fin") or ini

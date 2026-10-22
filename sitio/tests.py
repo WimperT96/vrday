@@ -74,8 +74,9 @@ class PaginasTest(SimpleTestCase):
 
     def test_menu_2026(self):
         r = self.client.get("/")
-        for texto in ("Acerca de", "Ponentes", "Agenda", "Lugar", "Memorias", "Contacto"):
+        for texto in ("Acerca de", "Ponentes", "Agenda", "Lugar", "Memorias"):
             self.assertContains(r, texto)
+        self.assertNotContains(r, 'href="/contacto/"')                # página eliminada
         self.assertContains(r, "Asamblea General RAIN Ecuador")   # resumen de agenda 2026
         self.assertContains(r, "Postulación de <strong>artículo</strong>")  # convocatoria vigente
         self.assertNotContains(r, "por confirmar")                  # aliados con publicar: false

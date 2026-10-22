@@ -37,9 +37,12 @@ CI (`.github/workflows/publicar-pages.yml`) runs on every push to `main`: tests,
 
 ## Architecture
 
-**Request flow:** `vrday/urls.py` has one catch-all `<path:ruta>/` route, plus `""`, sitemap, robots and 404. All of them go to `sitio/views.py:pagina`. That view looks up the URL in `contenido.cargar().paginas` (keyed by each YAML's `url:` field) or in `sitio.yaml → redirecciones`. It then renders `templates/pagina.html`, which loops over `pagina.secciones` and includes `templates/components/<tipo>.html` for each section. Every section is wrapped in `<section class="seccion seccion--<tipo>" data-componente data-efectos>` with a `.seccion__fondo` layer.
+**Request flow:** `vrday/urls.py` has one catch-all `<path:ruta>/` route plus `""`, and both go to `sitio/views.py:pagina`. Sitemap, robots and `404.html` have their own small views. `pagina` first checks `sitio.yaml → redirecciones`, then looks the URL up in `contenido.cargar().paginas`, which is keyed by each YAML's `url:` field after normalizing it to `/x/`. It then renders `templates/pagina.html`, which loops over `pagina.secciones` and includes `templates/components/<tipo>.html` for each section. Every section is wrapped in `<section class="seccion seccion--<tipo>" data-componente data-efectos>` with a `.seccion__fondo` layer.
 
-- **Adding a page** = add a YAML file under `contenido/paginas/`. URLs and export routes are derived automatically: `_rutas_paginas()` in `urls.py` feeds distill.
+- **Redirects** (old WordPress URLs) can't be real 301s on a static host. Each one is exported as its own page from `templates/redireccion.html` (meta refresh + canonical). The 404 works the same way: `handler404` covers the dev server, and an exportable `/404.html` covers the host.
+- Templates in `components/` that start with `_` (`_sesion.html`, `_youtube.html`) are partials shared by several section types, not section types themselves.
+
+- **Adding a page** = add a YAML file under `contenido/paginas/`. URLs and export routes are derived automatically: `_rutas_paginas()` in `urls.py` feeds distill. A YAML with no `url:` key is silently ignored.
 - **Adding a section type** = add `templates/components/<tipo>.html` (plus CSS in `static/css/componentes.css` if needed). `validar_contenido` fails if a YAML uses a `tipo` with no template.
 - **Adding an effect** = add `static/js/efectos/<nombre>.js` exporting `default(elemento, config)` and register it in the `efectos` map in `static/js/main.js`. YAML `efectos: {nombre: config}` becomes `data-efectos` JSON, and effects are skipped under `prefers-reduced-motion`.
 
@@ -61,7 +64,9 @@ CI (`.github/workflows/publicar-pages.yml`) runs on every push to `main`: tests,
 
 **Static files:** `medios/` is served under `/static/medios/` (a `STATICFILES_DIRS` prefix), so content refers to media by paths relative to `medios/`, e.g. `ponentes/2023/aura-forero.png`. The CSS is plain CSS: `tokens.css` holds the 2026 brand tokens from `docs/02-identidad-visual.md`, `base.css` the layout, and `componentes.css` one block per section type. JS is a single dependency-free ES module, `main.js`, and each feature in it only activates if its component is present.
 
-**Settings flags:** `MOSTRAR_PLACEHOLDERS` controls whether `placeholder: true` sections get a "Contenido provisional" mark. It defaults to on with `DEBUG` and is overridden by `exportar`. `NO_INDEXAR` comes from `VR_NOINDEX`.
+**Settings flags (all from env vars):** `DJANGO_DEBUG` defaults to `1`. `MOSTRAR_PLACEHOLDERS` (`VR_MOSTRAR_PLACEHOLDERS`) controls whether `placeholder: true` sections get a "Contenido provisional" mark. It defaults to on with `DEBUG` and is overridden by `exportar`. `NO_INDEXAR` comes from `VR_NOINDEX`, and `SITIO_BASE` from `VR_BASE_URL`.
+
+**Tests** use `SimpleTestCase` (there is no DB) and render every page through the test client. Because they read the real `contenido/`, a content change can break them too.
 
 ## Content conventions
 

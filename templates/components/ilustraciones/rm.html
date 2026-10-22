@@ -1,0 +1,42 @@
+<svg class="ilus" viewBox="0 0 480 360" role="img" aria-labelledby="ilus-rm-t">
+  <title id="ilus-rm-t">Una mano toca un holograma que convive con objetos reales sobre una mesa</title>
+  <defs>
+    <linearGradient id="ilus-rm-cono" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#4D9CF6" stop-opacity=".45"/><stop offset="1" stop-color="#4D9CF6" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- mesa real -->
+  <path d="M70 250H410L450 300H30Z" fill="#E5F0FD" stroke="#9DB8DA" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M30 300H450V316H30Z" fill="#C9DBF2" stroke="#9DB8DA" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M60 316V350M420 316V350" stroke="#9DB8DA" stroke-width="6" stroke-linecap="round"/>
+  <!-- objeto real: taza -->
+  <rect x="96" y="196" width="54" height="62" rx="9" fill="#fff" stroke="#071A38" stroke-width="4"/>
+  <path d="M150 210c22 0 22 36 0 36" fill="none" stroke="#071A38" stroke-width="4" stroke-linecap="round"/>
+  <path class="ilus__flotar" d="M112 182c-6-8 6-12 0-22M130 182c-6-8 6-12 0-22" fill="none" stroke="#9DB8DA" stroke-width="3" stroke-linecap="round"/>
+  <!-- holograma (virtual) -->
+  <ellipse cx="292" cy="262" rx="56" ry="11" fill="#4D9CF6" fill-opacity=".35" stroke="#4D9CF6" stroke-width="2"/>
+  <path d="M240 262L264 150H320L344 262Z" fill="url(#ilus-rm-cono)"/>
+  <g class="ilus__flotar">
+    <circle cx="292" cy="140" r="54" fill="#6DAAFE" fill-opacity=".14" stroke="#4D9CF6" stroke-width="2.5"/>
+    <g fill="none" stroke="#4D9CF6" stroke-width="1.6">
+      <ellipse cx="292" cy="140" rx="22" ry="54"/><ellipse cx="292" cy="140" rx="42" ry="54"/>
+      <ellipse cx="292" cy="140" rx="54" ry="16"/><ellipse cx="292" cy="112" rx="45" ry="10"/><ellipse cx="292" cy="168" rx="45" ry="10"/>
+    </g>
+  </g>
+  <!-- mano real tocando el holograma -->
+  <g class="ilus__pulso">
+    <circle cx="340" cy="130" r="9" fill="none" stroke="#B9A2F0" stroke-width="2"/>
+    <circle cx="340" cy="130" r="18" fill="none" stroke="#B9A2F0" stroke-width="1.5" stroke-opacity=".6"/>
+  </g>
+  <g transform="translate(340 130) rotate(-35) scale(4.6) translate(-8 -2)" fill="none" stroke="#071A38" stroke-width=".85" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15V4a2 2 0 0 1 4 0v5.5" fill="#fff"/>
+    <path d="M11 9.5V9a2 2 0 0 1 4 0v1M15 10a2 2 0 0 1 3 0v1"/>
+  </g>
+  <!-- etiquetas -->
+  <g font-size="13" font-weight="600">
+    <rect x="88" y="270" width="62" height="24" rx="12" fill="#fff" stroke="#9DB8DA"/>
+    <text x="119" y="286" text-anchor="middle" fill="#4A5B78">real</text>
+    <rect x="252" y="276" width="80" height="24" rx="12" fill="#071A38"/>
+    <text x="292" y="292" text-anchor="middle" fill="#fff">virtual</text>
+  </g>
+</svg>

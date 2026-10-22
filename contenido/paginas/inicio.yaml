@@ -39,21 +39,37 @@ secciones:
     id: que-encontraras
     fuente: evento.caracteristicas
 
-  # 3 ── Convocatoria (afiche "Postulación de artículo")
-  - tipo: convocatorias
-    id: convocatoria
-    fuente: evento.convocatorias
-    # Si la fecha límite ya pasó, la plantilla oculta la convocatoria automáticamente.
+  # 3 ── Inscripción general (banner "Inscripciones abiertas" del .ai del diseñador)
+  - tipo: inscripcion
+    id: inscripcion
+    fuente: evento                 # botón = evento.inscripcion (texto, url); logos = evento.organizadores
+    titulo: Inscripciones **abiertas**
+    imagen: inicio-2026/inscripcion-persona.webp
+    alt: Persona con visor de realidad virtual interactuando con una interfaz
+    # Mientras evento.inscripcion.url esté vacío, el botón aparece desactivado con este texto:
+    texto_sin_enlace: Enlace disponible pronto
 
   # 4 ── Banda navy
   - tipo: banda
     id: conecta
     estilo: navy
-    titulo: Un evento que **conecta**              # la palabra en ** ** va en azul
-    subtitulo: ideas, tecnología y personas
-    imagen: inicio-2026/banda-conecta.svg          # PLACEHOLDER
+    titulo: Un evento que **conecta**              # la palabra en ** ** va en azul (degradado)
+    # Red de nodos a todo el ancho bajo el titular: hasta 4 palabras unidas al isotipo.
+    # El subtítulo se quitó a propósito: las palabras las dicen los nodos.
+    nodos:
+      - {texto: ideas, icono: bombilla}
+      - {texto: educación, icono: birrete}
+      - {texto: tecnología, icono: cubo}
+      - {texto: personas, icono: usuarios}
+    efectos: {red_nodos: true}     # las líneas se dibujan al entrar en pantalla (docs/07)
 
-  # 5 ── ¿Qué es el VRD? (texto institucional existente, sin cambios)
+  # 5 ── Convocatoria (afiche "Postulación de artículo")
+  - tipo: convocatorias
+    id: convocatoria
+    fuente: evento.convocatorias
+    # Si la fecha límite ya pasó, la plantilla oculta la convocatoria automáticamente.
+
+  # 6 ── ¿Qué es el VRD? (texto institucional existente, sin cambios)
   - tipo: texto
     id: que-es
     titulo: ¿Qué es el Virtual Reality Day?
@@ -65,33 +81,33 @@ secciones:
       texto: Ver más
       url: /acerca-de/
 
-  # 6 ── Resumen de la agenda (se genera desde paginas/agenda.yaml)
+  # 7 ── Resumen de la agenda (se genera desde paginas/agenda.yaml)
   - tipo: agenda_resumen
     id: agenda
     titulo: Agenda
     fuente: agenda                 # muestra los dos días con sus actividades principales
     destacar:                      # actividades que se resaltan en el resumen
       - Asamblea General RAIN Ecuador
-      - Bootcamp de Tecnologías Inmersivas
+      - Bootcamp de cocreación con tecnologías inmersivas
       - Conferencia magistral internacional
-      - VRDay Talks – Docentes / Bloque 1
-      - VRDay Talks – Estudiantes
+      - VRDay Talks y stands
       - Premiación y foto oficial
+      - Circuito FIAV UTPL
     boton:
       texto: Ver agenda completa
       url: /agenda/
 
-  # 7 ── Sede organizadora y aliados (afiche 2026)
+  # 8 ── Sede organizadora y aliados (afiche 2026)
   - tipo: aliados
     id: aliados
     fuente: evento
     titulo_sede: "Sede organizadora:"
     titulo_aliados: "Aliados:"
 
-  # 8 ── Memorias
+  # 9 ── Memorias
   - tipo: cta
     id: memorias
-    titulo: Revive el VR Day LATAM 2023
+    titulo: Revive el VR Day LATAM
     boton:
       texto: Ver memorias
-      url: /memorias/2023/
+      url: /memorias/              # índice con todas las ediciones

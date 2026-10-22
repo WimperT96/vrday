@@ -794,3 +794,15 @@ ponentes:
     Cofundadora de INMERSIVAxR / Realidad Extendida, Virtual, Aumentada / Creative & Transmedia Producer. Investigadora en Agencia_RV y LabRS.
   visible_en_sitio_actual: true
   orden: 12
+- slug: vincent-moulinet
+  nombre: Vincent Moulinet
+  edicion: 2026
+  pais: Francia
+  institucion: ''
+  foto: ponentes/2026/vincent-moulinet.jpg
+  resena: |-
+    Artista francés de medios en tiempo real, curador y diseñador de videojuegos.
+
+    Dicta la conferencia magistral internacional del VR Day LATAM 2026 gracias al apoyo de la Embajada de Francia en Ecuador.
+  visible_en_sitio_actual: true
+  orden: 1

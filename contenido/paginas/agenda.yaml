@@ -1,11 +1,13 @@
 # ============================================================================
-# PÁGINA: AGENDA — VR Day LATAM 2026 (tentativa)
+# PÁGINA: AGENDA — VR Day LATAM 2026
 # URL: /agenda/
-# Fuente: referencias/evento-2026/agenda-tentativa-2026.jpg
+# Fuente: "Invitación a delegados institucionales" (PDF, oct-2026), sección "Agenda del evento".
+# Reemplaza a la agenda tentativa (referencias/evento-2026/agenda-tentativa-2026.jpg).
 # La agenda 2023 (6 países) está en paginas/memorias/2023-agenda.yaml.
 #
 # Estructura: sedes -> días -> sesiones. Hoy solo existe la sede Ecuador;
 # para otra sede (otro país) se agrega otro bloque en "sedes".
+# Los nombres de "actividad" se usan en inicio.yaml -> agenda_resumen.destacar.
 # ============================================================================
 
 slug: agenda
@@ -17,12 +19,12 @@ edicion: 2026
 
 secciones:
   - tipo: cabecera
-    titulo: Agenda tentativa – VRDay LATAM 2026
+    titulo: Agenda – VRDay LATAM 2026
     subtitulo: 12 y 13 de noviembre de 2026
 
   - tipo: agenda_dias
     id: programa
-    tentativa: true                  # muestra la etiqueta "Agenda tentativa"
+    tentativa: false                 # true = muestra la etiqueta "Agenda tentativa"
     sedes:
       - id: ecuador
         nombre: "Sede Ecuador: Universidad Técnica Particular de Loja – UTPL"
@@ -35,62 +37,33 @@ secciones:
             sesiones:
               - hora: "08:30 – 11:00"
                 actividad: Asamblea General RAIN Ecuador
-                detalle: Reunión de delegados de las 18 universidades miembro.
-              - hora: "11:00 – 11:30"
-                actividad: Receso / café
-                detalle: Espacio de networking.
-                tipo: pausa
+                detalle: Presencial y obligatoria para los delegados de las universidades miembros de RAIN Ecuador.
               - hora: "11:30 – 12:30"
-                actividad: Recorrido por el Centro de Convenciones UTPL
-                detalle: Visita a instalaciones y espacios tecnológicos.
-              - hora: "12:30 – 14:00"
-                actividad: Almuerzo
-                detalle: ""
-                tipo: pausa
+                actividad: Recorrido institucional
+                detalle: Visita a las instalaciones y espacios tecnológicos de la UTPL.
               - hora: "14:00 – 19:00"
-                actividad: Bootcamp de Tecnologías Inmersivas
-                detalle: Jornada práctica de realidad virtual, realidad aumentada y videojuegos.
+                actividad: Bootcamp de cocreación con tecnologías inmersivas
+                detalle: Cupos limitados, con inscripción previa.
           - id: viernes-13
             fecha: 2026-11-13
             etiqueta: Viernes 13 de noviembre
             sesiones:
-              - hora: "08:30 – 09:00"
-                actividad: Registro y bienvenida
-                detalle: Recepción de participantes.
               - hora: "09:00 – 09:45"
                 actividad: Conferencia magistral internacional
-                detalle: Tecnologías inmersivas y videojuegos. Expositor francés.
+                detalle: A cargo de Vincent Moulinet, artista francés de medios en tiempo real, curador y diseñador de videojuegos, gracias al apoyo de la Embajada de Francia en Ecuador.
                 destacada: true
-              - hora: "09:45 – 10:00"
-                actividad: Preguntas y transición
-                detalle: Espacio de interacción con el conferencista.
-              - hora: "10:00 – 11:00"
-                actividad: VRDay Talks – Docentes / Bloque 1
-                detalle: Presentación de experiencias e investigaciones.
-              - hora: "11:00 – 11:30"
-                actividad: Recorrido por stands y experiencias inmersivas
-                detalle: Visita a proyectos y demostraciones.
-              - hora: "11:30 – 12:30"
-                actividad: VRDay Talks – Docentes / Bloque 2
-                detalle: Segundo bloque de presentaciones docentes.
-              - hora: "12:30 – 14:30"
-                actividad: Almuerzo / Networking
-                detalle: ""
-                tipo: pausa
-              - hora: "14:30 – 15:00"
-                actividad: Recorrido por stands
-                detalle: Espacio para demostraciones y experiencias.
-              - hora: "15:00 – 17:00"
-                actividad: VRDay Talks – Estudiantes
-                detalle: Presentación de proyectos estudiantiles.
-              - hora: "17:00 – 17:30"
-                actividad: Deliberación y cierre de evaluación
-                detalle: Consolidación de resultados.
-              - hora: "17:30 – 18:00"
+              - hora: "10:00 – 13:30"
+                actividad: VRDay Talks y stands
+                detalle: Presentaciones en dos categorías, docentes y estudiantes, y stands de demostración de las universidades.
+              - hora: "15:00 – 16:00"
                 actividad: Premiación y foto oficial
-                detalle: Cierre del evento.
+                detalle: Reconocimiento a las 3 mejores experiencias, con placa.
                 destacada: true
-        nota: Los stands estarán ubicados en el Hall del Aula Magna y en el sector de ingreso al Rectorado.
+              - hora: "16:30"
+                actividad: Circuito FIAV UTPL
+                detalle: ""
+            nota: Los stands estarán ubicados en el Centro de Convenciones UTPL.   # solo en este día
+        # nota: ...   (nota de la sede: se muestra bajo las pestañas, en todos los días)
 
   - tipo: botones
     items:

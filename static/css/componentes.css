@@ -81,15 +81,83 @@
 }
 
 /* ── convocatorias ──────────────────────────────────────────────────────── */
+/* Píldoras escalonadas del afiche 2026 (mesa 1080×1350 de 20260922_Virtual Day.ai):
+   arriba contorno azul con la esquina inferior derecha recta, abajo relleno azul desplazado
+   a la derecha con la esquina superior izquierda recta. Medidas en em sobre texto de 42 px. */
 .convocatoria {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px;
-  padding: clamp(24px, 4vw, 40px); border-radius: var(--vr-radio-card);
-  background: var(--vr-degrade-holo), #fff; border: 1.5px solid var(--vr-azul-500);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px 32px;
+  padding: clamp(24px, 4vw, 48px); border-radius: var(--vr-radio-card);
+  background: var(--vr-degrade-holo), #fff; border: 1px solid var(--vr-borde);
 }
-.convocatoria__titulo { font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem); margin: 0; line-height: 1.2; }
+.convocatoria__texto { display: flex; flex-direction: column; align-items: flex-start; font-size: clamp(1.15rem, .9rem + 1.1vw, 1.75rem); }
+.convocatoria__titulo, .convocatoria__plazo { margin: 0; line-height: 1.2; padding-block: .25em; }
+.pildora-escalonada {
+  position: relative; z-index: 1; padding-inline: .45em .65em; font-weight: 400; color: var(--vr-navy-900);
+  background: rgba(255, 255, 255, .55); border: 1.5px solid var(--vr-azul-300);
+  border-radius: .85em 1.16em 0 .85em;
+}
+.pildora-escalonada strong { font-weight: 700; }
 .convocatoria__plazo {
-  display: inline-block; margin: 10px 0 0; padding: .25em 1em; font-size: clamp(1.1rem, 1rem + .6vw, 1.5rem);
-  color: var(--vr-navy-900); background: var(--vr-azul-100); border-radius: var(--vr-radio-pildora);
+  margin-left: 2.24em; padding-inline: .8em 1.1em; font-weight: 400; color: #fff;
+  background: var(--vr-azul-300); border-radius: 0 .85em .85em .85em;
+}
+
+/* Botón "Postula aquí" del banner 1280×320: blanco, borde azul grueso, sombra y mano de clic.
+   Lo usan convocatorias e inscripcion. */
+.boton--destacado {
+  min-height: 64px; padding: .5em 1.1em .5em 1.6em; gap: .5em;
+  font-size: clamp(1.15rem, 1rem + .6vw, 1.5rem); font-weight: 800; color: var(--vr-navy-900);
+  background: #fff; border: 4px solid var(--vr-azul-300); box-shadow: 0 6px 16px rgba(7, 26, 56, .22);
+}
+.boton--destacado .icono { width: 1.6em; height: 1.6em; color: var(--vr-azul-300); stroke-width: 1.6; }
+.boton--destacado:hover { color: var(--vr-navy-900); background: var(--vr-azul-100); transform: translateY(-2px); box-shadow: 0 10px 22px rgba(7, 26, 56, .26); }
+.boton--destacado:hover .icono { transform: none; }
+.boton--destacado.boton--deshabilitado,
+.boton--destacado.boton--deshabilitado:hover { color: var(--vr-texto-2); background: rgba(255, 255, 255, .7); border-color: var(--vr-borde); box-shadow: none; transform: none; cursor: default; }
+@media (max-width: 760px) { .convocatoria { justify-content: flex-start; } }
+@media (max-width: 480px) {
+  .convocatoria { padding: 24px 18px; }
+  .convocatoria__texto { font-size: 1rem; }
+  .convocatoria__plazo { margin-left: 1.4em; }
+}
+
+/* ── inscripcion (banner "Inscripciones abiertas" 854×285 del .ai) ──────── */
+/* Fondo gris muy claro → lavanda con arcos blancos; foto recortada a la derecha. */
+.registro {
+  position: relative; overflow: hidden; isolation: isolate;
+  display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: end;
+  border-radius: var(--vr-radio-card); border: 1px solid var(--vr-borde);
+  background: linear-gradient(90deg, #F6F8FA 30%, #EBE0F6 62%, #E4D1F5);
+}
+.registro::before, .registro::after {
+  content: ""; position: absolute; z-index: -1; border-radius: 50%; pointer-events: none;
+  border: clamp(6px, 1vw, 14px) solid rgba(255, 255, 255, .75);
+}
+.registro::before { width: 70%; aspect-ratio: 1; left: -28%; top: 50%; translate: 0 -50%; }
+.registro::after { width: 95%; aspect-ratio: 1; left: 22%; top: -20%; border-width: clamp(3px, .5vw, 6px); }
+.registro__texto {
+  display: flex; flex-direction: column; align-items: flex-start; gap: clamp(18px, 2.4vw, 28px);
+  padding: clamp(28px, 5vw, 56px) clamp(20px, 5vw, 64px); align-self: center;
+}
+.registro__marca { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin: 0; }
+.registro .logotipo { font-size: clamp(2rem, 1.2rem + 2.2vw, 3.2rem); }
+.registro .logotipo__edicion {
+  margin: 0; font-size: clamp(1.2rem, .9rem + 1vw, 1.9rem); background: #fff;
+  border-width: 1px; border-color: var(--vr-azul-300);
+}
+.registro__estado { margin: 0; font-size: clamp(1.3rem, 1rem + 1.2vw, 2.1rem); line-height: 1.2; padding-block: .25em; background: #fff; }
+.registro__detalle { margin: 0; max-width: 46ch; color: var(--vr-texto-2); }
+.registro__organizadores { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.registro__organizadores-titulo { margin: 0; font-weight: 700; color: var(--vr-azul-300); }
+.registro__logos { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; list-style: none; margin: 0; padding: 0; }
+.registro__logo { height: clamp(36px, 4vw, 52px); width: auto; }
+.registro__visual { position: relative; align-self: stretch; display: flex; align-items: flex-end; justify-content: center; min-height: 100%; }
+.registro__img { width: 100%; max-width: 520px; margin-top: 16px; }
+.registro__hud { left: auto; right: 4%; top: 6%; width: 24%; }
+@media (max-width: 860px) {
+  .registro { grid-template-columns: minmax(0, 1fr); }
+  .registro__visual { min-height: 0; }
+  .registro__img { max-width: 360px; }
 }
 
 /* ── banda (sección navy) y cta ─────────────────────────────────────────── */
@@ -104,7 +172,82 @@
 .banda__titulo strong { color: var(--vr-azul-500); font-weight: 700; }
 .banda__subtitulo { font-size: var(--vr-h2); font-weight: 500; line-height: 1.15; color: var(--vr-azul-300); margin: 0; }
 .banda__imagen { border-radius: var(--vr-radio-card); overflow: hidden; opacity: .95; }
+.banda__imagen img { width: 100%; }
 @media (max-width: 760px) { .banda { grid-template-columns: 1fr; } }
+
+/* Banda con red de nodos: titular centrado y la red a todo el ancho como protagonista. */
+.seccion--navy:has(.banda--red) { padding-block: calc(var(--vr-seccion) + 30px) calc(var(--vr-seccion) * .7) !important; }
+.banda--red { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; gap: clamp(4px, 1.5vw, 16px); }
+.banda--red .banda__titulo { font-size: clamp(2.3rem, 1.4rem + 3.6vw, 4.75rem); line-height: 1.05; letter-spacing: -.01em; }
+.banda--red .banda__titulo strong {
+  background: linear-gradient(90deg, var(--vr-azul-300), var(--vr-azul-500) 45%, #B9A2F0);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 0 22px rgba(77, 156, 246, .45));
+}
+.banda--red .banda__visual { width: 100%; }
+
+/* Red de nodos. Sin JS o con movimiento reducido se ve completa y quieta; el efecto
+   `red_nodos` agrega .red-nodos--animada (estado inicial oculto) y .es-visible al entrar. */
+.banda__visual { min-width: 0; }
+.red-nodos { position: relative; width: 100%; max-width: 1120px; margin-inline: auto; aspect-ratio: 1120 / 460; }
+.red-nodos__lienzo { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.red-nodos__lienzo--compacta { display: none; }
+.red-nodos__fondo path { fill: none; stroke: rgba(109, 170, 254, .2); stroke-width: 1.2; }
+.red-nodos__fondo circle { fill: rgba(109, 170, 254, .4); }
+.red-nodos__linea { fill: none; stroke: var(--vr-azul-300); stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 4px rgba(77, 156, 246, .55)); }
+.red-nodos__pulso { fill: none; stroke: #fff; stroke-width: 3.5; stroke-linecap: round; stroke-dasharray: .06 .94; stroke-dashoffset: .06; opacity: 0; }
+.red-nodos__nodo {
+  fill: var(--vr-navy-900); stroke: var(--vr-azul-500); stroke-width: 3.5;
+  filter: drop-shadow(0 0 8px rgba(77, 156, 246, .9)); transform-box: fill-box; transform-origin: center;
+}
+.red-nodos__anillo { fill: none; stroke: rgba(109, 170, 254, .45); stroke-width: 1.5; stroke-dasharray: 6 10; transform-box: fill-box; transform-origin: center; }
+.red-nodos__halo { fill: rgba(77, 156, 246, .25); transform-box: fill-box; transform-origin: center; }
+.red-nodos__nucleo { fill: var(--vr-navy-800); stroke: var(--vr-azul-500); stroke-width: 2.5; filter: drop-shadow(0 0 22px rgba(77, 156, 246, .7)); }
+.red-nodos__icono { color: var(--vr-azul-300); }
+.red-nodos__etiquetas { list-style: none; margin: 0; padding: 0; }
+.red-nodos__etiqueta {
+  position: absolute; left: var(--x); top: var(--y); translate: -50% calc(-100% - 26px);
+  display: inline-flex; align-items: center; gap: .5em; padding: .45em 1.15em .45em .9em; white-space: nowrap;
+  font-size: clamp(.95rem, .5rem + 1.1vw, 1.5rem); font-weight: 600; color: #fff;
+  background: linear-gradient(180deg, rgba(27, 51, 88, .95), rgba(7, 26, 56, .95));
+  border: 1.5px solid var(--vr-azul-300); border-radius: var(--vr-radio-pildora);
+  box-shadow: 0 0 0 4px rgba(77, 156, 246, .08), 0 0 28px rgba(77, 156, 246, .35);
+}
+.red-nodos__etiqueta[data-lado="abajo"] { translate: -50% 26px; }
+.red-nodos__etiqueta-icono { width: 1.25em; height: 1.25em; color: var(--vr-azul-300); flex: none; }
+@media (max-width: 700px) {
+  .red-nodos { aspect-ratio: 360 / 540; max-width: 420px; }
+  .red-nodos__lienzo--ancha { display: none; }
+  .red-nodos__lienzo--compacta { display: block; }
+  .red-nodos__etiqueta { left: var(--xm); top: var(--ym); font-size: 1rem; translate: var(--ancla-m) calc(-100% - 18px); }
+  .red-nodos__etiqueta[data-lado-movil="abajo"] { translate: var(--ancla-m) 18px; }
+}
+
+.red-nodos--animada .red-nodos__linea { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.1s cubic-bezier(.6, 0, .2, 1) calc(var(--i) * .18s + .3s); }
+.red-nodos--animada .red-nodos__nodo,
+.red-nodos--animada .red-nodos__etiqueta { opacity: 0; scale: .6; transition: opacity .5s ease, scale .55s cubic-bezier(.3, 1.4, .5, 1); transition-delay: calc(var(--i) * .18s + 1.2s); }
+.red-nodos--animada .red-nodos__nucleo,
+.red-nodos--animada .red-nodos__icono,
+.red-nodos--animada .red-nodos__anillo { opacity: 0; transition: opacity .6s ease; }
+.red-nodos--animada.es-visible .red-nodos__nucleo,
+.red-nodos--animada.es-visible .red-nodos__icono,
+.red-nodos--animada.es-visible .red-nodos__anillo { opacity: 1; }
+.red-nodos--animada.es-visible .red-nodos__linea { stroke-dashoffset: 0; }
+.red-nodos--animada.es-visible .red-nodos__nodo,
+.red-nodos--animada.es-visible .red-nodos__etiqueta { opacity: 1; scale: 1; }
+.red-nodos--animada.es-visible .red-nodos__pulso { animation: red-pulso 3.2s linear calc(var(--i) * .8s + 2s) infinite backwards; }
+.red-nodos--animada.es-visible .red-nodos__halo { animation: red-halo 2.8s ease-out 1s infinite; }
+.red-nodos--animada.es-visible .red-nodos__anillo { animation: red-giro 24s linear infinite; }
+@keyframes red-pulso {
+  0% { stroke-dashoffset: .06; opacity: .9; }
+  100% { stroke-dashoffset: -.94; opacity: .9; }
+}
+@keyframes red-halo {
+  0% { scale: 1; opacity: .9; }
+  100% { scale: 2; opacity: 0; }
+}
+@keyframes red-giro { to { rotate: 360deg; } }
+
 
 .seccion--cta { padding-block: calc(var(--vr-seccion) * .8) !important; }
 .cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
@@ -125,6 +268,26 @@
 .texto--izquierda { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); }
 .texto--izquierda .texto__imagen { order: -1; }
 .texto__imagen { margin: 0; }
+
+/* Ilustraciones SVG propias (templates/components/ilustraciones/<nombre>.html), campo `ilustracion:`.
+   Animaciones suaves en bucle; base.css las detiene con prefers-reduced-motion. */
+.ilustracion {
+  aspect-ratio: 4 / 3; border-radius: var(--vr-radio-card); overflow: hidden;
+  border: 1px solid var(--vr-borde); box-shadow: var(--vr-sombra-card);
+  background:
+    radial-gradient(circle at 85% 8%, rgba(230, 213, 247, .95), transparent 55%),
+    radial-gradient(circle at 8% 92%, rgba(201, 224, 253, .9), transparent 55%), #fff;
+}
+.ilus { display: block; width: 100%; height: 100%; }
+.ilus__flotar { animation: ilus-flotar 6s ease-in-out infinite; }
+.ilus__flotar--2 { animation-delay: -3s; }
+.ilus__pulso { transform-box: fill-box; transform-origin: center; animation: ilus-pulso 2.8s ease-in-out infinite; }
+.ilus__izq { animation: ilus-izq 7s ease-in-out infinite; }
+.ilus__der { animation: ilus-der 7s ease-in-out infinite; }
+@keyframes ilus-flotar { 50% { translate: 0 -10px; } }
+@keyframes ilus-pulso { 0%, 100% { opacity: .45; scale: .92; } 50% { opacity: 1; scale: 1.04; } }
+@keyframes ilus-izq { 50% { translate: -9px 0; } }
+@keyframes ilus-der { 50% { translate: 9px 0; } }
 .texto__cuerpo { background: #fff; border: 1px solid var(--vr-borde); border-radius: var(--vr-radio-card); padding: clamp(24px, 4vw, 40px); box-shadow: var(--vr-sombra-card); }
 @media (max-width: 760px) {
   .texto, .texto--izquierda { grid-template-columns: minmax(0, 1fr); }
@@ -226,6 +389,7 @@ a.bandera:hover { border-color: var(--vr-azul-500); box-shadow: var(--vr-sombra-
 .embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .embed--alto-fijo { aspect-ratio: auto; height: var(--alto); max-width: 560px; background: transparent; box-shadow: none; }
 .embed__credito { margin-top: 10px; font-size: .875rem; color: var(--vr-texto-2); }
+.embed__boton { margin: 20px 0 0; }
 
 /* ── acordeón / FAQ ─────────────────────────────────────────────────────── */
 .acordeon { display: grid; gap: 10px; }

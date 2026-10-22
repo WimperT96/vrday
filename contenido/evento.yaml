@@ -20,19 +20,20 @@ lugar:
     - Hall del Aula Magna (stands)
     - Sector de ingreso al Rectorado (stands)
   direccion: ""            # PENDIENTE: dirección exacta
-  mapa_url: ""             # PENDIENTE: URL de Google Maps (también en paginas/lugar.yaml)
+  mapa_url: https://maps.app.goo.gl/yBdi5coZ4zWkQEGi7   # Centro de Convenciones UTPL (mapa en paginas/lugar.yaml)
 lema: Innovación, educación y experiencias inmersivas para un futuro sin límites.
-frase_destacada: Un evento que conecta ideas, tecnología y personas   # "conecta" en azul
+frase_destacada: Un evento que conecta ideas, educación, tecnología y personas   # "conecta" en azul
 
 inscripcion:
   texto: Inscríbete ahora
-  url: ""                  # PENDIENTE: enlace de inscripción 2026
+  url: https://docs.google.com/forms/d/e/1FAIpQLSdTD8Ow9yCkvVi74ZjWWP1Ok1r7LpR_GPn8KCEJ8kVtaErSlQ/viewform
 
 convocatorias:
   - titulo: Postulación de **artículo**   # ** ** = negrita, como en el afiche
-    fecha_limite: 2026-10-15
-    texto: hasta el 15 de octubre 2026
-    url: ""                # PENDIENTE: enlace de postulación (Google Form / plataforma de envíos)
+    fecha_limite: 2026-10-25
+    texto: hasta el 25 de octubre 2026
+    url: https://queyam.com/editorial/home/vrdlatam2026
+    boton: Postula aquí      # texto del botón (como en el banner del diseñador)
 
 caracteristicas:           # 4 tarjetas bajo el hero de la maqueta
   - titulo: Conferencias

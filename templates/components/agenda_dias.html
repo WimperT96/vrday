@@ -14,6 +14,7 @@
       {% for dia in sede.dias %}
       <div class="pestanas__panel" role="tabpanel" id="{{ sede.id }}-{{ dia.id }}" aria-labelledby="tab-{{ sede.id }}-{{ dia.id }}" tabindex="0"{% if not forloop.first %} hidden{% endif %}>
         <ol class="agenda">{% for x in dia.sesiones %}{% include "components/_sesion.html" %}{% endfor %}</ol>
+        {% if dia.nota %}<p class="nota"><strong>Nota:</strong> {{ dia.nota }}</p>{% endif %}
       </div>
       {% endfor %}
     </div>

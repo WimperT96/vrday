@@ -1,0 +1,30 @@
+{% with ev=s.evento %}
+<div class="contenedor">
+  <div class="registro">
+    <div class="registro__texto">
+      <p class="registro__marca">{% include "components/_logotipo.html" %}</p>
+      <h2 class="registro__estado pildora-escalonada">{{ s.titulo|default:"Inscripciones **abiertas**"|md_linea }}</h2>
+      {% if s.texto %}<p class="registro__detalle">{{ s.texto }}</p>{% endif %}
+      {% if ev.inscripcion.url %}
+      <a class="boton boton--destacado" {% enlace ev.inscripcion.url %}>{{ ev.inscripcion.texto|default:"Inscríbete" }} {% icono "clic" %}</a>
+      {% else %}
+      <span class="boton boton--destacado boton--deshabilitado" aria-disabled="true">{{ s.texto_sin_enlace|default:"Enlace disponible pronto" }}</span>
+      {% endif %}
+      {% if ev.organizadores %}
+      <div class="registro__organizadores">
+        <p class="registro__organizadores-titulo">{{ s.titulo_organizadores|default:"Organizadores:" }}</p>
+        <ul class="registro__logos">
+          {% for o in ev.organizadores %}<li>{% if o.logo %}{% img o.logo o.nombre "registro__logo" %}{% else %}{{ o.nombre }}{% endif %}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+    {% if s.imagen %}
+    <div class="registro__visual">
+      {% img s.imagen s.alt "registro__img" %}
+      <div class="hud registro__hud" aria-hidden="true"><span></span><span></span><span></span></div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endwith %}

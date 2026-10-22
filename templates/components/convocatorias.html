@@ -3,10 +3,10 @@
   {% for c in s.items %}
   <div class="convocatoria">
     <div class="convocatoria__texto">
-      <p class="convocatoria__titulo">{{ c.titulo|md_linea }}</p>
+      <p class="convocatoria__titulo pildora-escalonada">{{ c.titulo|md_linea }}</p>
       <p class="convocatoria__plazo">{% if c.texto %}{{ c.texto }}{% else %}{{ c.fecha_limite|fecha_larga }}{% endif %}</p>
     </div>
-    {% if c.url %}<a class="boton boton--primario boton--grande" {% enlace c.url %}>Postular {% icono "flecha" %}</a>{% endif %}
+    {% if c.url %}<a class="boton boton--destacado" {% enlace c.url %}>{{ c.boton|default:"Postula aquí" }} {% icono "clic" %}</a>{% endif %}
   </div>
   {% endfor %}
 </div>

@@ -16,7 +16,7 @@ secciones:
     id: que-es-el-vrd
     titulo: ¿Qué es el Día de la Realidad Virtual?
     cuerpo: |
-      Es un evento sin fines de lucro, abierto al público y gratuito. A nivel global se celebra el mismo día, 21 de noviembre, en más de 70 ciudades de todo el mundo.
+      Es un evento sin fines de lucro, abierto al público y gratuito. A nivel global se celebra el mismo día, 21 de noviembre, en más de 70 ciudades de todo el mundo, liderado por [virtualrealityday.org](https://virtualrealityday.org/). El presente 2026 cumple su décimo aniversario a nivel mundial.
 
       Como Universidad Técnica Particular de Loja a través de la iniciativa "Realidad X UTPL" nos unimos a esta celebración para fomentar el conocimiento, el uso y el aprendizaje acerca de las Realidades Extendidas (RX), así como para la creación de una red de aprendizaje inmersivo en Ecuador.
 
@@ -33,26 +33,33 @@ secciones:
     titulo: ¿Qué es la Realidad Extendida (RX)?
     cuerpo: |
       La Realidad eXtendida hace referencia a la combinación de entornos reales y virtuales en conjunto con la interacción humano-máquina generada por un computador, sirviendo como paraguas para poder abarcar diversas áreas como realidad aumentada, virtual, mixta y realidades futuras.
-    imagen: acerca-de/personajes-rx.png
+    # Ilustraciones SVG propias: templates/components/ilustraciones/<rx|rv|ra|rm>.html
+    # (reemplazan a acerca-de/personajes-rx.png, la ilustración única del sitio anterior).
+    ilustracion: rx
     imagen_posicion: derecha
 
-  # ⚠ ERROR EN EL SITIO ACTUAL: los textos de RV y RA están intercambiados.
-  #   Se conservan tal cual; ver docs/06-problemas-de-contenido.md para la corrección propuesta.
+  # Los textos de RV y RA venían intercambiados en el sitio anterior; corregido el 22-oct-2026 (docs/06, punto 1).
   - tipo: texto
     id: que-es-rv
     titulo: ¿Qué es la Realidad Virtual (RV)?
     cuerpo: |
-      Es una tecnología que permite la superposición de entornos virtuales en el entorno real mediante dispositivos móviles, en donde el usuario podrá interactuar con contenido virtualizado sin dejar de lado su entorno real, permitiéndole la experimentación con ambos entornos.
+      Es una tecnología basada en entornos virtuales generados por un computador que permite a los usuarios interactuar, moverse y estar completamente inmersos en un entorno virtual. Al combinar diferentes tipos de hardware, se pueden lograr experiencias inmersivas con una recepción sensorial completamente simulada.
+    ilustracion: rv
+    imagen_posicion: izquierda
 
   - tipo: texto
     id: que-es-ra
     titulo: ¿Qué es la Realidad Aumentada (RA)?
     cuerpo: |
-      Es una tecnología basada en entornos virtuales generados por un computador que permite a los usuarios interactuar, moverse y estar completamente inmersos en un entorno virtual. Al combinar diferentes tipos de hardware, se pueden lograr experiencias inmersivas con una recepción sensorial completamente simulada.
+      Es una tecnología que permite la superposición de entornos virtuales en el entorno real mediante dispositivos móviles, en donde el usuario podrá interactuar con contenido virtualizado sin dejar de lado su entorno real, permitiéndole la experimentación con ambos entornos.
+    ilustracion: ra
+    imagen_posicion: derecha
 
   - tipo: texto
     id: que-es-rm
     titulo: ¿Qué es la Realidad Mixta (RM)?
+    ilustracion: rm
+    imagen_posicion: izquierda
     cuerpo: |
       Es una mezcla entre la Realidad Aumentada y la Realidad Virtual, combinando los mejores aspectos de cada una.
 

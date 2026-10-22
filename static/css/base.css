@@ -169,6 +169,25 @@ ul, ol { padding-left: 1.25em; }
 .pie__base { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding-top: 32px; }
 .pie__logo img { height: 40px; width: auto; background: #fff; border-radius: 10px; padding: 6px 10px; }
 .pie__enlaces, .pie__redes { display: flex; flex-wrap: wrap; gap: 8px 24px; list-style: none; margin: 0; padding: 0; font-size: .9375rem; }
+
+/* Redes sociales: botones circulares que toman el color de cada marca al pasar el cursor */
+.pie__redes-bloque { display: flex; align-items: center; gap: 16px; }
+.pie__redes-titulo { margin: 0; color: var(--vr-azul-300); font-weight: 600; font-size: .875rem; letter-spacing: .06em; text-transform: uppercase; }
+.pie__redes { gap: 12px; }
+.red-social {
+  --red-hueco: var(--vr-navy-900);
+  display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%;
+  color: #fff !important; background: rgba(255, 255, 255, .06); border: 1.5px solid rgba(109, 170, 254, .45);
+  box-shadow: 0 0 0 4px rgba(77, 156, 246, .06);
+  transition: background var(--vr-transicion), border-color var(--vr-transicion), box-shadow var(--vr-transicion), transform var(--vr-transicion);
+}
+.red-social__icono { width: 26px; height: 26px; }
+.red-social:hover, .red-social:focus-visible { transform: translateY(-3px); border-color: transparent; }
+.red-social--instagram:hover, .red-social--instagram:focus-visible {
+  background: radial-gradient(circle at 30% 110%, #FDF497 0%, #FD5949 40%, #D6249F 65%, #285AEB 100%);
+  box-shadow: 0 8px 24px rgba(214, 36, 159, .45);
+}
+.red-social--youtube:hover, .red-social--youtube:focus-visible { --red-hueco: #FF0000; background: #FF0000; box-shadow: 0 8px 24px rgba(255, 0, 0, .4); }
 .pie__legal { margin: 24px 0 0; font-size: .8125rem; opacity: .8; }
 
 /* ── Aviso de contenido provisional (solo en desarrollo) ────────────────── */

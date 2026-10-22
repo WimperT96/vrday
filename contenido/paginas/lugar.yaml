@@ -20,8 +20,6 @@ secciones:
   - tipo: texto
     id: sede
     titulo: Universidad Técnica Particular de Loja (UTPL)
-    imagen: lugar/sede-utpl.svg          # PLACEHOLDER
-    imagen_posicion: derecha
     cuerpo: |
       El VR Day LATAM 2026 se realizará el **12 y 13 de noviembre de 2026** en la Universidad Técnica Particular de Loja.
 
@@ -31,12 +29,17 @@ secciones:
       - **Hall del Aula Magna** — stands y experiencias inmersivas.
       - **Sector de ingreso al Rectorado** — stands y experiencias inmersivas.
     # PENDIENTE: agregar aquí la dirección exacta y las indicaciones de llegada
-    placeholder: true
 
   - tipo: embed
     id: mapa
     titulo: Cómo llegar
     proveedor: google-maps
-    url: ""                              # PENDIENTE: URL de "Insertar mapa" de Google Maps
+    # Centro de Convenciones UTPL (-3.9859414, -79.1983198), formato "Insertar mapa" de Google Maps.
+    # Viene del enlace https://maps.app.goo.gl/yBdi5coZ4zWkQEGi7 (ese enlace corto no se puede incrustar).
+    url: https://www.google.com/maps/embed?origin=mfe&pb=!1m12!1m8!1m3!1d3980.1673767061729!2d-79.1983198!3d-3.9859414!3m2!1i1024!2i768!4f13.1!2m1!1sCentro+de+Convenciones+UTPL,+Loja!6i17!3m1!1ses!5m1!1ses
     imagen_respaldo: lugar/mapa.svg      # se muestra mientras no haya URL
     proporcion: "16:9"
+    boton:                               # abre la app de mapas (indicaciones desde el celular)
+      texto: Abrir en Google Maps
+      url: https://maps.app.goo.gl/yBdi5coZ4zWkQEGi7
+      icono: ubicacion

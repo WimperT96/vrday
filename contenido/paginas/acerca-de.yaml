@@ -10,7 +10,10 @@ url_original: https://vrdaylatam.org/acerca-de/
 secciones:
   - tipo: cabecera
     titulo: Acerca de           # el sitio actual solo muestra la imagen, sin título visible
-    fondo: acerca-de/cabecera.png
+    # Afiche 2026 (mesa 1080×1350 de 20260922_Virtual Day.ai) sin editar, solo recortado
+    # entre la fecha y la píldora LATAM. Antes: acerca-de/cabecera.png (banner 2023).
+    fondo: acerca-de/cabecera-2026.webp
+    alt: Persona con visor de realidad virtual saludando, junto al logotipo Virtual Reality Day
 
   - tipo: texto
     id: que-es-el-vrd

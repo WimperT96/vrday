@@ -37,7 +37,7 @@ python referencias/herramientas/validar_contenido.py
 |---|---|---|
 | C1 | ~~Conferencista magistral~~ ✅ Vincent Moulinet (Francia), con apoyo de la Embajada de Francia en Ecuador — foto y reseña breve (22-oct-2026) | `contenido/ponentes.yaml` (edición 2026) y `paginas/ponentes.yaml` |
 | C2 | Ponentes de VRDay Talks (docentes y estudiantes) | `contenido/ponentes.yaml` |
-| C3 | ~~Agenda tentativa~~ ✅ agenda del PDF "Invitación a delegados" (22-oct-2026). Queda: ¿habrá otras sedes LATAM además de Ecuador? ¿Qué es exactamente el "Circuito FIAV UTPL" (16:30)? | `paginas/agenda.yaml` (admite varias sedes) |
+| C3 | ~~Agenda tentativa~~ ✅ agenda del PDF "Invitación a delegados" (22-oct-2026). Queda: ¿habrá otras sedes LATAM además de Ecuador? (El "Circuito" de las 16:30 es el Circuito Ciencia y Arte del FIAV, aclarado el 23-oct-2026.) | `paginas/agenda.yaml` (admite varias sedes) |
 | C4 | Texto provisional "Pronto anunciaremos a los ponentes del VR Day LATAM 2026." — validar redacción | `paginas/ponentes.yaml` |
 | C5 | ¿La premiación del viernes corresponde a los artículos/proyectos postulados? Si es así, explicarlo en la convocatoria | `evento.yaml → convocatorias` |
 | C6 | Redes sociales oficiales y texto legal del pie | `contenido/sitio.yaml → pie` |

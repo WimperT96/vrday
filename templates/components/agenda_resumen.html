@@ -12,7 +12,7 @@
       <h3 class="resumen-agenda__titulo">{{ dia.etiqueta }}</h3>
       <ol class="resumen-agenda__lista">
         {% for x in dia.sesiones %}
-        <li><span class="resumen-agenda__hora">{{ x.hora }}</span><span>{{ x.actividad }}</span></li>
+        <li><span class="resumen-agenda__hora">{{ x.hora }}</span><span>{{ x.actividad }}{% for e in x.etiquetas %} <span class="marca-sesion marca-sesion--{{ e.tono|default:'info' }}">{{ e.texto }}</span>{% endfor %}</span></li>
         {% endfor %}
       </ol>
     </article>

@@ -153,7 +153,7 @@ Estos tipos leen sus datos de `contenido/evento.yaml` (campo `fuente:`), para qu
 | `convocatorias` | fuente: evento.convocatorias (titulo, fecha_limite, texto, url, boton) — se oculta sola al vencer | Inicio | — |
 | `banda` | estilo (navy/claro), titulo (con `**palabra**` resaltada), subtitulo, imagen o nodos[{texto, icono}] (red de hasta 4 palabras unidas al isotipo; con nodos el titular va centrado y la red a todo el ancho) | Inicio | efecto `red_nodos` |
 | `agenda_resumen` | fuente: agenda, destacar[], boton | Inicio | — |
-| `agenda_dias` | tentativa, sedes[id, nombre, pais, bandera, dias[id, fecha, etiqueta, sesiones[hora, actividad, detalle, tipo, destacada], nota], nota] | Agenda 2026 | pestañas por día |
+| `agenda_dias` | tentativa, sedes[id, nombre, pais, bandera, dias[id, fecha, etiqueta, sesiones[hora, actividad, etiquetas[{texto, tono: info/alerta}], detalle, tipo, destacada], nota], nota] | Agenda 2026 | pestañas por día |
 | `aliados` | fuente: evento (organizadores + aliados), titulo_sede, titulo_aliados — si falta el logo muestra el nombre | Inicio, pie | — |
 | `logos` | titulo, items[nombre, logo, url] | Memorias 2023 | — |
 

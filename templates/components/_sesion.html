@@ -2,6 +2,7 @@
   <div class="sesion__hora">{% icono "reloj" %}<span>{{ x.hora }}</span></div>
   <div class="sesion__cuerpo">
     <h4 class="sesion__titulo">{% if x.icono %}{% img x.icono "" "sesion__icono" %}{% endif %}{% firstof x.titulo x.actividad as titulo_sesion %}{{ titulo_sesion|linebreaksbr }}</h4>
+    {% if x.etiquetas %}<p class="sesion__etiquetas">{% for e in x.etiquetas %}<span class="marca-sesion marca-sesion--{{ e.tono|default:'info' }}">{{ e.texto }}</span>{% endfor %}</p>{% endif %}
     {% if x.detalle %}<p class="sesion__detalle">{{ x.detalle }}</p>{% endif %}
     {% if x.modalidad or x.lugar %}<p class="sesion__meta">{% if x.modalidad %}<span class="chip">{{ x.modalidad }}</span>{% endif %}{% if x.lugar %}<span class="chip chip--suave">{% icono "ubicacion" %}{{ x.lugar }}</span>{% endif %}</p>{% endif %}
     {% if x.ponentes %}<p class="sesion__ponentes"><strong>{{ x.rol_ponentes|default:"Ponentes" }}:</strong> {{ x.ponentes|join:", " }}</p>{% endif %}

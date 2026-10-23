@@ -35,15 +35,20 @@ secciones:
             fecha: 2026-11-12
             etiqueta: Jueves 12 de noviembre
             sesiones:
+              # etiquetas: pastillas bajo el título (tono: info = gris azulado, alerta = rojo)
               - hora: "08:30 – 11:00"
                 actividad: Asamblea General RAIN Ecuador
+                etiquetas: [{texto: Solo delegados RAIN, tono: info}]
                 detalle: Presencial y obligatoria para los delegados de las universidades miembros de RAIN Ecuador.
               - hora: "11:30 – 12:30"
                 actividad: Recorrido institucional
+                etiquetas: [{texto: Solo delegados RAIN, tono: info}]
                 detalle: Visita a las instalaciones y espacios tecnológicos de la UTPL.
               - hora: "14:00 – 19:00"
                 actividad: Bootcamp de cocreación con tecnologías inmersivas
-                detalle: Cupos limitados, con inscripción previa.
+                etiquetas: [{texto: Cupos limitados, tono: alerta}]
+                detalle: Requiere inscripción previa.
+                destacada: true
           - id: viernes-13
             fecha: 2026-11-13
             etiqueta: Viernes 13 de noviembre
@@ -60,8 +65,8 @@ secciones:
                 detalle: Reconocimiento a las 3 mejores experiencias, con placa.
                 destacada: true
               - hora: "16:30"
-                actividad: Circuito FIAV UTPL
-                detalle: ""
+                actividad: Circuito Ciencia y Arte
+                detalle: Festival Internacional de Artes Vivas de Loja (FIAV) · UTPL
             nota: Los stands estarán ubicados en el Centro de Convenciones UTPL.   # solo en este día
         # nota: ...   (nota de la sede: se muestra bajo las pestañas, en todos los días)
 

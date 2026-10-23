@@ -431,6 +431,15 @@ a.bandera:hover { border-color: var(--vr-azul-500); box-shadow: var(--vr-sombra-
 .sesion__detalle, .sesion__ponentes { margin: 0 0 .35em; font-size: .9375rem; color: var(--vr-texto-2); }
 .sesion__ponentes strong { color: var(--vr-navy-900); }
 .sesion__meta { margin: .25em 0; }
+/* Etiquetas de público/cupo por sesión (campo `etiquetas: [{texto, tono}]`; tono: info | alerta) */
+.sesion__etiquetas { display: flex; flex-wrap: wrap; gap: 6px; margin: .1em 0 .45em; }
+.marca-sesion {
+  display: inline-block; padding: .2em .75em; border-radius: var(--vr-radio-pildora);
+  font-size: .78rem; font-weight: 700; line-height: 1.35; letter-spacing: .01em; white-space: nowrap;
+}
+.marca-sesion--info { color: #3E4F6D; background: #E7ECF4; }
+.marca-sesion--alerta { color: #B42318; background: #FDE7E5; }
+.resumen-agenda__lista .marca-sesion { margin-left: 4px; vertical-align: .1em; font-size: .72rem; }
 @media (max-width: 600px) { .sesion { grid-template-columns: 1fr; gap: 6px; } }
 
 /* resumen de agenda (Inicio) */

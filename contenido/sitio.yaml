@@ -11,7 +11,7 @@ sitio:
   dominio: https://vrdaylatam.org
   idioma: es
   hashtag: "#VRDayLatam"
-  logo: marca/logo-vrday-2026-provisional.png   # recorte provisional de la maqueta; PENDIENTE: logo SVG del diseñador
+  logo: marca/logo-vrday-2026.svg   # SVG transparente sacado del .ai (ícono + textos en contornos)
   logo_anterior: marca/logo-vrday-latam.png      # logo 2023, se usa en memorias
   favicon: marca/isotipo-visor.svg               # PENDIENTE: placeholder; generar desde el isotipo real
   organizador: Universidad Técnica Particular de Loja (UTPL) — iniciativa "Realidad X UTPL"
@@ -71,7 +71,7 @@ boton_cabecera:
 # PIE DE PÁGINA
 # ----------------------------------------------------------------------------
 pie:
-  logo: marca/logo-vrday-2026-provisional.png
+  logo: marca/logo-vrday-2026-blanco.svg   # mismo logo con "Virtual Reality" en blanco para el fondo navy
   enlaces:                       # páginas que salieron del menú principal
     - texto: Plataforma inmersiva
       url: /plataforma-inmersiva/

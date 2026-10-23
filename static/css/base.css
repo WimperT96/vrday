@@ -167,7 +167,7 @@ ul, ol { padding-left: 1.25em; }
 .pie__aliados { display: grid; gap: 32px; padding-bottom: 40px; border-bottom: 1px solid rgba(185, 203, 230, .2); }
 .pie__titulo { color: var(--vr-azul-300); font-weight: 600; font-size: .875rem; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 12px; }
 .pie__base { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding-top: 32px; }
-.pie__logo img { height: 40px; width: auto; background: #fff; border-radius: 10px; padding: 6px 10px; }
+.pie__logo img { height: 44px; width: auto; }
 .pie__enlaces, .pie__redes { display: flex; flex-wrap: wrap; gap: 8px 24px; list-style: none; margin: 0; padding: 0; font-size: .9375rem; }
 
 /* Redes sociales: botones circulares que toman el color de cada marca al pasar el cursor */

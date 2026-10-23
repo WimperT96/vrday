@@ -176,7 +176,7 @@ Pie de página: Plataforma inmersiva · Centro de ayuda · Memorias · Aliados
 
 ## 6. Recursos gráficos a solicitar al diseñador
 
-- [ ] Logo 2026 en SVG: horizontal, apilado, isotipo, versión blanca
+- [~] Logo 2026 en SVG: horizontal y versión blanca ✅ (sacados del .ai: `marca/logo-vrday-2026.svg`, `-blanco.svg`); faltan apilado e isotipo
 - [ ] Nombre y licencia de la fuente de "DAY" / "12 Y 13 DE"
 - [ ] Foto del hero en alta resolución, fondo transparente o limpio + confirmación de derechos
 - [x] Banda navy: sin foto, red de nodos animada (efecto `red_nodos`, docs/07)

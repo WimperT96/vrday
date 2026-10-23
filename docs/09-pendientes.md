@@ -22,7 +22,7 @@ python referencias/herramientas/validar_contenido.py
 
 | # | Recurso | Estado actual |
 |---|---|---|
-| B1 | Logo 2026 en SVG: horizontal, apilado, isotipo, versión blanca | Provisional: `medios/marca/logo-vrday-2026-provisional.png` (recorte de la maqueta, 360×64) · placeholders `logo-vrday-2026-apilado.svg`, `isotipo-visor.svg` |
+| B1 | Logo 2026 en SVG: ~~horizontal y versión blanca~~ ✅ sacados del .ai (`marca/logo-vrday-2026.svg` y `-blanco.svg`, 23-oct-2026); faltan apilado e isotipo | Placeholders `logo-vrday-2026-apilado.svg`, `isotipo-visor.svg` |
 | B2 | Nombre/licencia de la fuente de "DAY" y "12 Y 13 DE" | — |
 | B3 | Foto del hero (persona con visor) en alta resolución + derechos de uso | Placeholder `medios/inicio-2026/hero-persona-vr.svg` |
 | B4 | ~~Foto de la banda navy~~ ✅ ya no hace falta: la banda usa una red de nodos animada (22-oct-2026) | La foto del afiche quedó en `medios/inicio-2026/banda-conecta.jpg`, sin usar (candidata para el hero, B3) |

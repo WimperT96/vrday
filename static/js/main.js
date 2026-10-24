@@ -127,6 +127,9 @@ function iniciarYoutube() {
       iframe.title = cont.querySelector('button').getAttribute('aria-label') || 'Video';
       iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
       iframe.allowFullscreen = true;
+      // YouTube exige saber desde qué sitio se incrusta (si no llega el Referer muestra
+      // "Video player configuration error", error 153); esta política envía solo el dominio.
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
       cont.replaceChildren(iframe);
     }, { once: true });
   });

@@ -77,6 +77,11 @@ CONTENIDO_DIR = BASE_DIR / "contenido"
 MEDIOS_DIR = BASE_DIR / "medios"
 DISTILL_DIR = BASE_DIR / "dist"
 
+# Igual que el hosting estático (sin cabecera propia): los reproductores de YouTube
+# necesitan recibir el dominio de origen; con "same-origin" (valor por defecto de Django)
+# fallan en el servidor de desarrollo con "Video player configuration error".
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
+
 # Vista previa pública (GitHub Pages): pide a los buscadores no indexar el sitio.
 NO_INDEXAR = os.environ.get("VR_NOINDEX", "0") == "1"
 

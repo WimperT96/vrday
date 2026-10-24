@@ -17,10 +17,18 @@
       {% if s.boton_secundario %}<a class="boton boton--secundario boton--grande" {% enlace s.boton_secundario.url %}>{% if s.boton_secundario.icono %}{% icono s.boton_secundario.icono %}{% endif %} {{ s.boton_secundario.texto }}</a>{% endif %}
     </div>
   </div>
+  {% if s.video %}
+  <div class="hero__visual hero__visual--video">
+    <div class="hero__halo" aria-hidden="true"></div>
+    <div class="hero__video">{% include "components/_youtube.html" with id=s.video titulo=s.video_titulo portada=s.video_portada vertical=True carga="eager" %}</div>
+    <div class="hud" aria-hidden="true"><span></span><span></span><span></span></div>
+  </div>
+  {% else %}
   <div class="hero__visual">
     <div class="hero__halo" aria-hidden="true"></div>
     <div class="hero__foto">{% img s.imagen s.alt "hero__img" "eager" %}</div>
     <div class="hud" aria-hidden="true"><span></span><span></span><span></span></div>
   </div>
+  {% endif %}
 </div>
 {% endwith %}

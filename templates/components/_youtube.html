@@ -1,6 +1,7 @@
-{% if id %}<div class="yt" data-youtube="{{ id }}">
+{# id = id de YouTube · titulo · portada = ruta en medios/ (si no, miniatura de YouTube) · vertical = Shorts 9:16 · carga = lazy|eager #}
+{% if id %}<div class="yt{% if vertical %} yt--vertical{% endif %}" data-youtube="{{ id }}">
   <button type="button" class="yt__boton" aria-label="Reproducir video{% if titulo %}: {{ titulo }}{% endif %}">
-    <img class="yt__miniatura" src="{{ id|yt_miniatura }}" alt="" loading="lazy" width="480" height="360">
+    {% if portada %}{% img portada "" "yt__miniatura" carga|default:"lazy" %}{% else %}<img class="yt__miniatura" src="{{ id|yt_miniatura }}" alt="" loading="{{ carga|default:'lazy' }}" width="480" height="360">{% endif %}
     <span class="yt__play">{% icono "play" %}</span>
   </button>
 </div>{% else %}<div class="yt yt--vacio"><p>{% icono "play" %}<br>Video pendiente</p></div>{% endif %}

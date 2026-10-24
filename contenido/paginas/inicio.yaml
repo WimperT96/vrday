@@ -26,8 +26,11 @@ secciones:
     fuente: evento                         # toma fechas, lema e inscripción de evento.yaml
     logo: marca/logo-vrday-2026-apilado.svg   # PLACEHOLDER hasta tener el SVG
     usar_logo_imagen: false                # false = logotipo compuesto con texto y CSS; true cuando llegue el SVG
-    imagen: inicio-2026/hero-persona-vr.svg   # PLACEHOLDER hasta tener la foto
-    alt: Persona con visor de realidad virtual saludando con la mano
+    # Video vertical (YouTube Short) en lugar de la foto; se reproduce al hacer clic.
+    # Sin `video`, se usa `imagen` (+ `alt`).
+    video: 6tjNK5AoqAI                     # https://www.youtube.com/shorts/6tjNK5AoqAI
+    video_titulo: Virtual Reality Day Latam 2026
+    video_portada: inicio-2026/hero-video-portada.webp   # primer fotograma del Short (1080×1920 → 540×960)
     boton_secundario:
       texto: Ver agenda
       url: /agenda/

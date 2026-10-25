@@ -31,6 +31,7 @@ secciones:
     video: 6tjNK5AoqAI                     # https://www.youtube.com/shorts/6tjNK5AoqAI
     video_titulo: Virtual Reality Day Latam 2026
     video_portada: inicio-2026/hero-video-portada.webp   # primer fotograma del Short (1080×1920 → 540×960)
+    video_automatico: true   # arranca solo al cargar, en silencio y en bucle (no con movimiento reducido ni ahorro de datos)
     boton_secundario:
       texto: Ver agenda
       url: /agenda/

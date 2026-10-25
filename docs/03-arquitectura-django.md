@@ -147,7 +147,7 @@ Estos tipos leen sus datos de `contenido/evento.yaml` (campo `fuente:`), para qu
 
 | Tipo | Campos principales | Usado en | JS |
 |---|---|---|---|
-| `hero_evento` | fuente: evento, logo, imagen, alt, video (id de YouTube, vertical 9:16), video_titulo, video_portada, boton_secundario | Inicio | video al hacer clic; efectos HUD (futuro) |
+| `hero_evento` | fuente: evento, logo, imagen, alt, video (id de YouTube, vertical 9:16), video_titulo, video_portada, video_automatico (arranca solo, en silencio y en bucle), boton_secundario | Inicio | video al hacer clic o automático; efectos HUD (futuro) |
 | `caracteristicas` | fuente: evento.caracteristicas (titulo, texto, icono) | Inicio | — |
 | `inscripcion` | fuente: evento (inscripcion.texto/url + organizadores), titulo, texto, imagen, alt, texto_sin_enlace — sin URL el botón sale desactivado | Inicio | — |
 | `convocatorias` | fuente: evento.convocatorias (titulo, fecha_limite, texto, url, boton) — se oculta sola al vencer | Inicio | — |

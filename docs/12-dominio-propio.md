@@ -4,6 +4,8 @@ El sitio se publica con GitHub Pages desde el repositorio **WimperT96/vrday**. E
 registrado en GoDaddy: solo se cambia hacia dónde apunta. El hosting WordPress de GoDaddy deja de
 usarse para la web.
 
+> **Estado: activo desde el 26-oct-2026.** DNS en GitHub Pages, HTTPS forzado y publicación en modo producción.
+
 **La publicación ya está preparada.** El workflow (`.github/workflows/publicar-pages.yml`) detecta solo el modo:
 
 | En Settings › Pages | Se publica | Buscadores | Marcas "Contenido provisional" |
@@ -63,6 +65,16 @@ Settings › **Pages › Add a domain** → `vrdaylatam.org`. GitHub da un regis
 El cambio de DNS tarda de minutos a un par de horas en verse en todas partes. Mientras tanto
 algunos visitantes pueden ver todavía el WordPress, o un aviso de certificado si entran por
 `https` antes de que GitHub emita el certificado. Conviene hacerlo en un horario tranquilo.
+
+## Si alguna página se ve sin estilos tras el cambio
+
+Pasó el 26-oct-2026 con la portada: GitHub siguió entregando a los navegadores (que piden la versión
+comprimida) la copia de la vista previa, con rutas `/vrday/…`, aunque la versión sin comprimir ya era la nueva.
+Se arregla con una publicación nueva (cualquier push a `main` o *Actions › Run workflow*). Para comprobarlo:
+
+```bash
+curl -s --compressed -H "Accept-Encoding: gzip, br" https://vrdaylatam.org/ | grep -c '/vrday/'   # debe dar 0
+```
 
 ## Deshacer
 

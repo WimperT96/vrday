@@ -119,20 +119,24 @@ function iniciarPestanas() {
 }
 
 /* ── YouTube ligero: carga el reproductor solo al hacer clic ───────────── */
-/* Con data-autoplay arranca solo al cargar, en silencio y en bucle (los navegadores solo
-   permiten reproducción automática sin sonido); no lo hace con movimiento reducido ni con
-   ahorro de datos: queda la portada con el botón de reproducir.
-   El bucle NO usa loop=1&playlist=ID: con esos parámetros YouTube abre su reproductor de
-   Shorts/lista, que no arranca solo. Se repite con la API de mensajes (enablejsapi=1):
-   al terminar (estado 0) se pide volver al segundo 0 y reproducir. */
+/* data-autoplay: arranca solo al cargar (no con movimiento reducido ni ahorro de datos:
+   queda la portada con el botón de reproducir).
+   data-sonido: intenta arrancar con volumen. Los navegadores solo lo permiten si la persona
+   ya interactuó con el sitio; si no, se reproduce en silencio, aparece "Activar sonido" y el
+   sonido se activa solo con el primer clic, toque o tecla en cualquier parte de la página
+   (el iframe tiene allow="autoplay", así hereda ese permiso de la página).
+   Bucle y control usan la API de mensajes de YouTube (enablejsapi=1). NO se usa
+   loop=1&playlist=ID: con esos parámetros YouTube abre su reproductor de Shorts/lista,
+   que no arranca solo. */
 function ordenYoutube(iframe, func, args = []) {
   iframe.contentWindow?.postMessage(JSON.stringify({ event: 'command', func, args }), '*');
 }
 
 function crearReproductor(cont, automatico) {
   const id = cont.dataset.youtube;
+  const conSonido = automatico && 'sonido' in cont.dataset;
   const params = automatico
-    ? `autoplay=1&mute=1&playsinline=1&rel=0&enablejsapi=1&origin=${encodeURIComponent(location.origin)}`
+    ? `autoplay=1${conSonido ? '' : '&mute=1'}&playsinline=1&rel=0&enablejsapi=1&origin=${encodeURIComponent(location.origin)}`
     : 'autoplay=1&rel=0';
   const iframe = document.createElement('iframe');
   iframe.src = `https://www.youtube-nocookie.com/embed/${id}?${params}`;
@@ -142,25 +146,60 @@ function crearReproductor(cont, automatico) {
   // YouTube exige saber desde qué sitio se incrusta (si no llega el Referer muestra
   // "Video player configuration error", error 153); esta política envía solo el dominio.
   iframe.referrerPolicy = 'strict-origin-when-cross-origin';
-  if (automatico) {
-    iframe.addEventListener('load', () => {
-      // La portada queda debajo hasta que el reproductor carga: sin parpadeo.
-      cont.querySelector('button')?.remove();
-      iframe.contentWindow?.postMessage(JSON.stringify({ event: 'listening', id }), '*');
-    }, { once: true });
-    addEventListener('message', (e) => {
-      if (e.source !== iframe.contentWindow) return;
-      let datos;
-      try { datos = JSON.parse(e.data); } catch { return; }
-      if (datos?.info?.playerState === 0) {
-        ordenYoutube(iframe, 'seekTo', [0, true]);
-        ordenYoutube(iframe, 'playVideo');
-      }
-    });
-    cont.append(iframe);
-  } else {
+  if (!automatico) {
     cont.replaceChildren(iframe);
+    return;
   }
+
+  let reproduciendo = false;
+  let botonSonido = null;
+  const activarSonido = () => {
+    ordenYoutube(iframe, 'unMute');
+    ordenYoutube(iframe, 'setVolume', [100]);
+    ordenYoutube(iframe, 'playVideo');
+    botonSonido?.remove();
+    botonSonido = null;
+    ['pointerdown', 'keydown'].forEach((ev) => removeEventListener(ev, activarSonido, true));
+  };
+  const enSilencio = () => {
+    if (!conSonido || botonSonido) return;
+    botonSonido = document.createElement('button');
+    botonSonido.type = 'button';
+    botonSonido.className = 'yt__sonido';
+    botonSonido.innerHTML = '<svg class="icono" aria-hidden="true"><use href="#i-volumen"></use></svg>Activar sonido';
+    botonSonido.addEventListener('click', activarSonido);
+    cont.append(botonSonido);
+    // Cualquier gesto en la página cuenta como permiso del usuario para el sonido.
+    ['pointerdown', 'keydown'].forEach((ev) => addEventListener(ev, activarSonido, { capture: true, once: true }));
+  };
+
+  iframe.addEventListener('load', () => {
+    // La portada queda debajo hasta que el reproductor carga: sin parpadeo.
+    cont.querySelector('.yt__boton')?.remove();
+    iframe.contentWindow?.postMessage(JSON.stringify({ event: 'listening', id }), '*');
+    // Si el navegador bloqueó el arranque con sonido, se reproduce en silencio.
+    setTimeout(() => {
+      if (reproduciendo) return;
+      ordenYoutube(iframe, 'mute');
+      ordenYoutube(iframe, 'playVideo');
+      enSilencio();
+    }, 2500);
+  }, { once: true });
+
+  addEventListener('message', (e) => {
+    if (e.source !== iframe.contentWindow) return;
+    let datos;
+    try { datos = JSON.parse(e.data); } catch { return; }
+    const info = datos?.info;
+    if (!info) return;
+    if (info.playerState === 1) reproduciendo = true;
+    if (info.muted === true) enSilencio();       // YouTube lo silenció por su cuenta
+    if (info.playerState === 0) {                // terminó: bucle
+      ordenYoutube(iframe, 'seekTo', [0, true]);
+      ordenYoutube(iframe, 'playVideo');
+    }
+  });
+  cont.append(iframe);
 }
 
 function iniciarYoutube() {

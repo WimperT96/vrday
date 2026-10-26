@@ -5,8 +5,12 @@ Sitio 100 % informativo: sin base de datos, sin sesiones, sin admin.
 El contenido se lee de contenido/*.yaml y las imágenes de medios/.
 Se exporta a HTML estático con django-distill (ver README → "Exportar el sitio").
 """
+import mimetypes
 import os
 from pathlib import Path
+
+# El servidor de desarrollo de Windows no conoce woff2 (lo entrega como octet-stream).
+mimetypes.add_type("font/woff2", ".woff2")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -65,7 +69,15 @@ SITIO_BASE = os.environ.get("VR_BASE_URL", "").strip().rstrip("/")
 if SITIO_BASE and not SITIO_BASE.startswith("/"):
     SITIO_BASE = "/" + SITIO_BASE
 
-STATIC_URL = f"{SITIO_BASE}/static/"
+# CSS, JS, fuentes e imágenes. Por defecto junto a las páginas (<base>/static/).
+# VR_STATIC_URL los publica en otra ruta del mismo dominio, p. ej. dentro de un tema de
+# WordPress (/wp-content/themes/vrday/static/) con las páginas en la raíz; la exportación
+# deja los archivos en dist/ + esa ruta (ver docs/11-wordpress.md).
+_STATIC_PROPIO = os.environ.get("VR_STATIC_URL", "").strip()
+if _STATIC_PROPIO:
+    STATIC_URL = "/" + _STATIC_PROPIO.strip("/") + "/"
+else:
+    STATIC_URL = f"{SITIO_BASE}/static/"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     ("medios", BASE_DIR / "medios"),

@@ -11,7 +11,7 @@ url_original: https://vrdaylatam.org/centro-de-ayuda/
 secciones:
   - tipo: cabecera
     titulo: Centro de ayuda
-    fondo: fondos/cabecera-paginas.png
+    fondo: fondos/cabecera-paginas.webp
 
   - tipo: botones
     items:

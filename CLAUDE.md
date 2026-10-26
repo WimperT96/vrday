@@ -21,6 +21,7 @@ python manage.py test sitio.tests.PaginasTest.test_redirecciones   # a single te
 python manage.py validar_contenido       # missing media, broken internal links, missing component templates, PENDIENTE list
 python manage.py exportar                # validate + collectstatic + distill → dist/ (placeholder marks hidden)
 python manage.py exportar --borrador     # same, but placeholder marks stay visible
+python referencias/herramientas/optimizar_medios.py --aplicar   # PNG/JPG in medios/ → sized WebP, rewrites references (dry run without --aplicar)
 python -m http.server 8080 --directory dist
 ```
 
@@ -58,13 +59,15 @@ CI (`.github/workflows/publicar-pages.yml`) runs on every push to `main`: tests,
 - Sections with `mostrar: false` are skipped. Organizers or allies with `publicar: false` stay in the YAML but are hidden.
 - `evento.yaml` is the single file to edit when changing editions.
 
-**Subfolder deployment (`VR_BASE_URL` → `settings.SITIO_BASE`):** every internal URL must go through `contenido.url_sitio()` or the template helpers `{% ruta %}` / `{% enlace %}`. Never hardcode `/...` hrefs in templates. `exportar` moves distill's nested `dist/<base>/static` back up to `dist/static`. `test_publicacion_en_subcarpeta` covers this.
+**Subfolder deployment (`VR_BASE_URL` → `settings.SITIO_BASE`):** every internal URL must go through `contenido.url_sitio()` or the template helpers `{% ruta %}` / `{% enlace %}`. Never hardcode `/...` hrefs in templates. `exportar` moves distill's nested `dist/<base>/static` back up to `dist/static`. `test_publicacion_en_subcarpeta` covers this. `exportar` also wipes `staticfiles/` and `dist/` first, because collectstatic never deletes files removed from `medios/`.
 
-**Template helpers** (`sitio/templatetags/vr.py`, registered as builtins, so no `{% load %}` is needed): `{% medio %}`, `{% img %}` (adds width/height from the real file, plus lazy loading), `{% enlace %}` (externals get `target="_blank"`), `{% ruta %}`, `{% icono %}` (sprite in `templates/partials/iconos.html`), plus the `|md`, `|md_linea`, `|a_json` and `|fecha_larga` filters.
+**WordPress compatibility:** the production host is GoDaddy Managed WordPress. `VR_STATIC_URL` (e.g. `/wp-content/themes/vrday/static`) moves all static assets to that path while pages stay at the root; distill then writes them to `dist/` + that path. `test_estaticos_en_otra_ruta` covers it. The conversion options are in `docs/11-wordpress.md`.
 
-**Static files:** `medios/` is served under `/static/medios/` (a `STATICFILES_DIRS` prefix), so content refers to media by paths relative to `medios/`, e.g. `ponentes/2023/aura-forero.png`. The CSS is plain CSS: `tokens.css` holds the 2026 brand tokens from `docs/02-identidad-visual.md`, `base.css` the layout, and `componentes.css` one block per section type. JS is a single dependency-free ES module, `main.js`, and each feature in it only activates if its component is present.
+**Template helpers** (`sitio/templatetags/vr.py`, registered as builtins, so no `{% load %}` is needed): `{% estatico %}` (static URL plus `?v=<content hash>`, used for CSS/JS so browsers never keep stale copies), `{% medio %}`, `{% img %}` (adds width/height from the real file, plus lazy loading), `{% enlace %}` (externals get `target="_blank"`), `{% ruta %}`, `{% icono %}` (sprite in `templates/partials/iconos.html`), plus the `|md`, `|md_linea`, `|a_json` and `|fecha_larga` filters.
 
-**Settings flags (all from env vars):** `DJANGO_DEBUG` defaults to `1`. `MOSTRAR_PLACEHOLDERS` (`VR_MOSTRAR_PLACEHOLDERS`) controls whether `placeholder: true` sections get a "Contenido provisional" mark. It defaults to on with `DEBUG` and is overridden by `exportar`. `NO_INDEXAR` comes from `VR_NOINDEX`, and `SITIO_BASE` from `VR_BASE_URL`.
+**Static files:** `medios/` is served under `/static/medios/` (a `STATICFILES_DIRS` prefix), so content refers to media by paths relative to `medios/`, e.g. `ponentes/2023/aura-forero.webp`. Media is WebP (see `optimizar_medios.py`), except the 1200×630 share image, which stays JPG for social previews. Poppins is self-hosted in `static/fonts/` (`fuentes.css`); there are no Google Fonts requests. The CSS is plain CSS: `tokens.css` holds the 2026 brand tokens from `docs/02-identidad-visual.md`, `base.css` the layout, and `componentes.css` one block per section type. JS is a single dependency-free ES module, `main.js`, and each feature in it only activates if its component is present.
+
+**Settings flags (all from env vars):** `DJANGO_DEBUG` defaults to `1`. `MOSTRAR_PLACEHOLDERS` (`VR_MOSTRAR_PLACEHOLDERS`) controls whether `placeholder: true` sections get a "Contenido provisional" mark. It defaults to on with `DEBUG` and is overridden by `exportar`. `NO_INDEXAR` comes from `VR_NOINDEX`, `SITIO_BASE` from `VR_BASE_URL`, and `STATIC_URL` from `VR_STATIC_URL` when set.
 
 **Tests** use `SimpleTestCase` (there is no DB) and render every page through the test client. Because they read the real `contenido/`, a content change can break them too.
 

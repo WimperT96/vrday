@@ -23,6 +23,10 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         call_command("validar_contenido")
+        # Desde cero: collectstatic no borra archivos que ya no existen (p. ej. PNG/JPG
+        # reemplazados por WebP) y distill copiaría todo staticfiles/ al sitio publicado.
+        for carpeta in (settings.STATIC_ROOT, settings.DISTILL_DIR):
+            shutil.rmtree(carpeta, ignore_errors=True)
         with override_settings(MOSTRAR_PLACEHOLDERS=options["borrador"]):
             call_command("distill", "generate", collectstatic=True, force=True, quiet=True)
         # Con subcarpeta (p. ej. /vrday), distill copia los estáticos en dist/vrday/static,
@@ -33,5 +37,7 @@ class Command(BaseCommand):
                 shutil.move(str(anidado / "static"), str(settings.DISTILL_DIR / "static"))
                 shutil.rmtree(anidado, ignore_errors=True)
         html = sum(1 for _ in settings.DISTILL_DIR.rglob("*.html"))
+        peso = sum(f.stat().st_size for f in settings.DISTILL_DIR.rglob("*") if f.is_file()) / 1e6
         base = f" · publicado bajo {settings.SITIO_BASE}/" if settings.SITIO_BASE else ""
-        self.stdout.write(self.style.SUCCESS(f"Sitio exportado en {settings.DISTILL_DIR} ({html} páginas HTML){base}."))
+        base += f" · estáticos en {settings.STATIC_URL}" if settings.STATIC_URL != f"{settings.SITIO_BASE}/static/" else ""
+        self.stdout.write(self.style.SUCCESS(f"Sitio exportado en {settings.DISTILL_DIR} ({html} páginas HTML, {peso:.1f} MB){base}."))

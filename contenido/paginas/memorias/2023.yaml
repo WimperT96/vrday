@@ -21,17 +21,17 @@ secciones:
     id: portada
     efectos: {}          # reservado: p. ej. {parallax: true, fondo_3d: particulas}
     diapositivas:
-      - imagen: inicio/slider/01-vrday-latam-2023.jpg
+      - imagen: inicio/slider/01-vrday-latam-2023.webp
         capa: inicio/slider/01-capa-paises.png
         alt: "VR Day Latam — Argentina, Brasil, Chile, Ecuador, Bolivia, Panamá, Colombia, Perú — 18.NOV.2023"
-      - imagen: inicio/slider/02-anuncio.jpg
+      - imagen: inicio/slider/02-anuncio.webp
         alt: Anuncio VR Day Latam 2023
-      - imagen: inicio/slider/03-game-latam.jpg
+      - imagen: inicio/slider/03-game-latam.webp
         alt: VRDay Game LATAM
         botones:
           - texto: Inscríbete
             url: https://docs.google.com/forms/d/e/1FAIpQLSdTNxhK8mDGt9x9js5qUwpjxLAS0Hv1ZJ2l6lZevwtDeDuJTw/viewform
-      - imagen: inicio/slider/04-knockout.jpg
+      - imagen: inicio/slider/04-knockout.webp
         alt: VR Knock Out — Juega y gana
         titulo: Juega y gana
         texto: "#VRDayEc2023"
@@ -78,7 +78,7 @@ secciones:
   # 5 ── Inscripciones y países
   - tipo: inscripcion_paises
     id: inscripciones
-    mapa: inicio/mapa-latam.png
+    mapa: inicio/mapa-latam.webp
     boton_internacional:
       texto: Inscríbete en la programación internacional (en la tarde)
       url: https://www.eventbrite.es/e/entradas-virtual-reality-day-latam-2023-749589050027?aff=oddtdtcreator
@@ -86,20 +86,20 @@ secciones:
       texto: Inscríbete en la programación en tu país (en la mañana)
       url: /memorias/2023/agenda/
     paises:            # en el sitio actual solo Perú, Ecuador y Colombia tenían enlace
-      - {nombre: Perú,      bandera: banderas/peru.png,      url: /memorias/2023/agenda/#peru}
-      - {nombre: Chile,     bandera: banderas/chile.png,     url: /memorias/2023/agenda/#chile}
-      - {nombre: Brasil,    bandera: banderas/brasil.png,    url: /memorias/2023/agenda/#brasil}
-      - {nombre: Bolivia,   bandera: banderas/bolivia.png,   url: /memorias/2023/agenda/#bolivia}
-      - {nombre: Panamá,    bandera: banderas/panama.png,    url: ""}
-      - {nombre: Ecuador,   bandera: banderas/ecuador.png,   url: /memorias/2023/agenda/#ecuador}
-      - {nombre: Colombia,  bandera: banderas/colombia.png,  url: /memorias/2023/agenda/#colombia}
-      - {nombre: Argentina, bandera: banderas/argentina.png, url: ""}
+      - {nombre: Perú,      bandera: banderas/peru.webp,      url: /memorias/2023/agenda/#peru}
+      - {nombre: Chile,     bandera: banderas/chile.webp,     url: /memorias/2023/agenda/#chile}
+      - {nombre: Brasil,    bandera: banderas/brasil.webp,    url: /memorias/2023/agenda/#brasil}
+      - {nombre: Bolivia,   bandera: banderas/bolivia.webp,   url: /memorias/2023/agenda/#bolivia}
+      - {nombre: Panamá,    bandera: banderas/panama.webp,    url: ""}
+      - {nombre: Ecuador,   bandera: banderas/ecuador.webp,   url: /memorias/2023/agenda/#ecuador}
+      - {nombre: Colombia,  bandera: banderas/colombia.webp,  url: /memorias/2023/agenda/#colombia}
+      - {nombre: Argentina, bandera: banderas/argentina.webp, url: ""}
 
   # 6 ── Ponentes (se leen de contenido/ponentes.yaml)
   - tipo: ponentes
     id: ponentes
     titulo: Ponentes latinoamericanos
-    fondo: fondos/fondo-general-azul.png
+    fondo: fondos/fondo-general-azul.webp
     edicion: 2023
     solo_visibles: true
     # Al hacer clic en un ponente se abre su reseña (modal)
@@ -109,21 +109,21 @@ secciones:
     id: actividades
     items:
       - titulo: Plataforma inmersiva
-        imagen: inicio/actividades/plataforma-inmersiva.png
+        imagen: inicio/actividades/plataforma-inmersiva.webp
         url: /plataforma-inmersiva/
       - titulo: Stands virtuales
-        imagen: inicio/actividades/stands-virtuales.png
+        imagen: inicio/actividades/stands-virtuales.webp
         url: https://itch.io/jam/vrdaygamelatam   # así está en el sitio actual; ¿debería ir a /stands-virtuales/?
       - titulo: VRDay Game – LATAM
-        imagen: inicio/actividades/vrday-game-latam.png
+        imagen: inicio/actividades/vrday-game-latam.webp
         url: https://itch.io/jam/vrdaygamelatam
       - titulo: Arte en cuarentena
         etiqueta: "[Exposición]"
-        imagen: inicio/actividades/arte-en-cuarentena.png
+        imagen: inicio/actividades/arte-en-cuarentena.webp
         url: /arte-en-cuarentena/
       - titulo: Red de aprendizaje inmersivo
         etiqueta: "[Proyecto]"
-        imagen: inicio/actividades/red-aprendizaje-inmersivo.png
+        imagen: inicio/actividades/red-aprendizaje-inmersivo.webp
         url: /red-de-aprendizaje-inmersivo-ilrn-ecuador/
 
   # 8 ── Voces VRDay Latam
@@ -151,8 +151,8 @@ secciones:
     id: auspiciantes
     titulo: "Auspiciaron:"
     items:
-      - {nombre: COP,                                  logo: patrocinadores/cop.png}
-      - {nombre: Globant,                              logo: patrocinadores/globant.png}
-      - {nombre: iLRN — Immersive Learning Research Network, logo: patrocinadores/ilrn.png}
-      - {nombre: Unity,                                logo: patrocinadores/unity.png}
-      - {nombre: Libel Academy,                        logo: patrocinadores/libel-academy.png}
+      - {nombre: COP,                                  logo: patrocinadores/cop.webp}
+      - {nombre: Globant,                              logo: patrocinadores/globant.webp}
+      - {nombre: iLRN — Immersive Learning Research Network, logo: patrocinadores/ilrn.webp}
+      - {nombre: Unity,                                logo: patrocinadores/unity.webp}
+      - {nombre: Libel Academy,                        logo: patrocinadores/libel-academy.webp}

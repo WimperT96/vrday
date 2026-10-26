@@ -67,6 +67,15 @@ class PaginasTest(SimpleTestCase):
                     sin_prefijo.append((url, ref))
         self.assertEqual(sin_prefijo, [], f"Rutas sin subcarpeta: {sin_prefijo[:10]}")
 
+    @override_settings(STATIC_URL="/wp-content/themes/vrday/static/")
+    def test_estaticos_en_otra_ruta(self):
+        """WordPress (tema contenedor): estáticos en la carpeta del tema, páginas en la raíz."""
+        html = self.client.get("/").content.decode()
+        self.assertIn('href="/wp-content/themes/vrday/static/css/base.css?v=', html)
+        self.assertIn('src="/wp-content/themes/vrday/static/medios/', html)
+        self.assertIn('href="/agenda/"', html)
+        self.assertNotIn('"/static/', html)
+
     @override_settings(NO_INDEXAR=True)
     def test_vista_previa_no_indexable(self):
         self.assertContains(self.client.get("/"), '<meta name="robots" content="noindex">')
@@ -78,5 +87,10 @@ class PaginasTest(SimpleTestCase):
             self.assertContains(r, texto)
         self.assertNotContains(r, 'href="/contacto/"')                # página eliminada
         self.assertContains(r, "Asamblea General RAIN Ecuador")   # resumen de agenda 2026
-        self.assertContains(r, "Postulación de <strong>artículo</strong>")  # convocatoria vigente
+        # La convocatoria se oculta sola al vencer: el test no debe depender de la fecha de hoy.
+        vigente = any(contenido._convocatoria_visible(c) for c in contenido.cargar().evento.get("convocatorias") or [])
+        if vigente:
+            self.assertContains(r, "Postulación de <strong>artículo</strong>")
+        else:
+            self.assertNotContains(r, "Postulación de <strong>artículo</strong>")
         self.assertNotContains(r, "por confirmar")                  # aliados con publicar: false

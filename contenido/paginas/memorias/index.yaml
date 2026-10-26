@@ -12,23 +12,23 @@ url_original: ""       # no existía
 secciones:
   - tipo: cabecera
     titulo: Memorias
-    fondo: fondos/cabecera-paginas.png
+    fondo: fondos/cabecera-paginas.webp
 
   - tipo: tarjetas
     id: ediciones
     items:
       - titulo: VRD 2023
-        imagen: inicio/slider/01-vrday-latam-2023.jpg
+        imagen: inicio/slider/01-vrday-latam-2023.webp
         url: /memorias/2023/
       - titulo: VRD 2022
-        imagen: memorias/2022/01.jpg
+        imagen: memorias/2022/01.webp
         url: /memorias/2022/
       - titulo: VRD 2021
-        imagen: memorias/2021/00-organizadores.jpg
+        imagen: memorias/2021/00-organizadores.webp
         url: /memorias/2021/
       - titulo: VRD 2020
-        imagen: memorias/2020/00-portada.jpg
+        imagen: memorias/2020/00-portada.webp
         url: /memorias/2020/
       - titulo: VRD 2019
-        imagen: memorias/2019/00-afiche.jpg
+        imagen: memorias/2019/00-afiche.webp
         url: /memorias/2019/

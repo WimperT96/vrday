@@ -13,12 +13,12 @@ edicion: 2020
 secciones:
   - tipo: cabecera
     titulo: Acerca de
-    fondo: fondos/cabecera-paginas-2020.jpg
+    fondo: fondos/cabecera-paginas-2020.webp
 
   - tipo: texto
     id: que-es-el-vrd
     titulo: ¿Qué es el VRD?
-    imagen: acerca-de-vrd-anterior/publicidad-rx.jpg
+    imagen: acerca-de-vrd-anterior/publicidad-rx.webp
     imagen_posicion: derecha
     cuerpo: |
       El Día de la Realidad Virtual es una serie de eventos de RV / RA organizados en todo el mundo para ayudar a que la realidad virtual y aumentada se difunda.
@@ -58,7 +58,7 @@ secciones:
   - tipo: texto
     id: quien-organiza
     titulo: ¿Quién organiza el VR Day Ecuador?
-    imagen: acerca-de-vrd-anterior/logo-realidad-x.png
+    imagen: acerca-de-vrd-anterior/logo-realidad-x.webp
     imagen_posicion: izquierda
     cuerpo: |
       <!-- PLACEHOLDER: en el sitio actual este bloque es texto de relleno (lorem ipsum). -->

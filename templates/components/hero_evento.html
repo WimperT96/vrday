@@ -20,7 +20,7 @@
   {% if s.video %}
   <div class="hero__visual hero__visual--video">
     <div class="hero__halo" aria-hidden="true"></div>
-    <div class="hero__video">{% include "components/_youtube.html" with id=s.video titulo=s.video_titulo portada=s.video_portada vertical=True carga="eager" automatico=s.video_automatico %}</div>
+    <div class="hero__video">{% include "components/_youtube.html" with id=s.video titulo=s.video_titulo portada=s.video_portada vertical=True carga="eager" automatico=s.video_automatico sonido=s.video_sonido %}</div>
     <div class="hud" aria-hidden="true"><span></span><span></span><span></span></div>
   </div>
   {% else %}

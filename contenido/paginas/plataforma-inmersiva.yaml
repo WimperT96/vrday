@@ -10,14 +10,14 @@ url_original: https://vrdaylatam.org/plataforma-inmersiva/
 secciones:
   - tipo: cabecera
     titulo: Plataforma inmersiva
-    fondo: fondos/cabecera-paginas.png
+    fondo: fondos/cabecera-paginas.webp
 
   - tipo: texto
     id: pasos
     titulo: Pasos para ingresar a la plataforma inmersiva
     cuerpo: |
       La plataforma inmersiva que se va a utilizar para el evento es VirBELA. Esta plataforma estará disponible únicamente para las personas que se registraron en el evento y para acceder a la misma deben realizar lo siguiente:
-    imagen: plataforma-inmersiva/pasos.png
+    imagen: plataforma-inmersiva/pasos.webp
     imagen_posicion: abajo
 
   - tipo: texto
@@ -37,10 +37,10 @@ secciones:
     id: capturas
     titulo: Capturas del entorno de la plataforma VirBELA
     imagenes:
-      - plataforma-inmersiva/capturas/01.jpg
-      - plataforma-inmersiva/capturas/02.jpg
-      - plataforma-inmersiva/capturas/03.jpg
-      - plataforma-inmersiva/capturas/04.jpg
-      - plataforma-inmersiva/capturas/05.jpg
-      - plataforma-inmersiva/capturas/06.jpg
-      - plataforma-inmersiva/capturas/07.jpg
+      - plataforma-inmersiva/capturas/01.webp
+      - plataforma-inmersiva/capturas/02.webp
+      - plataforma-inmersiva/capturas/03.webp
+      - plataforma-inmersiva/capturas/04.webp
+      - plataforma-inmersiva/capturas/05.webp
+      - plataforma-inmersiva/capturas/06.webp
+      - plataforma-inmersiva/capturas/07.webp

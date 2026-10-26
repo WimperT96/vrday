@@ -1,4 +1,4 @@
 <div class="contenedor contenedor--estrecho">
   {% if s.titulo %}<h2 class="titulo-seccion">{{ s.titulo }}</h2>{% endif %}
-  <video class="video-local marco" controls preload="metadata" playsinline src="{% medio s.archivo %}"{% if s.poster %} poster="{% medio s.poster %}"{% endif %}></video>
+  <video class="video-local marco" controls preload="{% if s.poster %}none{% else %}metadata{% endif %}" playsinline src="{% medio s.archivo %}"{% if s.poster %} poster="{% medio s.poster %}"{% endif %}></video>
 </div>

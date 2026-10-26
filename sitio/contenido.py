@@ -175,6 +175,11 @@ def _agenda_dias(datos):
     return {}
 
 
+def _convocatoria_visible(c: dict) -> bool:
+    limite = c.get("fecha_limite")
+    return c.get("mostrar_vencida") is True or not isinstance(limite, datetime.date) or limite >= _hoy()
+
+
 def resolver_seccion(datos: Datos, s: dict) -> dict:
     s = copy.deepcopy(s)
     tipo = s.get("tipo")
@@ -199,11 +204,9 @@ def resolver_seccion(datos: Datos, s: dict) -> dict:
         s["items"] = s.get("items") or valor(datos, fuente or "evento.caracteristicas") or []
     elif tipo == "convocatorias":
         items = s.get("items") or valor(datos, fuente or "evento.convocatorias") or []
-        # Se ocultan las convocatorias vencidas (a la fecha de generación del sitio).
-        s["items"] = [
-            c for c in items
-            if not isinstance(c.get("fecha_limite"), datetime.date) or c["fecha_limite"] >= _hoy()
-        ]
+        # Se ocultan las convocatorias vencidas (a la fecha de generación del sitio),
+        # salvo las marcadas con `mostrar_vencida: true`.
+        s["items"] = [c for c in items if _convocatoria_visible(c)]
     elif tipo == "agenda_resumen":
         agenda = _agenda_dias(datos)
         destacar = set(s.get("destacar") or [])

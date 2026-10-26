@@ -11,8 +11,8 @@ secciones:
   - tipo: cabecera
     titulo: VR Knock Out
     subtitulo: Juega y gana
-    fondo: fondos/cabecera-paginas-2020.jpg
-    imagen: juego-knockout/logo.png
+    fondo: fondos/cabecera-paginas-2020.webp
+    imagen: juego-knockout/logo.webp
 
   - tipo: embed
     id: juego
@@ -49,7 +49,7 @@ secciones:
   - tipo: texto
     id: premios
     titulo: ¿Cómo puedo ganar fabulosos premios?
-    imagen: juego-knockout/premios.png
+    imagen: juego-knockout/premios.webp
     imagen_posicion: derecha
     cuerpo: |
       Si culminaste el videojuego, realiza una captura de pantalla, guárdala y compártela en Facebook con alguna descripción y utiliza las siguientes etiquetas: #VrDayLatam2022 #vrknockout

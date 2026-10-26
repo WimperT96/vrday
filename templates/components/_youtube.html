@@ -1,5 +1,5 @@
-{# id = id de YouTube · titulo · portada = ruta en medios/ (si no, miniatura de YouTube) · vertical = Shorts 9:16 · carga = lazy|eager · automatico = arranca solo, en silencio #}
-{% if id %}<div class="yt{% if vertical %} yt--vertical{% endif %}" data-youtube="{{ id }}"{% if automatico %} data-autoplay{% endif %}>
+{# id = id de YouTube · titulo · portada = ruta en medios/ (si no, miniatura de YouTube) · vertical = Shorts 9:16 · carga = lazy|eager · automatico = arranca solo · sonido = intenta arrancar con volumen #}
+{% if id %}<div class="yt{% if vertical %} yt--vertical{% endif %}" data-youtube="{{ id }}"{% if automatico %} data-autoplay{% endif %}{% if sonido %} data-sonido{% endif %}>
   <button type="button" class="yt__boton" aria-label="Reproducir video{% if titulo %}: {{ titulo }}{% endif %}">
     {% if portada %}{% img portada "" "yt__miniatura" carga|default:"lazy" %}{% else %}<img class="yt__miniatura" src="{{ id|yt_miniatura }}" alt="" loading="{{ carga|default:'lazy' }}" width="480" height="360">{% endif %}
     <span class="yt__play">{% icono "play" %}</span>

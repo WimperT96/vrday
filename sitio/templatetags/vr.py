@@ -1,6 +1,7 @@
 """
 Etiquetas y filtros de plantilla del sitio (disponibles en todas las plantillas sin {% load %}).
 
+  {% estatico "css/base.css" %}       URL de static/ con ?v=<huella del archivo> (sin caché vieja tras actualizar)
   {% medio ruta %}                    URL de un archivo de medios/
   {% img ruta alt clase carga %}      <img> con width/height, lazy loading y texto alternativo
   {% enlace url %}                    atributos href (+ target/rel si es externo; subcarpeta si es interno)
@@ -29,6 +30,24 @@ from django.utils.safestring import mark_safe
 register = template.Library()
 
 from sitio.contenido import MESES, url_sitio
+
+
+@lru_cache(maxsize=256)
+def _huella(ruta_absoluta: str, _mtime: int) -> str:
+    import hashlib
+    return hashlib.md5(Path(ruta_absoluta).read_bytes()).hexdigest()[:10]
+
+
+@register.simple_tag
+def estatico(ruta):
+    """static() + ?v=huella: al cambiar el archivo cambia la URL y el navegador no usa la copia vieja."""
+    from django.contrib.staticfiles import finders
+    url = static(ruta)
+    encontrado = finders.find(ruta)
+    if not encontrado:
+        return url
+    p = Path(encontrado)
+    return f"{url}?v={_huella(str(p), p.stat().st_mtime_ns)}"
 
 
 @register.simple_tag

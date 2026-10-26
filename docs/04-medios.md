@@ -47,9 +47,16 @@ Formato del placeholder: SVG 1200×800 con el degradé de marca, borde punteado 
 
 **Placeholders de contenido** (no de imagen) — ver `06-problemas-de-contenido.md`: 3 videos vacíos de VRD 2021, botón "Descargar manuales", enlaces "Videotutorial" e "Instructivo", 16 reseñas de ponentes vacías (9 de 2023, 7 de 2020).
 
-## 4. Optimización pendiente (se hará en la fase de construcción)
+## 4. Optimización ✅ (26-oct-2026)
 
-Los originales se conservan intactos; la optimización genera copias en el build.
+Hecha con `python referencias/herramientas/optimizar_medios.py --aplicar` (sin `--aplicar` solo simula):
+195 imágenes PNG/JPG pasaron a WebP (38,9 MB → 6,4 MB), con lado mayor máximo según el uso
+(ponentes y logos 600 px, banderas 160, íconos 256, fondos 2560, resto 1600) y conservando la
+transparencia. Las rutas del contenido se actualizaron solas. Los medios sin uso se movieron a
+`referencias/medios-sin-uso/` y los originales de la migración siguen en `referencias/originales/`.
+El sitio exportado pasó de ~45 MB a 10,4 MB. Volver a ejecutar el script cuando se agreguen imágenes nuevas.
+
+Tabla original del diagnóstico (referencia):
 
 | Problema | Ejemplos | Acción |
 |---|---|---|
@@ -72,4 +79,4 @@ Los originales se conservan intactos; la optimización genera copias en el build
 | `GWPVuogsc40`, `3mH2c88h2_Q`, `BQ2y2sE4J5c` | (disponibles) | Memorias 2020 |
 | `J9zWYuUNLNQ` | Día de la Realidad Virtual 2019 | Memorias 2019 |
 | `M157uJOSa7U` | (disponible) | Realidad aumentada (heredada) |
-| — (vacío) ×3 | — | Memorias 2021 → **PENDIENTE** |
+| `O2Tj34g1tg0`, `dkoe2M7ousE` | Virtual Reality Day Latam 2021 · VRDay GameLatam | Memorias 2021 (antes 3 reproductores vacíos) |

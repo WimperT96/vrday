@@ -11,7 +11,7 @@ url_original: https://vrdaylatam.org/stands-virtuales/
 secciones:
   - tipo: cabecera
     titulo: Stands virtuales
-    fondo: fondos/cabecera-paginas-2020.jpg
+    fondo: fondos/cabecera-paginas-2020.webp
 
   - tipo: texto
     id: descripcion
@@ -31,8 +31,8 @@ secciones:
     id: capturas
     titulo: Capturas del entorno de los stands
     imagenes:
-      - stands-virtuales/capturas/01.jpg
-      - stands-virtuales/capturas/02.jpg
-      - stands-virtuales/capturas/03.jpg
-      - stands-virtuales/capturas/04.jpg
-      - stands-virtuales/capturas/05.jpg
+      - stands-virtuales/capturas/01.webp
+      - stands-virtuales/capturas/02.webp
+      - stands-virtuales/capturas/03.webp
+      - stands-virtuales/capturas/04.webp
+      - stands-virtuales/capturas/05.webp

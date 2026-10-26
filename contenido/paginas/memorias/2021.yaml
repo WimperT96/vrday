@@ -15,19 +15,19 @@ secciones:
   - tipo: galeria
     id: fotos
     imagenes:
-      - memorias/2021/00-organizadores.jpg
-      - memorias/2021/01.png
-      - memorias/2021/02.png
-      - memorias/2021/03.png
-      - memorias/2021/04.png
-      - memorias/2021/05.png
-      - memorias/2021/06.png
-      - memorias/2021/07.png
-      - memorias/2021/08.png
-      - memorias/2021/09.png
-      - memorias/2021/10.png
-      - memorias/2021/11.png
-      - memorias/2021/12.png
+      - memorias/2021/00-organizadores.webp
+      - memorias/2021/01.webp
+      - memorias/2021/02.webp
+      - memorias/2021/03.webp
+      - memorias/2021/04.webp
+      - memorias/2021/05.webp
+      - memorias/2021/06.webp
+      - memorias/2021/07.webp
+      - memorias/2021/08.webp
+      - memorias/2021/09.webp
+      - memorias/2021/10.webp
+      - memorias/2021/11.webp
+      - memorias/2021/12.webp
 
   # El sitio anterior tenía 3 reproductores vacíos; se completaron con los 2 videos recibidos (22-oct-2026).
   - tipo: videos

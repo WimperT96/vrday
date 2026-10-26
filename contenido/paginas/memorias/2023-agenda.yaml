@@ -23,7 +23,7 @@ edicion: 2023
 secciones:
   - tipo: cabecera
     titulo: Agenda
-    fondo: fondos/cabecera-paginas.png
+    fondo: fondos/cabecera-paginas.webp
 
   - tipo: agenda_paises
     id: jornada-por-paises
@@ -34,7 +34,7 @@ secciones:
       # ────────────────────────────────────────────────────────── COLOMBIA
       - id: colombia
         nombre: Colombia
-        bandera: banderas/colombia.png
+        bandera: banderas/colombia.webp
         ubicacion: Fundación Universitaria Konrad Lorenz, carrera 9bis # 62-43, Bogotá.
         inscripcion: {texto: Inscríbete Aquí, url: "https://cipte.co/vrdaycol/inscripciones/"}
         titulo_programacion: Programación para Colombia
@@ -96,7 +96,7 @@ secciones:
       # ────────────────────────────────────────────────────────── ECUADOR
       - id: ecuador
         nombre: Ecuador
-        bandera: banderas/ecuador.png
+        bandera: banderas/ecuador.webp
         ubicacion: Coliseo Aguilas Rojas, Vargas Machuca, Cuenca
         inscripcion: {texto: Inscríbete Aquí, url: "https://forms.gle/ao4qJarbKBj5PyQP7"}
         titulo_programacion: Programación para Ecuador
@@ -183,7 +183,7 @@ secciones:
       # ────────────────────────────────────────────────────────── PERÚ
       - id: peru
         nombre: Perú
-        bandera: banderas/peru.png
+        bandera: banderas/peru.webp
         ubicacion: "OPEN PUCP Dirección: Av. Universitaria 1801, San Miguel, Lima"
         inscripcion: {texto: Incríbete Aquí, url: "https://nfticket.events/event/?QmNRU89ZZPdEz3SxH1tYm58Z6VFNGngQUBJJ3BqecmvcGB0x8F3CdE86EfD6000423D881a9e562b01679b90786"}
         titulo_programacion: Programación para Perú
@@ -226,7 +226,7 @@ secciones:
       # ────────────────────────────────────────────────────────── BRASIL
       - id: brasil
         nombre: Brasil
-        bandera: banderas/brasil.png
+        bandera: banderas/brasil.webp
         ubicacion: "Learning Village Dirección: Rua Harmonia, 1250 - Vila Magdalena, São Paulo"
         inscripcion: {texto: Assine aqui, url: "https://www.sympla.com.br/evento/vrday-latam-2023/2233142"}
         titulo_programacion: Programación para Brasil
@@ -255,7 +255,7 @@ secciones:
       # ────────────────────────────────────────────────────────── BOLIVIA
       - id: bolivia
         nombre: Bolivia
-        bandera: banderas/bolivia.png
+        bandera: banderas/bolivia.webp
         ubicacion: Alianza Francea de Cochabamba (Calle La Paz N° 784 casi Crisóstomo Carrillo)
         inscripcion: {texto: Inscríbete Aquí, url: "https://fb.me/e/v6vEyzKxo"}
         titulo_programacion: Programación para Bolivia
@@ -283,7 +283,7 @@ secciones:
       # ────────────────────────────────────────────────────────── CHILE
       - id: chile
         nombre: Chile              # en el sitio actual falta el título "Chile" (solo aparece la bandera)
-        bandera: banderas/chile.png
+        bandera: banderas/chile.webp
         ubicacion: Aula Magna Universidad del Desarrollo sede San Carlos de Apoquindo
         inscripcion: {texto: "", url: ""}   # vacío en el sitio actual
         titulo_programacion: Programación para Chile

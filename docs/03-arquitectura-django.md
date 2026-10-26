@@ -147,10 +147,10 @@ Estos tipos leen sus datos de `contenido/evento.yaml` (campo `fuente:`), para qu
 
 | Tipo | Campos principales | Usado en | JS |
 |---|---|---|---|
-| `hero_evento` | fuente: evento, logo, imagen, alt, video (id de YouTube, vertical 9:16), video_titulo, video_portada, video_automatico (arranca solo, en silencio y en bucle), boton_secundario | Inicio | video al hacer clic o automático; efectos HUD (futuro) |
+| `hero_evento` | fuente: evento, logo, imagen, alt, video (id de YouTube, vertical 9:16), video_titulo, video_portada, video_automatico (arranca solo y en bucle), video_sonido (intenta con volumen; si el navegador lo bloquea, en silencio + botón "Activar sonido" y se activa al primer clic/tecla), boton_secundario | Inicio | video al hacer clic o automático; efectos HUD (futuro) |
 | `caracteristicas` | fuente: evento.caracteristicas (titulo, texto, icono) | Inicio | — |
 | `inscripcion` | fuente: evento (inscripcion.texto/url + organizadores), titulo, texto, imagen, alt, texto_sin_enlace — sin URL el botón sale desactivado | Inicio | — |
-| `convocatorias` | fuente: evento.convocatorias (titulo, fecha_limite, texto, url, boton) — se oculta sola al vencer | Inicio | — |
+| `convocatorias` | fuente: evento.convocatorias (titulo, fecha_limite, mostrar_vencida, texto, url, boton) — se oculta sola al vencer salvo con `mostrar_vencida: true` | Inicio | — |
 | `banda` | estilo (navy/claro), titulo (con `**palabra**` resaltada), subtitulo, imagen o nodos[{texto, icono}] (red de hasta 4 palabras unidas al isotipo; con nodos el titular va centrado y la red a todo el ancho) | Inicio | efecto `red_nodos` |
 | `agenda_resumen` | fuente: agenda, destacar[], boton | Inicio | — |
 | `agenda_dias` | tentativa, sedes[id, nombre, pais, bandera, dias[id, fecha, etiqueta, sesiones[hora, actividad, etiquetas[{texto, tono: info/alerta}], detalle, tipo, destacada], nota], nota] | Agenda 2026 | pestañas por día |

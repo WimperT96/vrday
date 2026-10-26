@@ -55,7 +55,7 @@
 
 ## Fase 4 — Calidad y publicación
 
-- [ ] Optimización de imágenes (WebP/AVIF + `srcset`)
+- [x] Optimización de imágenes (WebP con tamaño según el uso; `srcset` queda opcional)
 - [ ] Accesibilidad (teclado, foco, contraste, textos alternativos)
 - [ ] Lighthouse móvil ≥ 90 en Rendimiento, Accesibilidad, SEO
 - [ ] Revisión visual página por página contra el sitio actual (`referencias/captura-sitio-actual/`)

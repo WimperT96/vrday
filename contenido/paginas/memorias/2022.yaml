@@ -16,16 +16,16 @@ secciones:
   - tipo: galeria
     id: fotos
     imagenes:
-      - memorias/2022/01.jpg
-      - memorias/2022/02.jpg
-      - memorias/2022/03.jpg
-      - memorias/2022/04.jpg
-      - memorias/2022/05.jpg
-      - memorias/2022/06.jpg
-      - memorias/2022/07.jpg
+      - memorias/2022/01.webp
+      - memorias/2022/02.webp
+      - memorias/2022/03.webp
+      - memorias/2022/04.webp
+      - memorias/2022/05.webp
+      - memorias/2022/06.webp
+      - memorias/2022/07.webp
       # En el sitio actual la galería también incluye la foto de ganadores de 2019
       # (y repite una foto). Se deja comentada; decidir si se mantiene:
-      # - memorias/2019/08-ganadores.jpg
+      # - memorias/2019/08-ganadores.webp
 
   - tipo: videos
     id: videos

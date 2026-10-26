@@ -31,6 +31,7 @@ inscripcion:
 convocatorias:
   - titulo: Postulación de **artículo**   # ** ** = negrita, como en el afiche
     fecha_limite: 2026-10-25
+    mostrar_vencida: true    # se sigue mostrando aunque la fecha ya pasó (pedido del 26-oct-2026)
     texto: hasta el 25 de octubre 2026
     url: https://queyam.com/editorial/home/vrdlatam2026
     boton: Postula aquí      # texto del botón (como en el banner del diseñador)
@@ -51,25 +52,25 @@ caracteristicas:           # 4 tarjetas bajo el hero de la maqueta
 
 organizadores:             # "Sede organizadora" en el afiche
   - nombre: Universidad Técnica Particular de Loja (UTPL)
-    logo: aliados/utpl.png
+    logo: aliados/utpl.webp
   - nombre: RAIN — Red de Aprendizaje Inmersivo
-    logo: aliados/rain.png
+    logo: aliados/rain.webp
 
 # Lista actualizada el 13-oct-2026. Logos de la carpeta de Drive de aliados, recortados a PNG
 # transparente (máx. 600×240) · sin logo se muestra el nombre · publicar: false = no se muestra en la web
 aliados:
-  - {nombre: Universidad Católica de Cuenca (UCACUE), logo: aliados/ucacue.png}
-  - {nombre: Universidad Nacional de Chimborazo (UNACH), logo: aliados/unach.png}
-  - {nombre: Instituto Superior Tecnológico Cotopaxi, logo: aliados/ist-cotopaxi.png}   # logo de isuc.edu.ec (versión blanca pasada al azul de su sello)
-  - {nombre: Universidad Católica de Santiago de Guayaquil (UCSG), logo: aliados/ucsg.png}
-  - {nombre: Universidad Nacional de Loja (UNL), logo: aliados/unl.png}
-  - {nombre: Universidad Espíritu Santo (UEES), logo: aliados/uees.png}
-  - {nombre: Escuela Superior Politécnica del Litoral (ESPOL), logo: aliados/espol.png}
-  - {nombre: Universidad de Guayaquil (UG), logo: aliados/ug.png}
-  - {nombre: "Pontificia Universidad Católica del Ecuador, sede Ibarra (PUCE Ibarra)", logo: aliados/puce-ibarra.png}
-  - {nombre: Instituto Superior Tecnológico Luis Rogerio González Azogues, logo: aliados/ist-luis-rogerio-gonzalez.png}   # PENDIENTE: confirmar; logo de 2022, hoy opera como IST del Austro (insteclrg.edu.ec)
-  - {nombre: Universidad Indoamérica, logo: aliados/indoamerica.png}
-  - {nombre: Instituto Superior Tecnológico Loja, logo: aliados/ist-loja.png}
-  - {nombre: Instituto Superior Tecnológico del Austro, logo: aliados/ist-austro.png}
-  - {nombre: Instituto Tecnológico Superior Oriente (ITSO), logo: aliados/itso.png}
-  - {nombre: Universidad Nacional de Educación (UNAE), logo: aliados/unae.png}
+  - {nombre: Universidad Católica de Cuenca (UCACUE), logo: aliados/ucacue.webp}
+  - {nombre: Universidad Nacional de Chimborazo (UNACH), logo: aliados/unach.webp}
+  - {nombre: Instituto Superior Tecnológico Cotopaxi, logo: aliados/ist-cotopaxi.webp}   # logo de isuc.edu.ec (versión blanca pasada al azul de su sello)
+  - {nombre: Universidad Católica de Santiago de Guayaquil (UCSG), logo: aliados/ucsg.webp}
+  - {nombre: Universidad Nacional de Loja (UNL), logo: aliados/unl.webp}
+  - {nombre: Universidad Espíritu Santo (UEES), logo: aliados/uees.webp}
+  - {nombre: Escuela Superior Politécnica del Litoral (ESPOL), logo: aliados/espol.webp}
+  - {nombre: Universidad de Guayaquil (UG), logo: aliados/ug.webp}
+  - {nombre: "Pontificia Universidad Católica del Ecuador, sede Ibarra (PUCE Ibarra)", logo: aliados/puce-ibarra.webp}
+  - {nombre: Instituto Superior Tecnológico Luis Rogerio González Azogues, logo: aliados/ist-luis-rogerio-gonzalez.webp}   # PENDIENTE: confirmar; logo de 2022, hoy opera como IST del Austro (insteclrg.edu.ec)
+  - {nombre: Universidad Indoamérica, logo: aliados/indoamerica.webp}
+  - {nombre: Instituto Superior Tecnológico Loja, logo: aliados/ist-loja.webp}
+  - {nombre: Instituto Superior Tecnológico del Austro, logo: aliados/ist-austro.webp}
+  - {nombre: Instituto Tecnológico Superior Oriente (ITSO), logo: aliados/itso.webp}
+  - {nombre: Universidad Nacional de Educación (UNAE), logo: aliados/unae.webp}

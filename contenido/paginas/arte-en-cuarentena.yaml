@@ -11,7 +11,7 @@ url_original: https://vrdaylatam.org/arte-en-cuarentena/
 secciones:
   - tipo: cabecera
     titulo: Arte en cuarentena
-    fondo: fondos/cabecera-paginas-2020.jpg
+    fondo: fondos/cabecera-paginas-2020.webp
 
   - tipo: texto
     id: descripcion
@@ -25,7 +25,7 @@ secciones:
   - tipo: texto
     id: curadora
     titulo: María Elisa Flores
-    imagen: ponentes/2020/maria-elisa-flores.jpg
+    imagen: ponentes/2020/maria-elisa-flores.webp
     imagen_posicion: izquierda
     cuerpo: |
       A María Elisa Flores la precariedad del sistema cultural la llevó a actuar desde su lugar como crítica de arte. Más allá de la queja perpetua hacia el sistema, que resulta ser inútil e improductiva si no se acompaña de actos concretos, decidió crear un espacio de difusión del "arte por el arte". Su plataforma cultural "soyartecuador" recopila el testimonio de artistas a través de la palabra y la imagen, un espacio virtual que propicia el diálogo entre obras y artistas con estilos y trayectorias diversas. El único requisito era mostrar obras producidas durante la cuarentena. No necesariamente representaciones plásticas del covid-19 como tema central, tampoco una apología al virus, al contrario, obras que nos den un respiro en medio del encierro.
@@ -45,7 +45,7 @@ secciones:
     id: como-interactuar
     titulo: ¿Cómo interactuar con el objeto 3D?
     imagenes:
-      - src: arte-en-cuarentena/como-interactuar-computador.jpg
+      - src: arte-en-cuarentena/como-interactuar-computador.webp
         alt: Cómo interactuar desde el computador
-      - src: arte-en-cuarentena/como-interactuar-celular.jpg
+      - src: arte-en-cuarentena/como-interactuar-celular.webp
         alt: Cómo interactuar desde el celular

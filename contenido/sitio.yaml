@@ -12,7 +12,7 @@ sitio:
   idioma: es
   hashtag: "#VRDayLatam"
   logo: marca/logo-vrday-2026.svg   # SVG transparente sacado del .ai (ícono + textos en contornos)
-  logo_anterior: marca/logo-vrday-latam.png      # logo 2023, se usa en memorias
+  logo_anterior: marca/logo-vrday-latam.webp      # logo 2023, se usa en memorias
   favicon: marca/isotipo-visor.svg               # PENDIENTE: placeholder; generar desde el isotipo real
   organizador: Universidad Técnica Particular de Loja (UTPL) — iniciativa "Realidad X UTPL"
 
@@ -22,7 +22,7 @@ seo:
   descripcion_por_defecto: >-
     VR Day LATAM 2026, 12 y 13 de noviembre en la UTPL. Innovación, educación y experiencias
     inmersivas para un futuro sin límites.
-  imagen_compartir: inicio-2026/hero-persona-vr.svg   # PENDIENTE: imagen 1200×630 para redes
+  imagen_compartir: marca/compartir-2026.jpg   # 1200×630, recorte del afiche 2026 (.ai) para Facebook, WhatsApp, LinkedIn
 
 analitica:
   # Identificadores presentes en el sitio actual. Decidir si se conservan.

@@ -14,7 +14,7 @@ edicion: 2020
 secciones:
   - tipo: cabecera
     titulo: Agenda
-    fondo: fondos/cabecera-paginas-2020.jpg
+    fondo: fondos/cabecera-paginas-2020.webp
 
   - tipo: agenda_lista
     id: jornada

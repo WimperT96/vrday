@@ -10,7 +10,7 @@ url_original: https://vrdaylatam.org/juego-cuidemonos-play-utpl/
 secciones:
   - tipo: cabecera
     titulo: Juego CUIDÉMONOS PLAY-UTPL
-    fondo: fondos/cabecera-paginas-2020.jpg
+    fondo: fondos/cabecera-paginas-2020.webp
 
   - tipo: video_local
     id: video
@@ -51,10 +51,10 @@ secciones:
     items:
       - titulo: Gafas Mirage Lenovo
         subtitulo: Primer y segundo lugar
-        imagen: juego-cuidemonos/premio-gafas.jpg
+        imagen: juego-cuidemonos/premio-gafas.webp
       - titulo: Tablet UTPL
         subtitulo: Tercer lugar
-        imagen: juego-cuidemonos/premio-tablet.jpg
+        imagen: juego-cuidemonos/premio-tablet.webp
 
   - tipo: galeria
     id: capturas

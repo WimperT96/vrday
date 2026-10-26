@@ -126,7 +126,7 @@ Se escribirán en `static/css/tokens.css`. Cambiar la marca = editar solo ese ar
 | Rol | Fuente | Pesos | Notas |
 |---|---|---|---|
 | Logo, "DAY", "LATAM", banda de fecha | **SVG del diseñador** | — | No es texto editable |
-| Titulares y navegación | **Poppins** (Google Fonts) | 600, 700, 800 | Geométrica, igual carácter que "Virtual Reality" del logo |
+| Titulares y navegación | **Poppins** (alojada en `static/fonts/`) | 600, 700, 800 | Geométrica, igual carácter que "Virtual Reality" del logo |
 | Texto corrido, agendas, reseñas | **Poppins** 400/500 *o* **Inter** 400/500 | — | Poppins basta para mantener unidad; Inter si se prefiere más legibilidad en textos largos (reseñas de ponentes) |
 | Horas y cifras | La misma, con `font-variant-numeric: tabular-nums` | — | Alinea la agenda |
 
@@ -183,7 +183,7 @@ Pie de página: Plataforma inmersiva · Centro de ayuda · Memorias · Aliados
 - [ ] Patrones SVG: circuitos, hexágonos, anillos HUD
 - [ ] Logos individuales de sede y aliados (UTPL, RAIN y 16 aliados) en SVG o PNG transparente — hoy solo existen dentro del afiche
 - [ ] Favicon y `apple-touch-icon` (desde el isotipo)
-- [ ] Imagen para compartir en redes 1200×630
+- [x] Imagen para compartir en redes 1200×630 → `marca/compartir-2026.jpg` (recorte del afiche 2026)
 
 ## 7. Cómo se aplica al contenido existente
 

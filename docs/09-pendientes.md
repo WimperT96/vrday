@@ -66,14 +66,14 @@ python referencias/herramientas/validar_contenido.py
 | E6 | **Orden de construcción:** ¿publicar primero solo el Inicio 2026 (por el plazo del 15-oct, ver A4) o seguir el orden normal del plan? |
 | E7 | **Tipografía para textos largos:** solo Poppins (recomendado) o Poppins + Inter |
 
-| E8 | Hoy las fuentes (Poppins) se cargan desde Google Fonts. ¿Alojarlas en el propio sitio (más privacidad, sin dependencia externa)? |
+| E8 | ~~Fuentes desde Google Fonts~~ ✅ Poppins alojada en `static/fonts/` (26-oct-2026) |
 | E9 | GTM/GA4 **no** están incluidos en las plantillas hasta decidir E2 |
 
 ## G. Técnicos para la fase 4 (calidad y publicación)
 
 | # | Pendiente |
 |---|---|
-| G1 | Optimizar imágenes: WebP/AVIF + `srcset` (hoy se sirven los originales; `dist/` pesa 43 MB) |
+| G1 | ~~Optimizar imágenes~~ ✅ WebP con tamaño según el uso (26-oct-2026): `dist/` pasó de ~45 MB a 10,4 MB. Queda opcional: `srcset` con varios tamaños |
 | G2 | Logo del encabezado: el recorte provisional tiene fondo claro; se verá bien cuando llegue el SVG (B1) |
 | G3 | Revisión visual página por página y ajustes finos de espaciado con los recursos reales |
 | G4 | Auditoría Lighthouse (rendimiento, accesibilidad, SEO) en móvil |

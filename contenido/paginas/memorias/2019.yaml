@@ -15,15 +15,15 @@ secciones:
   - tipo: galeria
     id: fotos
     imagenes:
-      - memorias/2019/00-afiche.jpg
-      - memorias/2019/01.jpg
-      - memorias/2019/02.jpg
-      - memorias/2019/03.jpg
-      - memorias/2019/04.jpg
-      - memorias/2019/05.jpg
-      - memorias/2019/06.jpg
-      - memorias/2019/07.jpg
-      - memorias/2019/08-ganadores.jpg
+      - memorias/2019/00-afiche.webp
+      - memorias/2019/01.webp
+      - memorias/2019/02.webp
+      - memorias/2019/03.webp
+      - memorias/2019/04.webp
+      - memorias/2019/05.webp
+      - memorias/2019/06.webp
+      - memorias/2019/07.webp
+      - memorias/2019/08-ganadores.webp
 
   - tipo: tabla
     id: actividades

@@ -21,7 +21,7 @@ secciones:
   - tipo: texto
     id: conferencia-magistral
     titulo: Conferencia magistral internacional
-    imagen: ponentes/2026/vincent-moulinet.jpg
+    imagen: ponentes/2026/vincent-moulinet.webp
     alt: Vincent Moulinet, conferencista magistral del VR Day LATAM 2026
     imagen_posicion: izquierda
     cuerpo: |

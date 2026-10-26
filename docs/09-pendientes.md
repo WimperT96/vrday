@@ -16,7 +16,7 @@ python referencias/herramientas/validar_contenido.py
 | A1 | **Sede 2026 — detalles para la página "Lugar"**: dirección exacta, fotos, indicaciones de llegada (~~mapa~~ ✅ Centro de Convenciones UTPL, 22-oct-2026) | `contenido/evento.yaml → lugar`, `contenido/paginas/lugar.yaml` | Ya se sabe: UTPL (Loja), Centro de Convenciones UTPL, stands en el Hall del Aula Magna y en el sector de ingreso al Rectorado (dato de la agenda) |
 | A2 | ~~Enlace de inscripción 2026~~ ✅ Google Form (22-oct-2026) | `contenido/evento.yaml → inscripcion.url` | Activa los botones del menú, del hero y de la sección de inscripción |
 | A3 | ~~Enlace de postulación de artículos~~ ✅ https://queyam.com/editorial/home/vrdlatam2026 | `contenido/evento.yaml → convocatorias[0].url` | |
-| A4 | **Plazo de postulación: 25 de octubre de 2026** (ampliado desde el 15 de octubre). Si la web debe difundir la convocatoria, el calendario es muy justo. Opción: publicar primero solo el Inicio 2026 (hero + convocatoria + agenda) y migrar el resto después | Decisión de calendario | La convocatoria se oculta sola cuando pasa la fecha límite |
+| A4 | ~~Plazo de postulación~~ ✅ venció el 25-oct-2026; la convocatoria sigue visible a pedido (`mostrar_vencida: true`) | `contenido/evento.yaml → convocatorias` | |
 
 ## B. Recursos gráficos (pedir al diseñador)
 
@@ -28,7 +28,7 @@ python referencias/herramientas/validar_contenido.py
 | B4 | ~~Foto de la banda navy~~ ✅ ya no hace falta: la banda usa una red de nodos animada (22-oct-2026) | La foto del afiche quedó en `medios/inicio-2026/banda-conecta.jpg`, sin usar (candidata para el hero, B3) |
 | B5 | Logos individuales de UTPL, RAIN y 16 aliados | Solo existen dentro del afiche; mientras tanto se muestran los nombres |
 | B6 | Patrones SVG (circuitos, hexágonos, anillos HUD) | — |
-| B7 | Favicon, `apple-touch-icon`, imagen para redes 1200×630 | Placeholders |
+| B7 | Favicon y `apple-touch-icon` (la imagen para redes 1200×630 ✅ ya está: `marca/compartir-2026.jpg`) | Favicon: placeholder `marca/isotipo-visor.svg` |
 | B8 | Confirmar 2 aliados ilegibles en el afiche (sello circular rojo/negro; "Tecnológico Loja") | `contenido/evento.yaml → aliados` |
 
 ## C. Contenido 2026
@@ -40,13 +40,13 @@ python referencias/herramientas/validar_contenido.py
 | C3 | ~~Agenda tentativa~~ ✅ agenda del PDF "Invitación a delegados" (22-oct-2026). Queda: ¿habrá otras sedes LATAM además de Ecuador? (El "Circuito" de las 16:30 es el Circuito Ciencia y Arte del FIAV, aclarado el 23-oct-2026.) | `paginas/agenda.yaml` (admite varias sedes) |
 | C4 | Texto provisional "Pronto anunciaremos a los ponentes del VR Day LATAM 2026." — validar redacción | `paginas/ponentes.yaml` |
 | C5 | ¿La premiación del viernes corresponde a los artículos/proyectos postulados? Si es así, explicarlo en la convocatoria | `evento.yaml → convocatorias` |
-| C6 | Redes sociales oficiales y texto legal del pie | `contenido/sitio.yaml → pie` |
+| C6 | Texto legal del pie (las redes sociales ✅ ya están: Instagram y YouTube) | `contenido/sitio.yaml → pie.texto_legal` |
 
 ## D. Contenido heredado (ver detalle en `06-problemas-de-contenido.md`)
 
 | # | Pendiente |
 |---|---|
-| D1 | Definiciones de RV y RA intercambiadas en *Acerca de* (error de hecho) |
+| D1 | ~~Definiciones de RV y RA intercambiadas~~ ✅ corregido el 22-oct-2026 |
 | D2 | 16 reseñas de ponentes vacías (2023 y 2020) |
 | D3 | ~~3 videos vacíos en Memorias 2021~~ ✅ 2 videos de YouTube agregados (22-oct-2026); botón "Descargar manuales" sin archivo |
 | D4 | Horas incoherentes en la Agenda 2023 (ahora en memorias) |
@@ -60,10 +60,10 @@ python referencias/herramientas/validar_contenido.py
 |---|---|
 | E1 | ~~Google Form de contacto~~ — ya no aplica: la página Contacto se eliminó (22-oct-2026) |
 | E2 | ¿Mantener Google Tag Manager / Analytics? |
-| E3 | Hosting destino (servidor UTPL, GitHub Pages, Netlify, Cloudflare Pages) — define cómo se publican las redirecciones |
+| E3 | ~~Hosting destino~~ ✅ GitHub Pages con el dominio vrdaylatam.org (activo desde el 26-oct-2026, `docs/12-dominio-propio.md`) |
 | E4 | ¿Conservar las 3 páginas heredadas ocultas o retirarlas? |
-| E5 | Confirmar URLs de memorias y redirecciones (`01 §5`) |
-| E6 | **Orden de construcción:** ¿publicar primero solo el Inicio 2026 (por el plazo del 15-oct, ver A4) o seguir el orden normal del plan? |
+| E5 | ~~Confirmar URLs y redirecciones~~ ✅ las 20 URLs del WordPress anterior funcionan en vrdaylatam.org (revisado el 26-oct-2026) |
+| E6 | ~~Orden de construcción~~ ✅ ya no aplica: el sitio completo está publicado |
 | E7 | **Tipografía para textos largos:** solo Poppins (recomendado) o Poppins + Inter |
 
 | E8 | ~~Fuentes desde Google Fonts~~ ✅ Poppins alojada en `static/fonts/` (26-oct-2026) |
@@ -74,11 +74,11 @@ python referencias/herramientas/validar_contenido.py
 | # | Pendiente |
 |---|---|
 | G1 | ~~Optimizar imágenes~~ ✅ WebP con tamaño según el uso (26-oct-2026): `dist/` pasó de ~45 MB a 10,4 MB. Queda opcional: `srcset` con varios tamaños |
-| G2 | Logo del encabezado: el recorte provisional tiene fondo claro; se verá bien cuando llegue el SVG (B1) |
+| G2 | ~~Logo del encabezado con fondo~~ ✅ SVG transparente sacado del .ai (23-oct-2026) |
 | G3 | Revisión visual página por página y ajustes finos de espaciado con los recursos reales |
 | G4 | Auditoría Lighthouse (rendimiento, accesibilidad, SEO) en móvil |
-| G5 | Redirecciones 301 reales según el hosting (E3) |
-| G6 | Volver a exportar después del 15-oct para que la convocatoria desaparezca del Inicio (se oculta al exportar) |
+| G5 | ~~Redirecciones 301 reales~~ GitHub Pages no permite 301 propios: se usan páginas de redirección (meta refresh + canonical), que Google trata como permanentes ✅ |
+| G6 | ~~Volver a exportar tras el plazo~~ ✅ ya no aplica (`mostrar_vencida: true`) |
 
 ## F. Hecho
 

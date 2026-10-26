@@ -51,10 +51,10 @@ caracteristicas:           # 4 tarjetas bajo el hero de la maqueta
     icono: bombilla
 
 organizadores:             # "Sede organizadora" en el afiche
-  - nombre: Universidad Técnica Particular de Loja (UTPL)
-    logo: aliados/utpl.webp
   - nombre: RAIN — Red de Aprendizaje Inmersivo
     logo: aliados/rain.webp
+  - nombre: Universidad Técnica Particular de Loja (UTPL)
+    logo: aliados/utpl.webp
 
 # Lista actualizada el 13-oct-2026. Logos de la carpeta de Drive de aliados, recortados a PNG
 # transparente (máx. 600×240) · sin logo se muestra el nombre · publicar: false = no se muestra en la web

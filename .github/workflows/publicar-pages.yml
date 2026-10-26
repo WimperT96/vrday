@@ -1,13 +1,15 @@
-# Publica la vista previa del sitio en GitHub Pages en cada push a main.
-# URL: https://<usuario-u-organizacion>.github.io/<repositorio>/
+# Publica el sitio en GitHub Pages en cada push a main (o a mano: Actions → Run workflow).
 #
 # Requisito (una sola vez): Settings → Pages → Build and deployment → Source: "GitHub Actions".
 #
-# La vista previa:
-#   - se sirve bajo la subcarpeta /<repositorio>/ (VR_BASE_URL),
-#   - pide a los buscadores no indexarla (VR_NOINDEX), para no competir con vrdaylatam.org,
-#   - muestra las marcas de "Contenido provisional" (--borrador) para que el equipo vea qué falta.
-name: Publicar vista previa (GitHub Pages)
+# El modo se decide solo, según lo configurado en Settings → Pages (salida de configure-pages):
+#   - Sin dominio propio → VISTA PREVIA en https://<usuario>.github.io/<repositorio>/
+#       subcarpeta /<repositorio>/ (VR_BASE_URL), no indexable (VR_NOINDEX) y con las marcas
+#       de "Contenido provisional" (--borrador) para que el equipo vea qué falta.
+#   - Con dominio propio (Custom domain = vrdaylatam.org) → PRODUCCIÓN en la raíz del dominio,
+#       indexable por buscadores y sin marcas de contenido provisional.
+# Pasos para conectar el dominio: docs/12-dominio-propio.md
+name: Publicar sitio (GitHub Pages)
 
 on:
   push:
@@ -41,13 +43,23 @@ jobs:
       - name: Pruebas
         run: python manage.py test sitio
 
-      - name: Exportar sitio estático
-        env:
-          VR_BASE_URL: /${{ github.event.repository.name }}
-          VR_NOINDEX: "1"
-        run: python manage.py exportar --borrador
+      - id: pages
+        uses: actions/configure-pages@v6
 
-      - uses: actions/configure-pages@v6
+      - name: Elegir modo (vista previa o producción)
+        run: |
+          host="${{ steps.pages.outputs.host }}"
+          if [[ -z "$host" || "$host" == *.github.io ]]; then
+            echo "Vista previa: ${{ steps.pages.outputs.base_url }}"
+            echo "VR_BASE_URL=${{ steps.pages.outputs.base_path }}" >> "$GITHUB_ENV"
+            echo "VR_NOINDEX=1" >> "$GITHUB_ENV"
+            echo "OPCIONES_EXPORTAR=--borrador" >> "$GITHUB_ENV"
+          else
+            echo "Producción: ${{ steps.pages.outputs.base_url }}"
+          fi
+
+      - name: Exportar sitio estático
+        run: python manage.py exportar $OPCIONES_EXPORTAR
 
       - uses: actions/upload-pages-artifact@v5
         with:

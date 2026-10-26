@@ -34,7 +34,7 @@ Remove-Item Env:VR_BASE_URL, Env:VR_NOINDEX
 ```
 In Git Bash, prefix the command with `MSYS_NO_PATHCONV=1`. Otherwise Git Bash rewrites `/vrday` into a Windows path.
 
-CI (`.github/workflows/publicar-pages.yml`) runs on every push to `main`: tests, then `exportar --borrador` with `VR_BASE_URL=/<repo>` and `VR_NOINDEX=1`, then deploy to GitHub Pages.
+CI (`.github/workflows/publicar-pages.yml`) runs on every push to `main`: tests, then export, then deploy to GitHub Pages. The mode comes from `actions/configure-pages` outputs. If the Pages host is `*.github.io` (no custom domain), it builds the preview: `exportar --borrador` with `VR_BASE_URL=<base_path>` and `VR_NOINDEX=1`. With the custom domain `vrdaylatam.org` it builds production: a plain `exportar` at the root, indexable and without placeholder marks. DNS and activation steps are in `docs/12-dominio-propio.md`.
 
 ## Architecture
 

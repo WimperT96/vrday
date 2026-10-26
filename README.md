@@ -105,13 +105,15 @@ python -m http.server 8080 --directory dist   # previsualizar lo exportado
 
 Detalle de comandos: `docs/03-arquitectura-django.md §6`.
 
-## Vista previa en GitHub Pages
+## Publicación en GitHub Pages (vista previa y producción)
 
-Cada `push` a `main` ejecuta `.github/workflows/publicar-pages.yml`: corre las pruebas, exporta el sitio y lo publica en
-`https://<usuario-u-organizacion>.github.io/<repositorio>/`.
+Cada `push` a `main` ejecuta `.github/workflows/publicar-pages.yml`: corre las pruebas, exporta el sitio y lo publica.
+El modo se elige solo según **Settings → Pages**:
 
-- Se publica bajo una subcarpeta (variable `VR_BASE_URL`): todas las rutas del sitio se ajustan solas.
-- Es una **vista previa**: pide a los buscadores no indexarla y muestra las marcas de "Contenido provisional".
+- **Sin dominio propio → vista previa** en `https://<usuario>.github.io/<repositorio>/`: subcarpeta (`VR_BASE_URL`),
+  no indexable y con las marcas de "Contenido provisional".
+- **Con Custom domain `vrdaylatam.org` → producción** en la raíz del dominio, indexable y sin marcas.
+  Pasos de DNS (GoDaddy) y activación: **`docs/12-dominio-propio.md`**.
 - Configuración inicial (una sola vez): **Settings → Pages → Source: GitHub Actions**.
 - Probar lo mismo en local (PowerShell):
   ```powershell

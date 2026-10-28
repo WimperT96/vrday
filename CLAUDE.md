@@ -41,7 +41,8 @@ CI (`.github/workflows/publicar-pages.yml`) runs on every push to `main`: tests,
 **Request flow:** `vrday/urls.py` has one catch-all `<path:ruta>/` route plus `""`, and both go to `sitio/views.py:pagina`. Sitemap, robots and `404.html` have their own small views. `pagina` first checks `sitio.yaml → redirecciones`, then looks the URL up in `contenido.cargar().paginas`, which is keyed by each YAML's `url:` field after normalizing it to `/x/`. It then renders `templates/pagina.html`, which loops over `pagina.secciones` and includes `templates/components/<tipo>.html` for each section. Every section is wrapped in `<section class="seccion seccion--<tipo>" data-componente data-efectos>` with a `.seccion__fondo` layer.
 
 - **Redirects** (old WordPress URLs) can't be real 301s on a static host. Each one is exported as its own page from `templates/redireccion.html` (meta refresh + canonical). The 404 works the same way: `handler404` covers the dev server, and an exportable `/404.html` covers the host.
-- Templates in `components/` that start with `_` (`_sesion.html`, `_youtube.html`) are partials shared by several section types, not section types themselves.
+- Templates in `components/` that start with `_` (`_sesion.html`, `_youtube.html`, `_logotipo.html`, `_red_nodos.html`) are partials shared by several section types, not section types themselves. The same goes for `components/ilustraciones/*.html`, which `texto` includes through its `ilustracion:` field.
+- Globals available in every template (`sitio`, `evento`, `menu` with `activo` flags, `boton_cabecera`, `pie`, `mostrar_placeholders`, `no_indexar`) come from the context processor `sitio/context_processors.py`.
 
 - **Adding a page** = add a YAML file under `contenido/paginas/`. URLs and export routes are derived automatically: `_rutas_paginas()` in `urls.py` feeds distill. A YAML with no `url:` key is silently ignored.
 - **Adding a section type** = add `templates/components/<tipo>.html` (plus CSS in `static/css/componentes.css` if needed). `validar_contenido` fails if a YAML uses a `tipo` with no template.
@@ -52,10 +53,12 @@ CI (`.github/workflows/publicar-pages.yml`) runs on every push to `main`: tests,
 - `resolver_seccion()` keeps logic out of templates. It fills in derived data per `tipo`:
   - `ponentes` filters `ponentes.yaml` by `edicion`.
   - `galeria` can list a whole `medios/` folder via `carpeta`.
-  - `hero_evento`/`aliados` inject `evento` and the formatted dates.
-  - `caracteristicas`/`convocatorias` pull from `evento.yaml` through `fuente:`.
+  - `hero_evento`/`aliados`/`inscripcion` inject `evento` and the formatted dates.
+  - `banda` with `nodos:` builds the node-network data.
+  - `caracteristicas`/`convocatorias` use inline `items:` when present. Otherwise they read a dotted path in `fuente:` (default `evento.caracteristicas` / `evento.convocatorias`).
   - `agenda_resumen` reads the `agenda_dias` section of `/agenda/`.
-- Expired `convocatorias` (`fecha_limite` < today) are dropped **at export time**, so the site must be re-exported after deadlines pass.
+- `contenido.valor(datos, "evento.x.y")` resolves dotted paths over `evento`/`sitio`. `fuente:` uses it, and so does `sitio.yaml → boton_cabecera.url_desde`.
+- Expired `convocatorias` (`fecha_limite` < today) are dropped **at export time** unless they set `mostrar_vencida: true`, so the site must be re-exported after deadlines pass.
 - Sections with `mostrar: false` are skipped. Organizers or allies with `publicar: false` stay in the YAML but are hidden.
 - `evento.yaml` is the single file to edit when changing editions.
 
@@ -63,7 +66,7 @@ CI (`.github/workflows/publicar-pages.yml`) runs on every push to `main`: tests,
 
 **WordPress compatibility:** the production host is GoDaddy Managed WordPress. `VR_STATIC_URL` (e.g. `/wp-content/themes/vrday/static`) moves all static assets to that path while pages stay at the root; distill then writes them to `dist/` + that path. `test_estaticos_en_otra_ruta` covers it. The conversion options are in `docs/11-wordpress.md`.
 
-**Template helpers** (`sitio/templatetags/vr.py`, registered as builtins, so no `{% load %}` is needed): `{% estatico %}` (static URL plus `?v=<content hash>`, used for CSS/JS so browsers never keep stale copies), `{% medio %}`, `{% img %}` (adds width/height from the real file, plus lazy loading), `{% enlace %}` (externals get `target="_blank"`), `{% ruta %}`, `{% icono %}` (sprite in `templates/partials/iconos.html`), plus the `|md`, `|md_linea`, `|a_json` and `|fecha_larga` filters.
+**Template helpers** (`sitio/templatetags/vr.py`, registered as builtins, so no `{% load %}` is needed): `{% estatico %}` (static URL plus `?v=<content hash>`, used for CSS/JS so browsers never keep stale copies), `{% medio %}`, `{% img %}` (adds width/height from the real file, plus lazy loading), `{% enlace %}` (externals get `target="_blank"`), `{% ruta %}`, `{% icono %}` (sprite in `templates/partials/iconos.html`), plus the `|md`, `|md_linea`, `|a_json`, `|fecha_larga`, `|externo`, `|empieza`, `|yt_miniatura` and `|iniciales` filters.
 
 **Static files:** `medios/` is served under `/static/medios/` (a `STATICFILES_DIRS` prefix), so content refers to media by paths relative to `medios/`, e.g. `ponentes/2023/aura-forero.webp`. Media is WebP (see `optimizar_medios.py`), except the 1200×630 share image, which stays JPG for social previews. Poppins is self-hosted in `static/fonts/` (`fuentes.css`); there are no Google Fonts requests. The CSS is plain CSS: `tokens.css` holds the 2026 brand tokens from `docs/02-identidad-visual.md`, `base.css` the layout, and `componentes.css` one block per section type. JS is a single dependency-free ES module, `main.js`, and each feature in it only activates if its component is present.
 

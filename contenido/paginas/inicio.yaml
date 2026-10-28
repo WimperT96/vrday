@@ -117,3 +117,13 @@ secciones:
     boton:
       texto: Ver memorias
       url: /memorias/              # índice con todas las ediciones
+
+  # 10 ── Voces VRDay Latam (los videos de memorias/2023.yaml + Bolivia)
+  - tipo: videos
+    id: voces
+    titulo: Voces VRDay Latam
+    items:
+      - {titulo: Perú,     youtube: Vhj5OXVEs1o}   # "VR DAY promocional Perú"
+      - {titulo: Colombia, youtube: I7sxWPlXGug}   # "VR Day Latam - Colombia 2023"
+      - {titulo: Ecuador,  youtube: NlQJv8lMz-U}   # "Virtual Reality Day Latam 2023 - Ecuador - UTPL"
+      - {titulo: Bolivia,  youtube: 3oxPaqO-2Rg}   # "Bolivia VR Day Latam – Summergo Lab"
